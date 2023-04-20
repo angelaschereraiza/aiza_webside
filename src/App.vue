@@ -1,89 +1,79 @@
 <template>
-  <v-app class="background">
-    <img class="logo" alt="Aiza GmbH Logo" src="./assets/aiza_logo.png" width="231.11" height="130" />
+  <v-app class="app">
+    <img class="logo" alt="Aiza GmbH Logo" src="./assets/aiza_logo.png" width="213.33" height="120" />
     <hr />
-    <v-row>
-      <v-card class="half-card background">
+    <div class="flex">
+      <div class="half-card">
         <v-row justify="start">
           <div class="container">
-            <p class="block">Die Aiza GmbH, gegründet am 13.04.23 und mit Sitz in Zollikofen, ist spezialisiert auf die Entwicklung von massgeschneiderten Webapplikationen für Unternehmen. Das Unternehmen besteht derzeit aus einer Person, Angela Scherer. Das Hauptaugenmerk liegt auf der Entwicklung von hochskalierbaren, global effizienten und sicheren Webapplikationen auf Basis von Open Source Software. Projekterfahrung und vertiefte Kenntnisse sind in folgenden Technologien vorhanden:</p>
+            <p>Die Aiza GmbH, gegründet am 13. April 2023 und mit Sitz in Zollikofen Bern, ist spezialisiert auf die Entwicklung von massgeschneiderten Webapplikationen für Unternehmen. Das Unternehmen besteht derzeit aus der Geschäftsführerin Angela Scherer mit dem Ziel der weiteren Entwicklung und Expansion. Das Hauptaugenmerk liegt auf der Entwicklung von hochskalierbaren, global effizienten und sicheren Webapplikationen auf Basis von Open Source Software. Projekterfahrung und vertiefte Kenntnisse sind in folgenden Technologien vorhanden:</p>
           </div>
         </v-row>
         <v-row justify="center" class="images">
-          <v-hover v-slot="{ isHovering, props }">
-            <v-card class="img-card" v-bind="props" :width="150" :height="100" href="https://go.dev" target="_blank">
-              <v-img alt="Go Logo" src="./assets/icon_go.png"/>
-              <v-overlay :model-value="isHovering" contained class="align-center justify-center">
-                <v-btn>Golang</v-btn>
-              </v-overlay>
-            </v-card>
-          </v-hover>
-          <v-hover v-slot="{ isHovering, props }">
-            <v-card class="img-card" v-bind="props" :width="150" :height="100" href="https://angular.io/" target="_blank">
-            <v-img alt="Angular Logo" src="./assets/icon_angular.png"/>
-            <v-overlay :model-value="isHovering" contained class="align-center justify-center">
-              <v-btn>Angular</v-btn>
-            </v-overlay>
-            </v-card>
-          </v-hover>
-          <v-hover v-slot="{ isHovering, props }">
-            <v-card class="img-card" v-bind="props" :width="150" :height="100" style="padding-top: 4px" href="https://vuejs.org" target="_blank">
-              <v-img alt="Vue.js Logo" src="./assets/icon_vue.png"/>
-              <v-overlay :model-value="isHovering" contained class="align-center justify-center">
-                <v-btn>Vue.js</v-btn>
-              </v-overlay>
-            </v-card>
-          </v-hover>
-          <v-hover v-slot="{ isHovering, props }">
-            <v-card class="img-card" v-bind="props" :width="150" :height="100" href="https://restfulapi.net" target="_blank">
-            <v-img alt="RESTful API Logo" src="./assets/icon_rest.png"/>
-            <v-overlay :model-value="isHovering" contained class="align-center justify-center">
-                <v-btn>RESTful API</v-btn>
-              </v-overlay>
-            </v-card>
-          </v-hover>
-          <v-hover v-slot="{ isHovering, props }">
-            <v-card class="img-card" v-bind="props" :width="150" :height="100" href="https://kubernetes.io" target="_blank">
-            <v-img alt="Kubernetes Logo" src="./assets/icon_kubernetes.png"/>
-            <v-overlay :model-value="isHovering" contained class="align-center justify-center">
-                <v-btn>Kubernetes</v-btn>
-              </v-overlay>
-            </v-card>
-          </v-hover>
-          <v-hover v-slot="{ isHovering, props }">
-            <v-card class="img-card" v-bind="props" :width="150" :height="100" href="https://about.gitlab.com/" target="_blank">
-            <v-img alt="Gitlab Logo" src="./assets/icon_gitlab.png"/>
-            <v-overlay :model-value="isHovering" contained class="align-center justify-center">
-                <v-btn>Gitlab</v-btn>
-              </v-overlay>
-            </v-card>
-          </v-hover>
+          <v-col justify="center">
+            <a href="https://go.dev" target="_blank">
+              <v-img class="img" alt="Go Logo" src="./assets/icon_go.png"/>
+              <h4 class="image-title">Golang</h4>
+            </a>
+          </v-col>
+          <v-col justify="center">
+            <a href="https://vuejs.org" target="_blank">
+              <v-img class="img" alt="Vue.js Logo" src="./assets/icon_vue.png"/>
+              <h4 class="image-title">Vue.js</h4>
+            </a>
+          </v-col>
+          <v-col justify="center">
+            <a href="https://angular.io/" target="_blank">
+              <v-img class="img" alt="Angular Logo" src="./assets/icon_angular.png"/>
+              <h4 class="image-title">Angular</h4>
+            </a>
+          </v-col>
+          <v-col justify="center">
+            <a href="https://kubernetes.io" target="_blank">
+              <v-img class="img" alt="Kubernetes Logo" src="./assets/icon_kubernetes.png"/>
+              <h4 class="image-title">Kubernetes</h4>
+            </a>
+          </v-col>
+          <v-col justify="center">
+            <a href="https://about.gitlab.com/" target="_blank">
+              <v-img class="img" alt="Gitlab Logo" src="./assets/icon_gitlab.png"/>
+              <h4 class="image-title">Gitlab</h4>
+            </a>
+          </v-col>
+          <v-col justify="center">
+            <a href="https://restfulapi.net" target="_blank">
+              <v-img class="img" alt="RESTful API Logo" src="./assets/icon_rest.png"/>
+              <h4 class="image-title">RESTful API</h4>
+            </a>
+          </v-col>
         </v-row>        
-      </v-card>
-      <v-card class="half-card background">
+      </div>
+      <div class="half-card">
         <v-row>
-          <v-img class="portrait-image" alt="Portrait" :width="133" :height="200" src="./assets/me.png"/>
+          <div class="portrait-div">
+            <img class="portrait-image" alt="Portrait Angela Scherer" src="./assets/me.png"/>
+          </div>
+          <v-col class="title">
+              <h4>Name:</h4>
+              <h4>Ausbildung:</h4>              
+              <h4>Zertifiziert:</h4>            
+              <h4 class="links-title">Links:</h4>              
+          </v-col>
           <v-col class="informations">
-            <v-row>
-              <h4 class="title">Name:</h4>
+            <v-col class="no-padding">
               <p>Angela Scherer</p>
-            </v-row>
-            <v-row>
-              <h4 class="title">Ausbildung:</h4>
+            </v-col>          
+            <v-col class="no-padding">
               <p>Bachelor of Science in Informatik</p>
-            </v-row>
-            <v-row>
-              <h4 class="title">Zertifiziert:</h4>
-              <v-col class="certified-col">
-                <p>Kubernetes Administrator (CKA)</p>
-                <p>ScrumMaster (CSM)</p>
-                <p>ITIL Foundation V3</p>
-                <p>Business English Cambridge Preliminary</p>
-              </v-col>
-            </v-row>
-            <v-row>
-              <h4 class="title">Links:</h4>
-              <v-row class="link-row-angi">
+            </v-col>
+            <v-col class="no-padding">
+              <!-- <p>Kubernetes Administrator (CKA)</p> -->
+              <p>ScrumMaster (CSM)</p>
+              <p>ITIL Foundation V3</p>
+              <p>Business English Cambridge Preliminary</p>
+            </v-col>
+            <v-col class="no-padding">
+              <v-row class="link-row-information">
                 <v-hover v-slot="{ isHovering, props }">
                   <v-card class="link-card" v-bind="props" :width="40" :height="40" href="https://www.linkedin.com/in/angela-scherer-2a2979136" target="_blank">
                     <v-img  alt="Linkedin Icon" src="./assets/icon_linkedin.png"/>
@@ -95,11 +85,11 @@
                   </v-card>
                 </v-hover>
               </v-row>
-            </v-row>
+            </v-col>
           </v-col>
         </v-row>
         <v-col justify="start" class="address-text">     
-          <p>Wenn Sie an einer Zusammenarbeit interessiert sind, wenden Sie sich bitte an:</p><br>
+          <p>Wenn Sie an einer Zusammenarbeit interessiert sind oder Fragen haben, wenden Sie sich bitte an:</p>
         </v-col>
         <v-row>
           <v-col justify="start" class="address">
@@ -108,7 +98,7 @@
             <h4>3052 Zollikofen</h4>
           </v-col>
           <v-col justify="start" class="contact">
-            <h4>E-Mail: angela.scherer@aiza.ch</h4>
+            <h4>E-Mail: <a style="color: #276fff" href="mailto:angela.scherer@aiza.ch">angela.scherer@aiza.ch</a></h4>
             <h4>Tel: +41 79 197 21 53</h4>            
           </v-col>
         </v-row>
@@ -124,15 +114,19 @@
             </v-card>
           </v-hover>
         </v-row>
-      </v-card>
-    </v-row>
-  </v-app>
+      </div>
+    </div>
+</v-app>
 </template>
 
 <style lang="sass" scoped>
-.background
-  background: #E6E6FA !important
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif !important
+.app
+ font-family: Helvetica Neue,Helvetica,Arial,sans-serif !important
+ hyphens: auto
+
+.flex
+  display: flex
+  flex-wrap: wrap
 
 .logo
   margin: 0 0 -8px 14px
@@ -146,25 +140,38 @@ hr
   margin-right: 16px
   &:before
     height: 6px
-    width: 219px
+    width: 205px
     content: ''
     position: absolute
     background: black !important
 
-.block
-  display: block
-  hyphens: auto
-
 .half-card
-  width: 50%
+  flex: 50%
+  @media only screen and (max-width: 1130px) 
+    flex: 100%
 
 .images 
-  margin: 40px 80px -40px 80px !important
+  margin: 0 80px 50px 80px !important
 
-.img-card
+.image-title
+  width: 150px
+  text-align: center
+  margin: 0
+
+a
+  text-decoration: none
+  color: #276fff
+
+.img
   margin: 8px 0
-  box-shadow: none !important
-  background: transparent !important
+  height: 90px
+  width: 150px
+  @media only screen and (max-width: 1200px) 
+    height: 70px !important
+
+.img:hover
+  height: 120px !important
+  background-color: transparent !important
 
 .link-card
   margin: 8px 4px
@@ -177,33 +184,53 @@ hr
   width: 52px !important
 
 .link-row
-  margin-left: 105px
-  margin-top: 0 !important
+  margin: 0 0 20px 63px !important
 
-.link-row-angi
-  margin-left: -2px
+.link-row-information
+  margin: 2px 0 0 -4px
 
 .container
   margin: 30px 80px 40px 80px
 
 .address
-  padding: 0 0 20px 120px
+  padding: 0 0 20px 78px
 
 .contact
-  padding: 0 120px 20px 0
+  padding: 0 50px 20px 8px
+  @media only screen and (max-width: 450px) 
+    padding-left: 78px
 
 .address-text
-  padding: 50px 70px 10px 65px
+  padding: 50px 70px 30px 65px
+
+.portrait-div
+  text-align: center !important
+
+  @media only screen and (max-width: 650px) 
+    width: 100%
 
 .portrait-image
-  margin: 30px 0 0 -175px
+  margin: 30px 30px 0 78px
+  width: 133px
+  height: 200px
 
-.informations
-  margin: 30px 0 0 -190px
+  @media only screen and (max-width: 650px) 
+    margin: 0%
+
+.no-padding
+  padding: 0
 
 .title
-  width: 150px
+  padding: 0 0 20px 78px
+  margin: 0 !important
 
-.certified-col
-  margin: -11px 0 0 -11px
+.informations
+  padding: 0 50px 20px 0
+  margin: 0 !important
+  @media only screen and (max-width: 650px)
+    margin-left: 78px 
+
+.links-title
+  width: 138px
+  margin-top: 115px
 </style>

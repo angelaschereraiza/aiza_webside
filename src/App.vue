@@ -53,41 +53,47 @@
           <div class="portrait-div">
             <img class="portrait-image" alt="Portrait Angela Scherer" src="./assets/me.png"/>
           </div>
-          <v-col class="title">
-              <h4>Name:</h4>
-              <h4>Ausbildung:</h4>              
-              <h4>Zertifiziert:</h4>            
-              <h4 class="links-title">Links:</h4>              
-          </v-col>
           <v-col class="informations">
-            <v-col class="no-padding">
-              <p>Angela Scherer</p>
-            </v-col>          
-            <v-col class="no-padding">
-              <p>Bachelor of Science in Informatik</p>
-            </v-col>
-            <v-col class="no-padding">
-              <!-- <p>Kubernetes Administrator (CKA)</p> -->
-              <p>ScrumMaster (CSM)</p>
-              <p>ITIL Foundation V3</p>
-              <p>Business English Cambridge Preliminary</p>
-            </v-col>
-            <v-col class="no-padding">
-              <v-row class="link-row-information">
-                <v-hover v-slot="{ isHovering, props }">
-                  <v-card class="link-card" v-bind="props" :width="40" :height="40" href="https://www.linkedin.com/in/angela-scherer-2a2979136" target="_blank">
-                    <v-img  alt="Linkedin Icon" src="./assets/icon_linkedin.png"/>
-                  </v-card>
-                </v-hover>
-                <v-hover v-slot="{ isHovering, props }">
-                  <v-card class="link-card" v-bind="props" :width="42" :height="42" href="https://www.xing.com/profile/Angela_Scherer3/cv" target="_blank">
-                    <v-img  alt="Xing Icon" src="./assets/icon_xing.png"/>
-                  </v-card>
-                </v-hover>
-              </v-row>
-            </v-col>
-          </v-col>
-        </v-row>
+            <v-row>
+              <h4 class="title">Name:</h4>
+              <v-col class="no-padding">
+                <p>Angela Scherer</p>
+              </v-col>  
+            </v-row>
+            <v-row>
+              <h4 class="title">Ausbildung:</h4>   
+              <v-col class="no-padding">
+                <p>Bachelor of Science in Informatik</p>
+              </v-col>
+            </v-row> 
+            <v-row>          
+              <h4 class="title">Zertifiziert:</h4>   
+              <v-col class="no-padding">
+                <!-- <p>Kubernetes Administrator (CKA)</p> -->
+                <p>ScrumMaster (CSM)</p>
+                <p>ITIL Foundation V3</p>
+                <p>Business English Cambridge Preliminary</p>
+              </v-col>
+            </v-row> 
+            <v-row>        
+              <h4 class="title links-title">Links:</h4> 
+              <v-col class="no-padding">
+                <v-row class="link-row-information">
+                  <v-hover v-slot="{ isHovering, props }">
+                    <v-card class="link-card" v-bind="props" :width="40" :height="40" href="https://www.linkedin.com/in/angela-scherer-2a2979136" target="_blank">
+                      <v-img  alt="Linkedin Icon" src="./assets/icon_linkedin.png"/>
+                    </v-card>
+                  </v-hover>
+                  <v-hover v-slot="{ isHovering, props }">
+                    <v-card class="link-card" v-bind="props" :width="42" :height="42" href="https://www.xing.com/profile/Angela_Scherer3/cv" target="_blank">
+                      <v-img  alt="Xing Icon" src="./assets/icon_xing.png"/>
+                    </v-card>
+                  </v-hover>
+                </v-row>
+              </v-col>
+            </v-row>             
+          </v-col>  
+        </v-row>         
         <v-col justify="start" class="address-text">     
           <p>Wenn Sie an einer Zusammenarbeit interessiert sind oder Fragen haben, wenden Sie sich bitte an:</p>
         </v-col>
@@ -146,12 +152,31 @@ hr
     background: black !important
 
 .half-card
-  flex: 50%
+  margin-right: 30px
+  flex: 40%
   @media only screen and (max-width: 1130px) 
     flex: 100%
 
 .images 
-  margin: 0 80px 50px 80px !important
+  margin: 0 80px 50px 80px  
+  @media only screen and (min-width: 2090px) 
+    margin:  0 300px 50px 300px
+    padding:  0 100px 0 100px
+    max-width: 800px  
+  @media only screen and (min-width: 1770px) 
+    margin:  0 180px 50px 180px
+  @media only screen and (max-width: 1130px) 
+    margin:  0 250px 50px 250px
+  @media only screen and (max-width: 1037px) 
+    margin:  0 170px 50px 170px
+  @media only screen and (max-width: 877px) 
+    margin:  0 90px 50px 90px
+  @media only screen and (max-width: 606px) 
+    margin:  0 0 50px 100px
+  @media only screen and (max-width: 550px) 
+    margin:  0 0 50px 30px
+  @media only screen and (max-width: 422px) 
+    margin:  0 0 50px 110px
 
 .image-title
   width: 150px
@@ -184,53 +209,67 @@ a
   width: 52px !important
 
 .link-row
-  margin: 0 0 20px 63px !important
+  margin: 0 0 0 15px
+  @media only screen and (max-width: 1130px) 
+    margin: -17px 0 20px 65px !important
 
 .link-row-information
   margin: 2px 0 0 -4px
 
 .container
-  margin: 30px 80px 40px 80px
+  margin: 30px 50px 40px 80px !important
 
 .address
-  padding: 0 0 20px 78px
+  padding: 0 0 20px 30px
+  hyphens: none !important
+  @media only screen and (max-width: 1130px) 
+    padding-left: 80px
+  @media only screen and (max-width: 500px) 
+    margin-right: 100px !important
 
 .contact
-  padding: 0 50px 20px 8px
-  @media only screen and (max-width: 450px) 
-    padding-left: 78px
+  padding: 0 40px 20px 20px
+  hyphens: none !important
+  @media only screen and (max-width: 500px) 
+    padding-left: 80px
 
 .address-text
-  padding: 50px 70px 30px 65px
+  padding: 40px 70px 30px 18px
+  @media only screen and (max-width: 1130px) 
+    margin-left: 50px
 
 .portrait-div
   text-align: center !important
-
-  @media only screen and (max-width: 650px) 
+  @media only screen and (max-width: 640px) 
     width: 100%
 
 .portrait-image
-  margin: 30px 30px 0 78px
-  width: 133px
-  height: 200px
-
-  @media only screen and (max-width: 650px) 
-    margin: 0%
+  margin: 20px 0 20px 30px
+  height: 230px
+  border: solid
+  border-color: #276fff
+  @media only screen and (max-width: 1130px) 
+    margin-left: 80px
+  @media only screen and (max-width: 640px) 
+    margin: 0
 
 .no-padding
   padding: 0
+  @media only screen and (max-width: 400px) 
+    margin-left: 40px
 
 .title
-  padding: 0 0 20px 78px
+  min-width: 150px
   margin: 0 !important
-
-.informations
-  padding: 0 50px 20px 0
-  margin: 0 !important
-  @media only screen and (max-width: 650px)
-    margin-left: 78px 
+  hyphens: none
+  @media only screen and (max-width: 400px)
+    min-width: 300px
 
 .links-title
-  width: 138px
-  margin-top: 115px
+  margin-top: 15px!important
+
+.informations
+  margin: 30px 40px 20px 49px
+  @media only screen and (max-width: 640px) 
+    margin-left: 80px
 </style>

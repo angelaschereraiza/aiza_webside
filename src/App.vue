@@ -6,47 +6,50 @@
       <div class="half-card">
         <v-row justify="start">
           <div class="container">
-            <p>Die Aiza GmbH, gegründet am 13. April 2023 und mit Sitz in Zollikofen Bern, ist spezialisiert auf die Entwicklung von massgeschneiderten Webapplikationen für Unternehmen. Das Unternehmen besteht derzeit aus der Geschäftsführerin Angela Scherer mit dem Ziel der weiteren Entwicklung und Expansion. Das Hauptaugenmerk liegt auf der Entwicklung von hochskalierbaren, global effizienten und sicheren Webapplikationen auf Basis von Open Source Software. Projekterfahrung und vertiefte Kenntnisse sind in folgenden Technologien vorhanden:</p>
+            <p>Die Aiza GmbH mit Sitz in Zollikofen bei Bern bietet Entwicklung von massgeschneiderten, modernen Webapplikationen für Unternehmen auf Basis von Open-Source-Software an.</p><br>
+            <p>Unser Fokus liegt im Bereich der folgenden Technologien:</p>
           </div>
         </v-row>
-        <v-row justify="center" class="images">
-          <v-col justify="center">
-            <a href="https://go.dev" target="_blank">
-              <v-img class="img" alt="Go Logo" src="./assets/icon_go.png"/>
-              <h4 class="image-title">Golang</h4>
-            </a>
-          </v-col>
-          <v-col justify="center">
-            <a href="https://vuejs.org" target="_blank">
-              <v-img class="img" alt="Vue.js Logo" src="./assets/icon_vue.png"/>
-              <h4 class="image-title">Vue.js</h4>
-            </a>
-          </v-col>
-          <v-col justify="center">
-            <a href="https://angular.io/" target="_blank">
-              <v-img class="img" alt="Angular Logo" src="./assets/icon_angular.png"/>
-              <h4 class="image-title">Angular</h4>
-            </a>
-          </v-col>
-          <v-col justify="center">
-            <a href="https://kubernetes.io" target="_blank">
-              <v-img class="img" alt="Kubernetes Logo" src="./assets/icon_kubernetes.png"/>
-              <h4 class="image-title">Kubernetes</h4>
-            </a>
-          </v-col>
-          <v-col justify="center">
-            <a href="https://about.gitlab.com/" target="_blank">
-              <v-img class="img" alt="Gitlab Logo" src="./assets/icon_gitlab.png"/>
-              <h4 class="image-title">Gitlab</h4>
-            </a>
-          </v-col>
-          <v-col justify="center">
-            <a href="https://restfulapi.net" target="_blank">
-              <v-img class="img" alt="RESTful API Logo" src="./assets/icon_rest.png"/>
-              <h4 class="image-title">RESTful API</h4>
-            </a>
-          </v-col>
-        </v-row>        
+        <div class="images-div">
+          <div class="images">
+            <v-col class="image-col">
+              <a href="https://go.dev" target="_blank">
+                <v-img class="img" alt="Go Logo" src="./assets/icon_go.png"/>
+                <h4 class="image-title">Golang</h4>
+              </a>
+            </v-col>
+            <v-col class="image-col">
+              <a href="https://vuejs.org" target="_blank">
+                <v-img class="img" alt="Vue.js Logo" src="./assets/icon_vue.png"/>
+                <h4 class="image-title">Vue.js</h4>
+              </a>
+            </v-col>
+            <v-col class="image-col">
+              <a href="https://angular.io/" target="_blank">
+                <v-img class="img" alt="Angular Logo" src="./assets/icon_angular.png"/>
+                <h4 class="image-title">Angular</h4>
+              </a>
+            </v-col>
+            <v-col class="image-col">
+              <a href="https://kubernetes.io" target="_blank">
+                <v-img class="img" alt="Kubernetes Logo" src="./assets/icon_kubernetes.png"/>
+                <h4 class="image-title">Kubernetes</h4>
+              </a>
+            </v-col>
+            <v-col class="image-col">
+              <a href="https://about.gitlab.com/" target="_blank">
+                <v-img class="img" alt="Gitlab Logo" src="./assets/icon_gitlab.png"/>
+                <h4 class="image-title">Gitlab</h4>
+              </a>
+            </v-col>
+            <v-col class="image-col">
+              <a href="https://restfulapi.net" target="_blank">
+                <v-img class="img" alt="RESTful API Logo" src="./assets/icon_rest.png"/>
+                <h4 class="image-title">RESTful API</h4>
+              </a>
+            </v-col>
+          </div>
+        </div>      
       </div>
       <div class="half-card">
         <v-row>
@@ -54,6 +57,7 @@
             <img class="portrait-image" alt="Portrait Angela Scherer" src="./assets/me.png"/>
           </div>
           <v-col class="informations">
+            <h3 class="leitung-title">Geschäftsleitung</h3>  
             <v-row>
               <h4 class="title">Name:</h4>
               <v-col class="no-padding">
@@ -72,7 +76,7 @@
                 <!-- <p>Kubernetes Administrator (CKA)</p> -->
                 <p>ScrumMaster (CSM)</p>
                 <p>ITIL Foundation V3</p>
-                <p>Business English Cambridge Preliminary</p>
+                <p class="english">Business English Cambridge Preliminary</p>
               </v-col>
             </v-row> 
             <v-row>        
@@ -97,18 +101,18 @@
         <v-col justify="start" class="address-text">     
           <p>Wenn Sie an einer Zusammenarbeit interessiert sind oder Fragen haben, wenden Sie sich bitte an:</p>
         </v-col>
-        <v-row>
-          <v-col justify="start" class="address">
+        <div class="address-div">
+          <div class="address">
             <h3>Aiza GmbH</h3>
             <h4>Bernstrasse 159</h4>
             <h4>3052 Zollikofen</h4>
-          </v-col>
-          <v-col justify="start" class="contact">
+          </div>
+          <div justify="start" class="contact">
             <h4>E-Mail: <a style="color: #276fff" href="mailto:angela.scherer@aiza.ch">angela.scherer@aiza.ch</a></h4>
             <h4>Tel: +41 79 197 21 53</h4>            
-          </v-col>
-        </v-row>
-        <v-row class="link-row">
+          </div>
+        </div>
+        <!-- <v-row class="link-row">
           <v-hover v-slot="{ isHovering, props }">
             <v-card class="link-card" v-bind="props" :width="40" :height="40" href="https://www.linkedin.com/in/angela-scherer-2a2979136" target="_blank">
               <v-img  alt="Linkedin Icon" src="./assets/icon_linkedin.png"/>
@@ -119,7 +123,7 @@
               <v-img  alt="Xing Icon" src="./assets/icon_xing.png"/>
             </v-card>
           </v-hover>
-        </v-row>
+        </v-row> -->
       </div>
     </div>
 </v-app>
@@ -152,36 +156,35 @@ hr
     background: black !important
 
 .half-card
-  margin-right: 30px
+  margin: 0 70px
   flex: 40%
   @media only screen and (max-width: 1130px) 
     flex: 100%
+  @media only screen and (max-width: 600px)
+    margin: 0 50px
+
+.container
+  margin: 20px 0 40px 0 !important
+
+.images-div
+  margin: 10px -20px 60px 0 !important
+  display: flex
+  justify-content: center
 
 .images 
-  margin: 0 80px 50px 80px  
-  @media only screen and (min-width: 2090px) 
-    margin:  0 300px 50px 300px
-    padding:  0 100px 0 100px
-    max-width: 800px  
-  @media only screen and (min-width: 1770px) 
-    margin:  0 180px 50px 180px
-  @media only screen and (max-width: 1130px) 
-    margin:  0 250px 50px 250px
-  @media only screen and (max-width: 1037px) 
-    margin:  0 170px 50px 170px
-  @media only screen and (max-width: 877px) 
-    margin:  0 90px 50px 90px
-  @media only screen and (max-width: 606px) 
-    margin:  0 0 50px 100px
-  @media only screen and (max-width: 550px) 
-    margin:  0 0 50px 30px
-  @media only screen and (max-width: 422px) 
-    margin:  0 0 50px 110px
+  max-width: 650px
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
 
 .image-title
   width: 150px
   text-align: center
   margin: 0
+
+.image-col
+  display: flex
+  justify-content: center
 
 a
   text-decoration: none
@@ -192,7 +195,7 @@ a
   height: 90px
   width: 150px
   @media only screen and (max-width: 1200px) 
-    height: 70px !important
+    height: 70px
 
 .img:hover
   height: 120px !important
@@ -209,67 +212,74 @@ a
   width: 52px !important
 
 .link-row
-  margin: 0 0 0 15px
-  @media only screen and (max-width: 1130px) 
-    margin: -17px 0 20px 65px !important
+  margin-top: -17px !important
 
 .link-row-information
   margin: 2px 0 0 -4px
 
-.container
-  margin: 30px 50px 40px 80px !important
+.address-text
+  margin: 20px 0 20px -23px
+  @media only screen and (max-width: 430px)
+    width: 300px
+
+.address-div
+  display: flex
+  flex-wrap: wrap
+  hyphens: none !important
+  margin-bottom: 20px !important
 
 .address
-  padding: 0 0 20px 30px
-  hyphens: none !important
-  @media only screen and (max-width: 1130px) 
-    padding-left: 80px
-  @media only screen and (max-width: 500px) 
-    margin-right: 100px !important
+  margin: 0 20px 20px -12px
+  width: 150px
+  margin-right: 232px !important
+  @media only screen and (max-width: 350px)
+    margin: 20px !important
 
 .contact
-  padding: 0 40px 20px 20px
-  hyphens: none !important
-  @media only screen and (max-width: 500px) 
-    padding-left: 80px
-
-.address-text
-  padding: 40px 70px 30px 18px
-  @media only screen and (max-width: 1130px) 
-    margin-left: 50px
+  margin: 0
+  @media only screen and (max-width: 600px)
+    margin: 0 0 20px -12px
 
 .portrait-div
-  text-align: center !important
-  @media only screen and (max-width: 640px) 
+  display: flex
+  justify-content: center
+  margin-right: 50px
+  @media only screen and (max-width: 640px)
     width: 100%
 
 .portrait-image
-  margin: 20px 0 20px 30px
+  margin: 20px 0 20px 0
   height: 230px
   border: solid
   border-color: #276fff
-  @media only screen and (max-width: 1130px) 
-    margin-left: 80px
-  @media only screen and (max-width: 640px) 
-    margin: 0
 
 .no-padding
   padding: 0
-  @media only screen and (max-width: 400px) 
-    margin-left: 40px
+  @media only screen and (max-width: 455px) 
+    margin-left: 30px
+
+.leitung-title
+  margin: -13px 0 20px -12px
 
 .title
   min-width: 150px
   margin: 0 !important
   hyphens: none
-  @media only screen and (max-width: 400px)
-    min-width: 300px
+  @media only screen and (max-width: 455px)
+    min-width: 350px
+    @media only screen and (max-width: 350px)
+      min-width: none
 
 .links-title
   margin-top: 15px!important
 
 .informations
-  margin: 30px 40px 20px 49px
-  @media only screen and (max-width: 640px) 
-    margin-left: 80px
+  margin: 20px 0 20px 0
+  hyphens: auto !important
+  @media only screen and (max-width: 640px)
+    margin-left: 0
+
+.english
+  @media only screen and (max-width: 430px)
+    width: 200px !important
 </style>

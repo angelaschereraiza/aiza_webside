@@ -1,4 +1,6 @@
-# default
+# Deployment
+test.aiza.ch --> make
+aiza.ch --> make deploy
 
 ## Project setup
 

@@ -111,18 +111,18 @@
             <h4>Telefon: +41 79 197 21 53</h4>            
           </div>
         </div>
-        <!-- <v-row class="link-row">
+        <div class="link-row">
           <v-hover v-slot="{ isHovering, props }">
-            <v-card class="link-card" v-bind="props" :width="40" :height="40" href="https://www.linkedin.com/in/angela-scherer-2a2979136" target="_blank">
+            <v-card class="link-card" v-bind="props" :width="40" :height="40" href="https://www.linkedin.com/company/aiza-gmbh" target="_blank">
               <v-img  alt="Linkedin Icon" src="./assets/icon_linkedin.png"/>
             </v-card>
           </v-hover>
           <v-hover v-slot="{ isHovering, props }">
-            <v-card class="link-card" v-bind="props" :width="42" :height="42" href="https://www.xing.com/profile/Angela_Scherer3/cv" target="_blank">
+            <v-card class="link-card" v-bind="props" :width="42" :height="42" href="https://www.xing.com/pages/aiza-gmbh" target="_blank">
               <v-img  alt="Xing Icon" src="./assets/icon_xing.png"/>
             </v-card>
           </v-hover>
-        </v-row> -->
+        </div>
       </div>
     </div>
 </v-app>
@@ -266,9 +266,6 @@ a
   border: solid
   border-color: #276fff
 
-.link-row
-  margin-top: -17px !important
-
 .link-row-information
   margin: 2px 0 0 -4px
 
@@ -284,15 +281,17 @@ a
     flex-direction: column
 
 .address
-  margin: 0 163px 20px 0
+  margin: 0 163px 0 0
   width: 175px
   @media only screen and (max-width: 710px)
-    margin-right: 0
+    margin: 0 0 20px 0
 
 .contact
   margin: 0
-  @media only screen and (max-width: 600px)
-    margin: 0 0 20px 0
+
+.link-row
+  margin: -17px 0 20px -4px
+  display: flex
 
 .h3-title-1
   margin-bottom: 8px
@@ -312,7 +311,7 @@ a
   hyphens: none
 
 .links-title
-  margin-top: 15px!important
+  margin-top: 15px !important
   @media only screen and (max-width: 455px) 
     margin-top: 0 !important
 

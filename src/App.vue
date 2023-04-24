@@ -4,12 +4,10 @@
     <hr />
     <div class="flex">
       <div class="half-card">
-        <v-row justify="start">
-          <div class="container">
-            <p>Die Aiza GmbH mit Sitz in Zollikofen bei Bern bietet Entwicklung von massgeschneiderten, modernen Webapplikationen für Unternehmen auf Basis von Open-Source-Software an.</p><br>
-            <p>Unser Fokus liegt im Bereich der folgenden Technologien:</p>
-          </div>
-        </v-row>
+        <div class="container">
+          <p>Die Aiza GmbH mit Sitz in Zollikofen bei Bern bietet Entwicklungen von massgeschneiderten, modernen Webapplikationen für Unternehmen und Institutionen auf Basis von Open-Source-Software an.</p><br>
+          <p>Unser Fokus liegt im Bereich der folgenden Technologien:</p>
+        </div>
         <div class="images-div">
           <div class="images">
             <v-col class="image-col">
@@ -25,15 +23,15 @@
               </a>
             </v-col>
             <v-col class="image-col">
-              <a href="https://angular.io/" target="_blank">
-                <v-img class="img" alt="Angular Logo" src="./assets/icon_angular.png"/>
-                <h4 class="image-title">Angular</h4>
-              </a>
-            </v-col>
-            <v-col class="image-col">
               <a href="https://kubernetes.io" target="_blank">
                 <v-img class="img" alt="Kubernetes Logo" src="./assets/icon_kubernetes.png"/>
                 <h4 class="image-title">Kubernetes</h4>
+              </a>
+            </v-col>
+            <v-col class="image-col">
+              <a href="https://restfulapi.net" target="_blank">
+                <v-img class="img" alt="RESTful API Logo" src="./assets/icon_rest.png"/>
+                <h4 class="image-title">RESTful API</h4>
               </a>
             </v-col>
             <v-col class="image-col">
@@ -43,45 +41,46 @@
               </a>
             </v-col>
             <v-col class="image-col">
-              <a href="https://restfulapi.net" target="_blank">
-                <v-img class="img" alt="RESTful API Logo" src="./assets/icon_rest.png"/>
-                <h4 class="image-title">RESTful API</h4>
+              <a href="https://angular.io/" target="_blank">
+                <v-img class="img" alt="Angular Logo" src="./assets/icon_angular.png"/>
+                <h4 class="image-title">Angular</h4>
               </a>
             </v-col>
           </div>
         </div>      
       </div>
       <div class="half-card">
-        <v-row>
+        <div class="informations-div">
+          <h3 class="h3-title-1">Geschäftsleitung</h3>  
           <div class="portrait-div">
             <img class="portrait-image" alt="Portrait Angela Scherer" src="./assets/me.png"/>
           </div>
-          <v-col class="informations">
-            <h3 class="leitung-title">Geschäftsleitung</h3>  
-            <v-row>
+          <div class="informations">
+            <h3 class="h3-title-2">Geschäftsleitung</h3>  
+            <div class="information-div">
               <h4 class="title">Name:</h4>
-              <v-col class="no-padding">
+              <div class="information">
                 <p>Angela Scherer</p>
-              </v-col>  
-            </v-row>
-            <v-row>
+              </div>  
+            </div>
+            <div class="information-div">
               <h4 class="title">Ausbildung:</h4>   
-              <v-col class="no-padding">
+              <div class="information">
                 <p>Bachelor of Science in Informatik</p>
-              </v-col>
-            </v-row> 
-            <v-row>          
+              </div>
+            </div> 
+            <div class="information-div">          
               <h4 class="title">Zertifiziert:</h4>   
-              <v-col class="no-padding">
+              <div class="information">
                 <!-- <p>Kubernetes Administrator (CKA)</p> -->
                 <p>ScrumMaster (CSM)</p>
                 <p>ITIL Foundation V3</p>
                 <p class="english">Business English Cambridge Preliminary</p>
-              </v-col>
-            </v-row> 
-            <v-row>        
+              </div>
+            </div> 
+            <div class="information-div">      
               <h4 class="title links-title">Links:</h4> 
-              <v-col class="no-padding">
+              <div class="information">
                 <v-row class="link-row-information">
                   <v-hover v-slot="{ isHovering, props }">
                     <v-card class="link-card" v-bind="props" :width="40" :height="40" href="https://www.linkedin.com/in/angela-scherer-2a2979136" target="_blank">
@@ -94,13 +93,13 @@
                     </v-card>
                   </v-hover>
                 </v-row>
-              </v-col>
-            </v-row>             
-          </v-col>  
-        </v-row>         
-        <v-col justify="start" class="address-text">     
-          <p>Wenn Sie an einer Zusammenarbeit interessiert sind oder Fragen haben, wenden Sie sich bitte an:</p>
-        </v-col>
+              </div>
+            </div>             
+          </div>  
+        </div>         
+        <div class="address-text">     
+          <p>Haben wir Ihr Interesse geweckt? Bitte melden Sie sich zu einem unverbindlichen Informationsgespräch.</p>
+        </div>
         <div class="address-div">
           <div class="address">
             <h3>Aiza GmbH</h3>
@@ -109,7 +108,7 @@
           </div>
           <div justify="start" class="contact">
             <h4>E-Mail: <a style="color: #276fff" href="mailto:angela.scherer@aiza.ch">angela.scherer@aiza.ch</a></h4>
-            <h4>Tel: +41 79 197 21 53</h4>            
+            <h4>Telefon: +41 79 197 21 53</h4>            
           </div>
         </div>
         <!-- <v-row class="link-row">
@@ -139,7 +138,10 @@
   flex-wrap: wrap
 
 .logo
-  margin: 0 0 -8px 14px
+  margin: 0 0 -8px 10px
+  @media only screen and (max-width: 600px)
+    margin: -4px 0 -8px 4px
+
 
 hr
   border: none
@@ -150,24 +152,29 @@ hr
   margin-right: 16px
   &:before
     height: 6px
-    width: 205px
+    width: 197px
     content: ''
     position: absolute
-    background: black !important
+    background: black
+    @media only screen and (max-width: 600px)
+      width: 182px
 
 .half-card
-  margin: 0 70px
+  margin: 0 50px
   flex: 40%
   @media only screen and (max-width: 1130px) 
     flex: 100%
   @media only screen and (max-width: 600px)
-    margin: 0 50px
+    margin: 0 40px
 
 .container
-  margin: 20px 0 40px 0 !important
+  margin: 20px 0 40px 0
+  @media only screen and (max-width: 600px)
+    margin-top: 10px
 
 .images-div
-  margin: 10px -20px 60px 0 !important
+  width: 100%
+  margin: 0 -20px 40px 0
   display: flex
   justify-content: center
 
@@ -181,6 +188,12 @@ hr
   width: 150px
   text-align: center
   margin: 0
+  @media only screen and (max-width: 640px) 
+    width: 110px
+  @media only screen and (max-width: 500px) 
+    width: 100px
+  @media only screen and (max-width: 400px) 
+    width: 95px
 
 .image-col
   display: flex
@@ -194,22 +207,64 @@ a
   margin: 8px 0
   height: 90px
   width: 150px
-  @media only screen and (max-width: 1200px) 
+  @media only screen and (max-width: 640px) 
+    height: 80px
+    width: 110px
+  @media only screen and (max-width: 500px) 
     height: 70px
+    width: 100px
+  @media only screen and (max-width: 400px) 
+    height: 60px
+    width: 95px
 
 .img:hover
-  height: 120px !important
-  background-color: transparent !important
+  height: 120px
+  background-color: transparent
+  @media only screen and (max-width: 500px) 
+    height: 100px
+    @media only screen and (max-width: 500px) 
+      height: 90px
 
 .link-card
   margin: 8px 4px
-  box-shadow: none !important
-  background: transparent !important
+  box-shadow: none
+  background: transparent
   border-radius: 50%
 
 .link-card:hover
   height: 50px !important
   width: 52px !important
+
+.informations-div
+  display: flex
+  @media only screen and (max-width: 640px)
+    flex-direction: column
+
+.informations
+  margin: 20px 0 20px 0
+  hyphens: auto
+
+.information-div
+  display: flex
+  @media only screen and (max-width: 455px)
+    flex-direction: column
+
+.information
+  @media only screen and (max-width: 455px) 
+    margin-left: 30px
+
+.portrait-div
+  display: flex
+  justify-content: center
+  margin-right: 50px
+  @media only screen and (max-width: 640px)
+    margin-right: 0
+
+.portrait-image
+  margin: 26px 0 20px 0
+  height: 205px
+  border: solid
+  border-color: #276fff
 
 .link-row
   margin-top: -17px !important
@@ -218,66 +273,48 @@ a
   margin: 2px 0 0 -4px
 
 .address-text
-  margin: 20px 0 20px -23px
-  @media only screen and (max-width: 430px)
-    width: 300px
+  margin: 15px 0 20px 0
 
 .address-div
   display: flex
   flex-wrap: wrap
   hyphens: none !important
   margin-bottom: 20px !important
+  @media only screen and (max-width: 710px)
+    flex-direction: column
 
 .address
-  margin: 0 20px 20px -12px
-  width: 150px
-  margin-right: 232px !important
-  @media only screen and (max-width: 350px)
-    margin: 20px !important
+  margin: 0 163px 20px 0
+  width: 175px
+  @media only screen and (max-width: 710px)
+    margin-right: 0
 
 .contact
   margin: 0
   @media only screen and (max-width: 600px)
-    margin: 0 0 20px -12px
+    margin: 0 0 20px 0
 
-.portrait-div
-  display: flex
-  justify-content: center
-  margin-right: 50px
-  @media only screen and (max-width: 640px)
-    width: 100%
+.h3-title-1
+  margin-bottom: 8px
+  display: none
+  @media only screen and (max-width: 641px)
+    display: block
 
-.portrait-image
-  margin: 20px 0 20px 0
-  height: 230px
-  border: solid
-  border-color: #276fff
-
-.no-padding
-  padding: 0
-  @media only screen and (max-width: 455px) 
-    margin-left: 30px
-
-.leitung-title
-  margin: -13px 0 20px -12px
-
+.h3-title-2
+  margin-bottom: 8px
+  display: block
+  @media only screen and (max-width: 641px)
+    display: none
+  
 .title
   min-width: 150px
   margin: 0 !important
   hyphens: none
-  @media only screen and (max-width: 455px)
-    min-width: 350px
-    @media only screen and (max-width: 350px)
-      min-width: none
 
 .links-title
   margin-top: 15px!important
-
-.informations
-  margin: 20px 0 20px 0
-  hyphens: auto !important
-  @media only screen and (max-width: 640px)
-    margin-left: 0
+  @media only screen and (max-width: 455px) 
+    margin-top: 0 !important
 
 .english
   @media only screen and (max-width: 430px)

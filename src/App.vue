@@ -234,7 +234,7 @@ hr
       width: 182px
 
 .half-card
-  margin: 0 50px
+  margin: 20px 50px
   flex: 40%
   @media only screen and (max-width: 1130px) 
     flex: 100%
@@ -242,7 +242,7 @@ hr
     margin: 0 40px
 
 .container
-  margin: 20px 0 40px 0
+  margin: 2px 0 40px 0
   @media only screen and (max-width: 600px)
     margin-top: 10px
 
@@ -315,7 +315,7 @@ a
     flex-direction: column
 
 .informations
-  margin: 20px 0 20px 0
+  margin: 0 0 20px 0
   hyphens: auto
 
 .information-div
@@ -335,7 +335,7 @@ a
     margin-right: 0
 
 .portrait-image
-  margin: 26px 0 20px 0
+  margin: 6px 0 20px 0
   height: 205px
   border: solid
   border-color: #276fff

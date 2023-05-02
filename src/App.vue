@@ -336,7 +336,7 @@ a
 
 .portrait-image
   margin: 6px 0 20px 0
-  height: 205px
+  height: 190px
   border: solid
   border-color: #276fff
 

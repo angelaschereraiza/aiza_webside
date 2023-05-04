@@ -355,7 +355,7 @@ a
     flex-direction: column
 
 .address
-  margin: 0 163px 0 0
+  margin: 0 153px 0 0
   width: 175px
   @media only screen and (max-width: 1370px)
     margin: 0 40px 0 0

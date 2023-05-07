@@ -16,16 +16,21 @@ import { registerPlugins } from '@/plugins'
 const app = createApp(App)
 
 // Gets page language from local storage or browser setting
+var userLang = navigator.language || navigator.userLanguage
 if (localStorage.getItem("english") === null) {
-  var userLang = navigator.language || navigator.userLanguage
   if (userLang.includes("de")) {
     localStorage.setItem("english", false) 
-    document.documentElement.setAttribute('lang', 'de')
   }
   else {
     localStorage.setItem("english", true)
-    document.documentElement.setAttribute('lang', 'en')
   }
+}
+
+if (userLang.includes("de")) {
+  document.documentElement.setAttribute('lang', 'de')
+}
+else {
+  document.documentElement.setAttribute('lang', 'en')
 }
 
 registerPlugins(app)

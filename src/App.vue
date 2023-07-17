@@ -46,21 +46,21 @@
               </a>
             </v-col>
             <v-col class="image-col">
-              <a href="https://restfulapi.net" target="_blank">
-                <v-img class="img" alt="RESTful API Logo" src="./assets/icon_rest.png"/>
-                <h4 class="image-title">RESTful API</h4>
-              </a>
-            </v-col>
-            <v-col class="image-col">
-              <a href="https://about.gitlab.com/" target="_blank">
-                <v-img class="img" alt="Gitlab Logo" src="./assets/icon_gitlab.png"/>
-                <h4 class="image-title">Gitlab</h4>
+              <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank">
+                <v-img class="img" alt="C# Logo" src="./assets/icon_csharp.png"/>
+                <h4 class="image-title">C#</h4>
               </a>
             </v-col>
             <v-col class="image-col">
               <a href="https://angular.io/" target="_blank">
                 <v-img class="img" alt="Angular Logo" src="./assets/icon_angular.png"/>
                 <h4 class="image-title">Angular</h4>
+              </a>
+            </v-col>
+            <v-col class="image-col">
+              <a href="https://about.gitlab.com/" target="_blank">
+                <v-img class="img" alt="Gitlab Logo" src="./assets/icon_gitlab.png"/>
+                <h4 class="image-title">Gitlab</h4>
               </a>
             </v-col>
           </div>

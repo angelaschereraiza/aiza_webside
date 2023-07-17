@@ -34,21 +34,15 @@
               </a>
             </v-col>
             <v-col class="image-col">
-              <a href="https://vuejs.org" target="_blank">
-                <v-img class="img" alt="Vue.js Logo" src="./assets/icon_vue.png"/>
-                <h4 class="image-title">Vue.js</h4>
-              </a>
-            </v-col>
-            <v-col class="image-col">
-              <a href="https://kubernetes.io" target="_blank">
-                <v-img class="img" alt="Kubernetes Logo" src="./assets/icon_kubernetes.png"/>
-                <h4 class="image-title">Kubernetes</h4>
-              </a>
-            </v-col>
-            <v-col class="image-col">
               <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank">
                 <v-img class="img" alt="C# Logo" src="./assets/icon_csharp.png"/>
                 <h4 class="image-title">C#</h4>
+              </a>
+            </v-col>
+            <v-col class="image-col">
+              <a href="https://vuejs.org" target="_blank">
+                <v-img class="img" alt="Vue.js Logo" src="./assets/icon_vue.png"/>
+                <h4 class="image-title">Vue.js</h4>
               </a>
             </v-col>
             <v-col class="image-col">
@@ -63,6 +57,13 @@
                 <h4 class="image-title">Gitlab</h4>
               </a>
             </v-col>
+            <v-col class="image-col">
+              <a href="https://kubernetes.io" target="_blank">
+                <v-img class="img" alt="Kubernetes Logo" src="./assets/icon_kubernetes.png"/>
+                <h4 class="image-title">Kubernetes</h4>
+              </a>
+            </v-col>  
+
           </div>
         </div>      
       </div>

@@ -1,5 +1,5 @@
 # Deployment
-test.aiza.ch --> make
+test.aiza.ch --> make <br>
 aiza.ch --> make deploy
 
 ## Project setup

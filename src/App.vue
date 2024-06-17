@@ -94,11 +94,12 @@
             <div class="information-div">
               <h4 v-if="english" class="title">Certifications:</h4>           
               <h4 v-if="!english" class="title">Zertifizierungen:</h4>   
-              <div class="information">
-                <p>ScrumMaster (CSM)</p>
-                <p>ITIL Foundation V3</p>
-                <p>Business English Cambridge Preliminary</p>
-              </div>
+              <ul class="information">
+                <li class="information-li">Certified Kubernetes Administrator (CKA)</li>
+                <li class="information-li">ScrumMaster (CSM)</li>
+                <li class="information-li">ITIL Foundation V3</li>
+                <li class="information-li">Business English Cambridge Preliminary</li>
+              </ul>
             </div> 
             <div class="information-div">      
               <h4 class="title links-title">Links:</h4> 
@@ -214,8 +215,7 @@
     height: 30px
     margin: 0 0 4px 4px
 
-.language-card:hover
-  height: 45px
+.language-card:hoverinformation
   width: 45px
 
 hr
@@ -328,6 +328,9 @@ a
   @media only screen and (max-width: 455px) 
     margin-left: 30px
 
+.information-li 
+  margin-left:19px
+
 .portrait-div
   display: flex
   justify-content: center
@@ -337,7 +340,7 @@ a
 
 .portrait-image
   margin: 6px 0 20px 0
-  height: 190px
+  height: 207px
   border: solid
   border-color: #276fff
 

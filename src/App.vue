@@ -63,7 +63,6 @@
                 <h4 class="image-title">Kubernetes</h4>
               </a>
             </v-col>  
-
           </div>
         </div>      
       </div>

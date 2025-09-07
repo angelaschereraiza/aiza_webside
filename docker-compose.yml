@@ -1,0 +1,38 @@
+services:
+  llama:
+    image: ghcr.io/ggerganov/llama.cpp:server
+    command:
+      - server
+      - -m
+      - /models/${MODEL_FILE}
+      - -c
+      - "${CTX}"
+      - -t
+      - "${THREADS}"
+      - -b
+      - "${BATCH}"
+      - --host
+      - 0.0.0.0
+      - --port
+      - "${LLAMA_PORT}"
+      - -ngl
+      - "0"
+      - --chat-template
+      - chatml  
+    volumes:
+      - ${MODEL_DIR}:/models:ro,Z
+    ports:
+      - "${LLAMA_PORT:-8000}:8000"
+    restart: unless-stopped
+
+  proxy:
+    build:
+      context: ./backend/ai
+      dockerfile: Dockerfile
+    environment:
+      UPSTREAM_BASE: "http://llama:${LLAMA_PORT:-8000}"
+    ports:
+      - "${PROXY_PORT:-9000}:9000"
+    depends_on:
+      - llama
+    restart: unless-stopped

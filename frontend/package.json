@@ -1,0 +1,23 @@
+{
+  "name": "aiza_webside",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mdi/font": "7.4.47",
+    "roboto-fontface": "latest",
+    "sass": "latest",
+    "vue": "3.5.21",
+    "vue-router": "latest",
+    "vuetify": "3.9.7",
+    "webfontloader": "latest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "vite": "^7.1.4",
+    "vite-plugin-vuetify": "^2.1.2"
+  }
+}

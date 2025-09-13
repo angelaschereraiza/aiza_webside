@@ -40,31 +40,56 @@ function scrollDown () {
 }
 
 async function send() {
-  if (!input.value.trim()) return
-  const userMsg = { role: 'user', content: input.value }
-  messages.value.push(userMsg)
-  const payload = {
-    message: input.value,
-    max_tokens: 1024
-  }
-  input.value = ''
-  loading.value = true
-  scrollDown()
+  if (!input.value.trim()) return;
+
+  const userMsg = { role: 'user', content: input.value };
+  messages.value.push(userMsg);
+
+  const payload = { message: input.value, max_tokens: 1024 };
+  input.value = '';
+  loading.value = true;
+  scrollDown();
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 60_000);
 
   try {
     const r = await fetch(`${API_BASE}/chat`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    })
-    if (!r.ok) throw new Error(`HTTP ${r.status}`)
-    const data = await r.json()
-    messages.value.push({ role: 'assistant', content: data.reply })
+      body: JSON.stringify(payload),
+      signal: controller.signal,
+    });
+
+    if (r.ok) {
+      const data = await r.json().catch(() => ({}));
+      const reply = data?.reply ?? '';
+      messages.value.push({
+        role: 'assistant',
+        content: reply || 'Error: Empty response from server (reply missing).',
+      });
+    } else {
+      const clone = r.clone();
+      let detail = '';
+      try {
+        const err = await r.json();
+        detail = err?.detail || JSON.stringify(err);
+      } catch {
+        detail = await clone.text();
+      }
+      const short = (detail || '').slice(0, 400);
+      messages.value.push({
+        role: 'assistant',
+        content: `Error: HTTP ${r.status} ${r.statusText}${short ? ' - ' + short : ''}`,
+      });
+    }
   } catch (e) {
-    messages.value.push({ role: 'assistant', content: `Fehler: ${e.message}` })
+    const msg = e.name === 'AbortError' ? 'Timeout during request.' : (e.message || String(e));
+    messages.value.push({ role: 'assistant', content: `Error: ${msg}` });
   } finally {
-    loading.value = false
-    scrollDown()
+    clearTimeout(timeout);
+    loading.value = false;
+    scrollDown();
   }
 }
 

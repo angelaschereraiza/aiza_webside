@@ -19,7 +19,7 @@ COMPOSE                 ?= docker compose
 SHELL := /bin/bash
 
 # Remote paths (where compose + proxy code will live)
-REMOTE_BACKEND_DIR      ?= /opt/aiza-ai
+REMOTE_BACKEND_DIR      ?= aiza-ai
 REMOTE_COMPOSE_DIR      ?= $(REMOTE_BACKEND_DIR)
 
 # llama.cpp + proxy ports (also mirrored in .env)

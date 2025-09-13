@@ -2,37 +2,45 @@ services:
   llama:
     image: ghcr.io/ggerganov/llama.cpp:server
     command:
-      - server
       - -m
       - /models/${MODEL_FILE}
       - -c
-      - "${CTX}"
+      - "${CTX:-4096}"
       - -t
-      - "${THREADS}"
+      - "${THREADS:-4}"
       - -b
-      - "${BATCH}"
+      - "${BATCH:-512}"
       - --host
       - 0.0.0.0
       - --port
-      - "${LLAMA_PORT}"
+      - "${LLAMA_PORT:-8000}"     # im Container
       - -ngl
       - "0"
       - --chat-template
-      - chatml  
+      - chatml
     volumes:
       - ${MODEL_DIR}:/models:ro,Z
     ports:
-      - "${LLAMA_PORT:-8000}:8000"
+      - "${LLAMA_PORT:-8000}:${LLAMA_PORT:-8000}"  # Host ↔ Container identisch
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/v1/models"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 20s
 
   proxy:
     build:
       context: ./backend/ai
       dockerfile: Dockerfile
     environment:
-      UPSTREAM_BASE: "http://llama:${LLAMA_PORT:-8000}"
+      UPSTREAM_BASE: "http://llama:${LLAMA_PORT:-8000}"  # interner Container-Port!
+      REQUEST_TIMEOUT: "600"
+      MODEL_ID: "qwen2.5-coder-7b-instruct-q4_k_m.gguf"  # optional
     ports:
       - "${PROXY_PORT:-9000}:9000"
     depends_on:
-      - llama
+      llama:
+        condition: service_healthy
     restart: unless-stopped

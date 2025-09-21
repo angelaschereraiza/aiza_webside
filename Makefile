@@ -16,11 +16,8 @@ PROD_SUBDIR             ?= _/htdocs/
 SSH                     = ssh $(HOST)
 RSYNC                   = rsync -av --delete
 COMPOSE                 ?= docker compose
-SHELL := /bin/bash
-
-# Remote paths (where compose + proxy code will live)
-REMOTE_BACKEND_DIR      ?= aiza-ai
-REMOTE_COMPOSE_DIR      ?= $(REMOTE_BACKEND_DIR)
+SHELL 					:= /bin/bash
+REMOTE_COMPOSE_DIR      ?= aiza-ai
 
 # llama.cpp + proxy ports (also mirrored in .env)
 LLAMA_PORT              ?= 8000
@@ -79,15 +76,15 @@ backend_test:   ## Smoke test via proxy
 # Rsyncs docker-compose.yml + backend/ai/* + .env to the NAS and runs "docker compose up -d" there.
 .PHONY: deploy_backend
 deploy_backend:
-	$(SSH) '$(REMOTE_SH)'
+	$(SSH) "mkdir -p '$(REMOTE_COMPOSE_DIR)/backend/ai'"
 	$(RSYNC) docker-compose.yml $(HOST):$(REMOTE_COMPOSE_DIR)/
 	$(RSYNC) backend/ai/ $(HOST):$(REMOTE_COMPOSE_DIR)/backend/ai/
 	@if [ -f .env ]; then \
 	  $(RSYNC) .env $(HOST):$(REMOTE_COMPOSE_DIR)/.env ; \
 	else \
-	  echo "[warn] .env not found locally – remote compose will use its own env"; \
+	  echo "[warn] .env not found locally - remote compose will use its own env"; \
 	fi
-	$(SSH) 'cd $(REMOTE_COMPOSE_DIR) && $(COMPOSE) up -d --build'
+	$(SSH) "cd '$(REMOTE_COMPOSE_DIR)' && $(COMPOSE) up -d --build"
 
 .PHONY: remote_backend_down
 remote_backend_down:

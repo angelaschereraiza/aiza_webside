@@ -86,30 +86,39 @@ function fileToDataUrl(file){
 async function send(){
   if(!input.value.trim() && images.value.length===0) return;
 
-  messages.value.push({ role:'user', content: input.value || '(images)', images: images.value.map(i=>i.url) });
+  messages.value.push({
+    role:'user',
+    content: input.value || '(images)',
+    images: images.value.map(i => i.url)
+  });
+
   scrollDown();
   loading.value=true;
 
   try{
-    const encoded = await Promise.all(images.value.map(i=>fileToDataUrl(i.file)));
+    const encoded = await Promise.all(
+      images.value.map(i => fileToDataUrl(i.file))
+    );
+
     const payload = {
       messages: [
         { role: "system", content: "You are Qwendoline, a helpful AI assistant." },
         ...messages.value.map(m => ({
           role: m.role,
           content: m.content,
-          images: m.images || []      
+          images: m.images || []
         })),
         {
           role: "user",
           content: input.value,
-          images: images.value.map(i => i.url)
+          images: encoded
         }
       ],
       max_tokens: 1024
     };
 
-    input.value=''; clearAllImages();
+    input.value=''; 
+    clearAllImages();
 
     const r = await fetch(`${API_BASE}/chat`,{
       method:'POST',

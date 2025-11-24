@@ -52,9 +52,9 @@
               </a>
             </v-col>
             <v-col class="image-col">
-              <a href="https://about.gitlab.com/" target="_blank">
-                <v-img class="img" alt="Gitlab Logo" src="./assets/icon_gitlab.png"/>
-                <h4 class="image-title">Gitlab</h4>
+              <a href="https://azure.microsoft.com/" target="_blank">
+                <v-img class="img" alt="Azure Logo" src="./assets/icon_azure.png"/>
+                <h4 class="image-title">Azure</h4>
               </a>
             </v-col>
             <v-col class="image-col">
@@ -293,7 +293,6 @@ a
 
 .img:hover
   height: 120px
-  background-color: transparent
   @media only screen and (max-width: 500px) 
     height: 100px
     @media only screen and (max-width: 500px) 

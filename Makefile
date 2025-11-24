@@ -23,6 +23,15 @@ REMOTE_COMPOSE_DIR      ?= aiza-ai
 LLAMA_PORT              ?= 8000
 PROXY_PORT              ?= 9000
 
+# ====== Full deployment helpers ======
+.PHONY: run_all
+run_all: run_frontend backend_up
+	@echo "Deploy all done: Frontend deployed + Backend (local) up."
+
+.PHONY: deploy_all
+deploy_all_remote: deploy_frontend deploy_backend
+	@echo "Deploy all done: Frontend deployed + Backend (remote NAS) up."
+
 # ====== Frontend ======
 .PHONY: run_frontend
 run_frontend:
@@ -103,11 +112,3 @@ remote_backend_health:
 	$(SSH) 'curl -s http://127.0.0.1:$(LLAMA_PORT)/health || true'
 	$(SSH) 'curl -s http://127.0.0.1:$(PROXY_PORT)/health || true'
 
-# ====== Full deployment helpers ======
-.PHONY: run_all
-run_all: run_frontend backend_up
-	@echo "Deploy all done: Frontend deployed + Backend (local) up."
-
-.PHONY: deploy_all
-deploy_all_remote: deploy_frontend deploy_backend
-	@echo "Deploy all done: Frontend deployed + Backend (remote NAS) up."

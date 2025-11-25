@@ -178,6 +178,7 @@
 
 
 <style lang="sass" scoped>
+
 .home
  font-family: Helvetica Neue,Helvetica,Arial,sans-serif !important
  hyphens: auto

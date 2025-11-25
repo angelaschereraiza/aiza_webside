@@ -202,7 +202,6 @@ onMounted(() => {
   padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
   overflow-y: auto;        
   height: calc(100vh - 345px);
 }

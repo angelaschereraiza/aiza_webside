@@ -4,16 +4,16 @@
       <img src="@/assets/hexenhut.webp" alt="Hexenhut" class="icon-hexenhut" />
       Qwendoline - AI
     </h1>
-    <v-card class="chat-card" elevation="2">
-      <div class="chat-window">
-        <div v-for="(m,i) in messages" :key="i" class="message-row" :class="m.role">
-          <pre class="pre" :class="m.role">{{ m.content }}</pre>
+    <div class="chat-layout">
+      <v-card class="chat-card" elevation="2">
+        <div class="chat-window">
+          <div v-for="(m,i) in messages" :key="i" class="message-row" :class="m.role">
+            <pre class="pre" :class="m.role">{{ m.content }}</pre>
+          </div>
+          <div v-if="loading" class="loading-text">...generate response</div>
         </div>
-        <div v-if="loading" class="loading-text">...generate response</div>
-      </div>
-
-      <v-divider />
-
+        <v-divider />
+      </v-card>
       <div class="input-area">
         <v-textarea v-model="input" label="Ask anything" rows="3" auto-grow variant="outlined" rounded-lg class="input-field" @keydown.enter.exact.prevent="send">
           <template #append-inner><v-icon class="cursor-pointer" @click.stop="openFileDialog" :disabled="loading" title="Upload images">mdi-image-plus</v-icon></template>
@@ -24,14 +24,13 @@
           <div class="send-button-container"><v-btn :loading="loading" color="primary" @click="send">Send</v-btn></div>
         </div>
       </div>
-    </v-card>
+    </div>
   </v-container>
 </template>
 
 <script setup>
 import { ref, nextTick, onMounted } from 'vue'
 
-const API_BASE = '/ai-api'
 const input = ref('')
 const messages = ref([])
 const loading = ref(false)
@@ -70,8 +69,8 @@ function clearAllImages () {
 
 function scrollDown() {
   nextTick(() => {
-    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
-  });
+    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })
+  })
 }
 
 function fileToDataUrl(file){
@@ -83,62 +82,69 @@ function fileToDataUrl(file){
   });
 }
 
-async function send(){
-  if(!input.value.trim() && images.value.length===0) return;
+async function send() {
+  if(!input.value.trim() && images.value.length === 0) return;
 
   messages.value.push({
-    role:'user',
+    role: 'user',
     content: input.value || '(images)',
     images: images.value.map(i => i.url)
   });
 
   scrollDown();
-  loading.value=true;
+  loading.value = true;
 
-  try{
-    const encoded = await Promise.all(
-      images.value.map(i => fileToDataUrl(i.file))
-    );
+  try {
+    const encoded = await Promise.all(images.value.map(i => fileToDataUrl(i.file)));
 
     const payload = {
-      messages: [
-        { role: "system", content: "You are Qwendoline, a helpful AI assistant." },
-        ...messages.value.map(m => ({
-          role: m.role,
-          content: m.content,
-          images: m.images || []
-        })),
-        {
-          role: "user",
-          content: input.value,
-          images: encoded
-        }
-      ],
-      max_tokens: 1024
+      model: "stablelm-zephyr:3b",
+      prompt: input.value,
+      max_tokens: 1024,
+      images: encoded.length ? encoded : undefined
     };
 
-    input.value=''; 
+    input.value = '';
     clearAllImages();
 
-    const r = await fetch(`${API_BASE}/chat`,{
-      method:'POST',
-      headers:{ 'Content-Type':'application/json' },
+    const r = await fetch('http://127.0.0.1:11434/api/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
 
-    if(r.ok){
-      const data = await r.json().catch(()=>({}));
-      messages.value.push({ role:'assistant', content: data?.reply ?? 'Error: Empty response from server (reply missing).', images: data?.images ?? null });
-    }else{
-      const maybeJson = await r.text();
-      let detail = maybeJson;
-      try{ detail = JSON.stringify(JSON.parse(maybeJson), null, 2); }catch{}
-      messages.value.push({ role:'assistant', content:`Error: HTTP ${r.status} ${r.statusText}\n${detail}` });
+    if (!r.ok) {
+      const errText = await r.text();
+      messages.value.push({ role: 'assistant', content: `Error: HTTP ${r.status}\n${errText}` });
+      return;
     }
-  }catch(e){
-    messages.value.push({ role:'assistant', content:`Error: ${e.message || String(e)}` });
-  }finally{
-    loading.value=false; 
+
+    const reader = r.body.getReader();
+    let done = false;
+    let responseText = '';
+
+    while (!done) {
+      const { value, done: streamDone } = await reader.read();
+      done = streamDone;
+      if (value) {
+        const chunk = new TextDecoder().decode(value);
+        const lines = chunk.split(/\r?\n/);
+        for (const line of lines) {
+          if (!line.trim()) continue;
+          try {
+            const obj = JSON.parse(line);
+            if (obj.response) responseText += obj.response;
+          } catch (e) {}
+        }
+      }
+    }
+
+    messages.value.push({ role: 'assistant', content: responseText });
+
+  } catch(e) {
+    messages.value.push({ role: 'assistant', content: `Error: ${e.message || String(e)}` });
+  } finally {
+    loading.value = false;
     scrollDown();
   }
 }
@@ -149,7 +155,6 @@ onMounted(() => {
     content: "Hi! I'm Qwendoline, your code assistant. How can I help you?"
   })
 })
-
 </script>
 
 <style scoped>
@@ -158,7 +163,7 @@ onMounted(() => {
   max-width: 100%;
   background: #000000;
   min-height: 100vh;
-  padding: 36px;
+  padding: 24px;
 }
 
 .title {
@@ -181,27 +186,42 @@ onMounted(() => {
   display: inline-block;
 }
 
+.chat-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
 .chat-card {
   background-color: #1a1a1a;
   color: #ffffff;
-  overflow: visible;
 }
 
 .chat-window {
   padding: 16px;
-  padding-bottom: 140px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  overflow-y: auto;        
+  height: calc(100vh - 345px);
+}
+
+.app-container {
+  scrollbar-width: thin;
+  scrollbar-color: #000 #1a1a1a;
 }
 
 .input-area {
-  position: sticky;
+  position: fixed;
   bottom: 0;
+  left: 24px;
+  width: calc(100% - 48px);
   z-index: 20;
   background: #1a1a1a;
   padding: 16px;
-  box-shadow: 0 -8px 16px rgba(0,0,0,.35);
+  border-radius: 4px;
+  margin-bottom: 24px;
 }
 
 .send-button-container {
@@ -225,7 +245,6 @@ onMounted(() => {
 
 .pre {
   white-space: pre-wrap;
-  overflow: auto;
   tab-size: 2;
   direction: ltr;
   unicode-bidi: plaintext;
@@ -266,7 +285,6 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 8px;
 }
 
 .thumbs {
@@ -280,7 +298,6 @@ onMounted(() => {
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  overflow: hidden;
   background: #2a2a2a;
 }
 

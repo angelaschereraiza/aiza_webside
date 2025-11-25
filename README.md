@@ -1,90 +1,89 @@
-# Aiza Webside
+# Aiza Website
 
-Aiza Webside is a project with a **static web frontend** (with AI chat) and a **FastAPI backend** that communicates with an Ollama server for AI responses.
+**Aiza Website** is a project with a **static web frontend** including AI chat.
 
 ---
 
 ## Features
 
 ### Frontend
-- **Vue 3** + **Vuetify 3** for a modern UI
-- **AI Chat Page** with:
-  - User messages aligned to the right
-  - AI responses aligned to the left
-  - Automatic scrolling
-  - Dynamic input box with rounded corners
-- **Home Page** with:
-  - Multi-language support (English/German)
-  - Company info, technologies, and contact details
-  - Responsive design for mobile and desktop
 
-### Backend
-- **FastAPI** with CORS setup for `https://aiza.ch` & `localhost`
-- Rate limiting (max. 60 requests per minute per IP)
-- `/chat` endpoint calling the Ollama API (`/api/chat`)
-- Model and Ollama URL configurable via environment variables:
-  ```bash
-  OLLAMA_BASE=http://127.0.0.1:11434/api
-  MODEL=llama2
-  ```
+* **Vue 3** + **Vuetify 3** for a modern UI design
+* **Home Page**:
+
+  * Multi-language support (English / German)
+  * Company information, technologies, and contact details
+  * Responsive design for mobile and desktop
+* **AI Chat Page**:
+
+  * User messages aligned to the right
+  * AI responses aligned to the left
+  * Automatic scrolling
+  * Dynamic input box with rounded corners
 
 ---
 
 ## Requirements
 
+* **Ollama Server** (local or remote)
 - **Node.js** ≥ 20.19 or 22.x  
-- **Python** ≥ 3.10  
-- **Ollama Server** with OpenAI-compatible API running at `OLLAMA_BASE`
 
 ---
 
 ## Setup & Start
 
-### 1. Start the Backend
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate
-pip install fastapi uvicorn httpx
-uvicorn main:app --reload --port 5000
-```
+### 1. Start Frontend
 
-The backend will be running at `http://127.0.0.1:5000`.
-
----
-
-### 2. Start the Frontend
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-The frontend will be available at `http://localhost:3000`.
+The frontend is available at `http://localhost:5173`.
 
 ---
 
-## Environment Variables
+### 2. Set up OLLAMA Server on Linux
 
-| Variable        | Description                          | Default                         |
-|------------------|--------------------------------------|---------------------------------|
-| `OLLAMA_BASE`     | URL to the Ollama server             | `http://127.0.0.1:11434/api`     |
-| `MODEL`           | Model name for chat responses        | `llama2`                         |
+1. **Download Ollama**
+
+```bash
+curl -LO https://ollama.com/download/linux
+```
+
+2. **Install**
+
+```bash
+sudo dpkg -i ollama_<version>_amd64.deb
+```
+
+3. **Start the server**
+
+```bash
+ollama server start
+```
+
+4. **Check server status**
+
+```bash
+ollama status
+```
+
+> Note: The server runs by default on `http://localhost:11434`. Make sure this port is accessible for the frontend.
 
 ---
 
 ## Routes
 
-| Route        | Description                       |
-|---------------|-----------------------------------|
-| `/`           | Home page with company info       |
-| `/ai`         | AI Chat with Qwendoline           |
-| `/chat` (API) | POST endpoint for AI responses    |
+| Route | Description                        |
+| ----- | ---------------------------------- |
+| `/`   | Home page with company information |
+| `/ai` | AI Chat with Qwendoline            |
 
 ---
 
 ## Tech Stack
 
-- **Frontend:** Vue 3, Vuetify 3, Vite  
-- **Backend:** FastAPI, Python 3  
-- **AI:** Ollama with OpenAI-compatible API format  
+* **Frontend:** Vue 3, Vuetify 3, Vite
+* **AI:** Ollama

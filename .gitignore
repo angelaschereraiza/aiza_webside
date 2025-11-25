@@ -1,19 +1,2 @@
-# Node/Vite
 node_modules/
 dist/
-
-# Python
-.venv/
-__pycache__/
-*.pyc
-
-# Docker
-*.log
-
-# Env / Secrets
-.env
-.env.*.local
-
-# Models (NIEMALS ins Repo)
-models/
-*.gguf

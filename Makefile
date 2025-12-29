@@ -1,10 +1,10 @@
-.PHONY: deploy_test
-deploy_test:
-	npm run build
-	rsync -av --delete dist/ aiza.ch:test/htdocs/
+.PHONY: deploy deploy_test serve
 
-.PHONY: deploy
 deploy:
-	npm run build
-	rsync -av --delete dist/ aiza.ch:_/htdocs/
+	rsync -av --delete --exclude '.git' -e "ssh -p 17022" . aiza.ch:test/htdocs/
 
+deploy_test:
+	rsync -av --delete --exclude '.git' -e "ssh -p 17022" . aiza.ch:test/htdocs/
+
+serve:
+	browser-sync start --server --files "*.html" "*.css" "*.js" "images/*"

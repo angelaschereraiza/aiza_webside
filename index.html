@@ -5,64 +5,72 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Aiza GmbH | Consulting, Architecture & Software Development</title>
 
-  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/images/favicon.ico" sizes="any" />
+  <link rel="alternate" hreflang="de-CH" href="https://www.aiza.ch/" />
+  <link rel="alternate" hreflang="en"    href="https://www.aiza.ch/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.aiza.ch/" />
   <link rel="canonical" href="https://aiza.ch/" />
+
+  <!-- SEO -->
   <meta name="robots" content="index,follow" />
-  <meta name="description" content="Aiza GmbH (Zollikofen bei Bern): Consulting, Architektur & Entwicklung von Webapplikationen und Cloud-/Kubernetes-Lösungen auf Open-Source-Basis. Golang, C#, Python, JavaScript." />
-  <meta name="keywords" content="Aiza GmbH, Softwareentwicklung Bern, Zollikofen, Consulting, Golang, C#, Python, JavaScript, Kubernetes, LLM Infrastruktur, Architektur" />
+  <meta name="description" content="Aiza GmbH (Zollikofen bei Bern): Consulting, Architektur & Entwicklung von Webapplikationen und Cloud und Kubernetes Lösungen auf Open Source Basis. Golang, C#, Python, JavaScript, TypeScript." />
+  <meta name="keywords" content="Aiza GmbH, Softwareentwicklung Bern, Zollikofen, Consulting, Golang, C#, Python, JavaScript, TypeScript, Kubernetes, LLM Infrastruktur, Architektur" />
   <meta name="theme-color" content="#0b1020" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Aiza GmbH | Consulting, Architecture & Software Development" />
-  <meta property="og:description" content="Consulting, Architektur & Entwicklung. Golang, C#, Python, JavaScript. Kubernetes & LLM Infrastruktur." />
+  <meta property="og:description" content="Consulting, Architektur und Entwicklung. Golang, C#, Python, JavaScript, TypeScript. Kubernetes und LLM Infrastruktur." />
   <meta property="og:url" content="https://aiza.ch/" />
   <meta property="og:image" content="https://aiza.ch/images/social.jpg" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Aiza GmbH",
-    "url":"https://aiza.ch/",
-    "logo":"https://aiza.ch/images/aiza_logo.png",
-    "email":"mailto:angela.scherer@aiza.ch",
-    "telephone":"+41 79 197 21 53",
-    "address":{
-      "@type":"PostalAddress",
-      "streetAddress":"Bernstrasse 159",
-      "postalCode":"3052",
-      "addressLocality":"Zollikofen",
-      "addressCountry":"CH"
-    },
-    "founder":{
-      "@type":"Person",
-      "name":"Angela Scherer"
-    },
-    "sameAs":[
-      "https://www.linkedin.com/company/aiza-gmbh",
-      "https://www.xing.com/pages/aiza-gmbh"
-    ]
-  }
+    {
+      "@context":"https://schema.org",
+      "@type":"Organization",
+      "name":"Aiza GmbH",
+      "url":"https://aiza.ch/",
+      "logo":"https://aiza.ch/images/aiza_logo.png",
+      "email":"mailto:angela.scherer@aiza.ch",
+      "telephone":"+41 79 197 21 53",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"Bernstrasse 159",
+        "postalCode":"3052",
+        "addressLocality":"Zollikofen",
+        "addressCountry":"CH"
+      },
+      "founder":{
+        "@type":"Person",
+        "name":"Angela Scherer"
+      },
+      "sameAs":[
+        "https://www.linkedin.com/company/aiza-gmbh",
+        "https://www.xing.com/pages/aiza-gmbh"
+      ]
+    }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
 
 <body>
-  <a class="skip-link" href="#main" data-i18n="skip">Zum Inhalt springen</a>
-
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Aiza GmbH Home">
         <span class="brand-badge" aria-hidden="true">
-            <img src="images/aiza_logo.png" alt="Aiza GmbH Logo" class="brand-logo" data-light="images/aiza_logo.png" data-dark="images/aiza_logo_border.png"/>
+          <img
+            src="images/aiza_logo.png"
+            alt="Aiza GmbH Logo"
+            class="brand-logo"
+            data-light="images/aiza_logo.png"
+            data-dark="images/aiza_logo_border.png"
+          />
         </span>
       </a>
 
@@ -85,40 +93,44 @@
         </button>
 
         <button class="hamburger" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
-          <span></span><span></span><span></span>
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
         </button>
       </div>
     </div>
-
-    <nav id="mobileMenu" class="nav-mobile container" aria-label="Mobile navigation" hidden aria-hidden="true">
-      <a href="#services" data-i18n="nav.services">Services</a>
-      <a href="#stack" data-i18n="nav.stack">Technologies</a>
-      <a href="#about" data-i18n="nav.about">About</a>
-      <a href="#contact" data-i18n="nav.contact">Contact</a>
-
-      <div class="mobile-row">
-        <div class="segmented" role="group" aria-label="Language">
-          <button type="button" class="seg-btn" data-lang="de">DE</button>
-          <button type="button" class="seg-btn" data-lang="en">EN</button>
-        </div>
-
-        <button type="button" class="mode-toggle mode-toggle-compact" data-mode-toggle aria-label="Toggle theme">
-          <span class="mode-icon" aria-hidden="true">☾</span>
-          <span class="mode-text" data-i18n="theme.dark">Dark</span>
-        </button>
-      </div>
-    </nav>
   </header>
+
+  <div id="mobileMenu" class="mobile-menu" hidden aria-hidden="true">
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="#services" data-i18n="nav.services">Services</a>
+    <a href="#stack" data-i18n="nav.stack">Technologies</a>
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
+
+    <div class="mobile-row">
+      <div class="segmented" role="group" aria-label="Language">
+        <button type="button" class="seg-btn" data-lang="de">DE</button>
+        <button type="button" class="seg-btn" data-lang="en">EN</button>
+      </div>
+
+      <button type="button" class="mode-toggle mode-toggle-compact" data-mode-toggle aria-label="Toggle theme">
+        <span class="mode-icon" aria-hidden="true">☾</span>
+        <span class="mode-text" data-i18n="theme.dark">Dark</span>
+      </button>
+    </div>
+  </nav>
+</div>
 
   <main id="main">
     <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="kicker" data-i18n="hero.kicker">Aiza GmbH · Zollikofen (Bern)</p>
+          <p class="kicker" data-i18n="hero.kicker">Aiza GmbH, Zollikofen bei Bern</p>
           <h1 data-i18n="hero.title">Consulting, Architecture & Software Development</h1>
           <p class="lead" data-i18n="hero.lead">
-            Wir entwickeln massgeschneiderte Webapplikationen und Cloud-/Kubernetes-Lösungen für Unternehmen und Institutionen – modern, robust und wartbar.
+            Wir entwickeln massgeschneiderte Webapplikationen sowie Cloud und Kubernetes Lösungen für Unternehmen und Institutionen auf Basis von Open-Source-Software.
           </p>
 
           <div class="cta-row">
@@ -131,6 +143,7 @@
             <span class="badge">C#</span>
             <span class="badge">Python</span>
             <span class="badge">JavaScript</span>
+            <span class="badge">TypeScript</span>
             <span class="badge">Kubernetes</span>
             <span class="badge">Azure</span>
           </div>
@@ -140,15 +153,11 @@
           <div class="hero-card-inner">
             <h2 class="card-title" data-i18n="hero.cardTitle">Schwerpunkte</h2>
             <ul class="checklist">
-              <li data-i18n="hero.b1">Architektur & Umsetzung von Web- und Cloud-Lösungen</li>
-              <li data-i18n="hero.b2">Kubernetes Setup, Betrieb, Upgrades</li>
-              <li data-i18n="hero.b3">Bugfixing & Stabilisierung bestehender Systeme</li>
-              <li data-i18n="hero.b4">LLM Infrastruktur & Data Training (Use-Case-orientiert)</li>
+              <li data-i18n="hero.b1">Architektur und Umsetzung von Web und Cloud Lösungen</li>
+              <li data-i18n="hero.b2">Kubernetes Setup, Betrieb und Upgrades</li>
+              <li data-i18n="hero.b3">Bugfixing und Stabilisierung bestehender Systeme</li>
+              <li data-i18n="hero.b4">LLM Infrastruktur und Data Training, use case orientiert</li>
             </ul>
-
-            <div class="note">
-              <span class="mono" data-i18n="hero.note">Open-Source-first · Quality-focused · Pragmatic delivery</span>
-            </div>
           </div>
         </div>
       </div>
@@ -161,67 +170,66 @@
       <div class="container">
         <div class="section-head">
           <h2 data-i18n="services.title">Services</h2>
-          <p data-i18n="services.subtitle">Klar definierte Leistungen – vom Konzept bis zum produktiven Betrieb.</p>
+          <p data-i18n="services.subtitle">Klar definierte Leistungen, vom Konzept bis zum produktiven Betrieb.</p>
         </div>
 
         <div class="grid cards">
           <article class="card">
-            <h3 data-i18n="services.s1.title">Consulting, Architektur & Entwicklung</h3>
-            <p data-i18n="services.s1.text">Golang, C#, Python und JavaScript – pragmatisch, testbar, dokumentiert.</p>
+            <h3 data-i18n="services.s1.title">Consulting, Architektur und Entwicklung</h3>
+            <p data-i18n="services.s1.text">Golang, C#, Python, JavaScript und TypeScript. Pragmatic, testbar und dokumentiert.</p>
             <ul class="mini">
-              <li data-i18n="services.s1.b1">Systemdesign & API-Schnittstellen</li>
-              <li data-i18n="services.s1.b2">Code Reviews & Quality Gates</li>
+              <li data-i18n="services.s1.b1">Systemdesign und API Schnittstellen</li>
+              <li data-i18n="services.s1.b2">Code Reviews und Quality Gates</li>
               <li data-i18n="services.s1.b3">Modernisierung bestehender Anwendungen</li>
             </ul>
           </article>
 
           <article class="card">
-            <h3 data-i18n="services.s2.title">Bug Fixing & Stabilisierung</h3>
-            <p data-i18n="services.s2.text">Gezielte Analyse, reproduzierbare Fixes und nachhaltige Verbesserungen.</p>
+            <h3 data-i18n="services.s2.title">Bug Fixing und Stabilisierung</h3>
+            <p data-i18n="services.s2.text">Gezielte Analyse, reproduzierbare Fixes und Verbesserungen, die bleiben.</p>
             <ul class="mini">
-              <li data-i18n="services.s2.b1">Debugging & Root-Cause Analysis</li>
-              <li data-i18n="services.s2.b2">Performance & Memory Profiling</li>
-              <li data-i18n="services.s2.b3">Testabdeckung & Regression Prevention</li>
+              <li data-i18n="services.s2.b1">Debugging und Root Cause Analysis</li>
+              <li data-i18n="services.s2.b2">Performance und Memory Profiling</li>
+              <li data-i18n="services.s2.b3">Testabdeckung und Regression Prevention</li>
             </ul>
           </article>
 
           <article class="card">
-            <h3 data-i18n="services.s3.title">Kubernetes Setup & Updates</h3>
-            <p data-i18n="services.s3.text">Von der ersten Cluster-Einführung bis zu sicheren Upgrades.</p>
+            <h3 data-i18n="services.s3.title">Kubernetes Setup und Updates</h3>
+            <p data-i18n="services.s3.text">Von der ersten Cluster Einführung bis zu sicheren Upgrades.</p>
             <ul class="mini">
-              <li data-i18n="services.s3.b1">Cluster Setup (Cloud/On-Prem)</li>
-              <li data-i18n="services.s3.b2">Upgrades, Hardening, Observability</li>
-              <li data-i18n="services.s3.b3">CI/CD & GitOps Patterns</li>
+              <li data-i18n="services.s3.b1">Cluster Setup, Cloud oder On Prem</li>
+              <li data-i18n="services.s3.b2">Upgrades, Hardening und Observability</li>
+              <li data-i18n="services.s3.b3">CI CD und GitOps Patterns</li>
             </ul>
           </article>
 
           <article class="card">
-            <h3 data-i18n="services.s4.title">LLM Infrastruktur & Data Training</h3>
-            <p data-i18n="services.s4.text">Aufbau von Infrastruktur und Datenpipelines für LLM-Use-Cases.</p>
+            <h3 data-i18n="services.s4.title">LLM Infrastruktur und Data Training</h3>
+            <p data-i18n="services.s4.text">Aufbau von Infrastruktur und Datenpipelines für LLM Use Cases.</p>
             <ul class="mini">
-              <li data-i18n="services.s4.b1">Deployment Patterns & Monitoring</li>
-              <li data-i18n="services.s4.b2">Data Pipelines & Governance</li>
-              <li data-i18n="services.s4.b3">Evaluierung & Qualitätssicherung</li>
+              <li data-i18n="services.s4.b1">Deployment Patterns und Monitoring</li>
+              <li data-i18n="services.s4.b2">Data Pipelines und Governance</li>
+              <li data-i18n="services.s4.b3">Evaluierung und Qualitätssicherung</li>
             </ul>
           </article>
 
           <article class="card">
-            <h3 data-i18n="services.s5.title">Workshops & Training</h3>
-            <p data-i18n="services.s5.text">Kubernetes Grundlagen sowie CRDs/Operatoren – hands-on mit Best Practices.</p>
+            <h3 data-i18n="services.s5.title">Workshops und Training</h3>
+            <p data-i18n="services.s5.text">Kubernetes Grundlagen sowie CRDs und Operatoren, hands on mit Best Practices.</p>
             <ul class="mini">
-              <li data-i18n="services.s5.b1">Kubernetes Basics & Operations</li>
-              <li data-i18n="services.s5.b2">CRDs & Operator Development (Golang)</li>
-              <li data-i18n="services.s5.b3">Real-world Übungen & Templates</li>
+              <li data-i18n="services.s5.b1">Kubernetes Basics und Operations</li>
+              <li data-i18n="services.s5.b2">CRDs und Operator Development, Golang</li>
+              <li data-i18n="services.s5.b3">Praxisübungen und Templates</li>
             </ul>
           </article>
 
           <article class="card card-accent">
             <h3 data-i18n="services.s6.title">Zusammenarbeit</h3>
-            <p data-i18n="services.s6.text">Kurzfristige Unterstützung oder langfristige Partnerschaft – transparent und zielorientiert.</p>
+            <p data-i18n="services.s6.text">Kurzfristige Unterstützung oder langfristige Partnerschaft. Transparent und zielorientiert.</p>
             <div class="pill-row">
               <span class="pill" data-i18n="services.s6.p1">Remote / On-Site (CH)</span>
               <span class="pill" data-i18n="services.s6.p2">Projekt / Consulting</span>
-              <span class="pill" data-i18n="services.s6.p3">Start small, scale fast</span>
             </div>
           </article>
         </div>
@@ -244,6 +252,7 @@
               <span class="chip">C#</span>
               <span class="chip">Python</span>
               <span class="chip">JavaScript</span>
+              <span class="chip">TypeScript</span>
             </div>
           </div>
 
@@ -253,8 +262,7 @@
               <span class="chip">HTML/CSS</span>
               <span class="chip">Vue.js</span>
               <span class="chip">Angular</span>
-              <span class="chip">ASP.NET</span>
-              <span class="chip">RazorPage.NET</span>
+              <span class="chip">Razor Pages</span>
             </div>
           </div>
 
@@ -271,9 +279,9 @@
           <div class="stack-card">
             <h3 data-i18n="stack.principles">Principles</h3>
             <ul class="mini">
-              <li data-i18n="stack.p1">Security & Reliability by design</li>
-              <li data-i18n="stack.p2">Observability & clean operations</li>
-              <li data-i18n="stack.p3">Documentation & knowledge transfer</li>
+              <li data-i18n="stack.p1">Security und Reliability by design</li>
+              <li data-i18n="stack.p2">Observability und saubere Operations</li>
+              <li data-i18n="stack.p3">Dokumentation und Wissenstransfer</li>
             </ul>
           </div>
         </div>
@@ -282,14 +290,16 @@
 
     <!-- ABOUT -->
     <section id="about" class="section">
+      <div class="section-head">
+        <h2 data-i18n="about.title">Über uns</h2>
+      </div>
       <div class="container about-grid">
         <div class="about-card">
-          <h2 data-i18n="about.title">Über Uns</h2>
           <p data-i18n="about.text1">
-            Aiza GmbH mit Sitz in Zollikofen bei Bern entwickelt massgeschneiderte, moderne Webapplikationen und Plattform-Lösungen.
+            Aiza GmbH mit Sitz in Zollikofen bei Bern entwickelt massgeschneiderte, moderne Webapplikationen und Plattformlösungen. Wir bieten Beratung sowie Entwicklung, Implementierung und Schulung rund um Softwarelösungen. Dazu gehört auch der Aufbau und das Training unternehmensinterner AI Systeme auf Basis firmeneigener Daten. Unsere Arbeit basiert auf Open Source Technologien und richtet sich an Unternehmen und Institutionen.
           </p>
           <p data-i18n="about.text2">
-            Fokus: robuste Architektur, saubere Umsetzung und nachhaltiger Betrieb – damit Systeme langfristig stabil bleiben.
+            Der Fokus liegt auf robuster Architektur, sauberer Umsetzung und einem nachhaltigen Betrieb, damit Systeme langfristig stabil, sicher und wartbar bleiben.
           </p>
         </div>
 
@@ -303,31 +313,24 @@
             </div>
           </div>
 
-          <div class="profile-cols">
-            <div>
-              <h4 data-i18n="about.certs">Zertifizierungen</h4>
-              <ul class="mini">
-                <li>Certified Kubernetes Administrator (CKA)</li>
-                <li>ScrumMaster (CSM)</li>
-                <li>ITIL Foundation V3</li>
-                <li>Business English Cambridge Preliminary</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 data-i18n="about.links">Links</h4>
-              <div class="social-row">
-                <a class="social" href="https://www.linkedin.com/in/angela-scherer-2a2979136" target="_blank" rel="noopener" aria-label="LinkedIn (Angela Scherer)">
-                  <span class="social-dot" aria-hidden="true"></span>
-                  LinkedIn
-                </a>
-                <a class="social" href="https://www.xing.com/profile/Angela_Scherer3/cv" target="_blank" rel="noopener" aria-label="Xing (Angela Scherer)">
-                  <span class="social-dot" aria-hidden="true"></span>
-                  Xing
-                </a>
-              </div>
-            </div>
-          </div>
+          <div>
+            <h4 data-i18n="about.certs">Zertifizierungen</h4>
+            <ul class="mini">
+              <li>Certified Kubernetes Administrator (CKA)</li>
+              <li>Talos Linux Certified Administrator</li>
+              <li>ScrumMaster (CSM)</li>
+              <li>ITIL Foundation V3</li>
+              <li>Business English Cambridge Preliminary</li>
+            </ul>
+          </div> 
+          <div class="icon-row" aria-label="Social links">
+            <a class="icon-link" href="https://www.linkedin.com/in/angela-scherer-2a2979136" target="_blank" rel="noopener" aria-label="LinkedIn (Angela Scherer)">
+              <img src="images/icon_linkedin.png" alt="LinkedIn Icon" width="28" height="28" loading="lazy">
+            </a>
+            <a class="icon-link" href="https://www.xing.com/profile/Angela_Scherer3/cv" target="_blank" rel="noopener" aria-label="Xing (Angela Scherer)">
+              <img src="images/icon_xing.png" alt="Xing Icon" width="28" height="28" loading="lazy">
+            </a>
+          </div>           
         </div>
       </div>
     </section>
@@ -342,39 +345,34 @@
 
         <div class="grid contact-grid">
           <div class="contact-card">
-            <h3>Aiza GmbH</h3>
-            <p>Bernstrasse 159<br/>3052 Zollikofen<br/>Schweiz</p>
+            <h3 data-i18n="contact.address">Adresse</h3>
+            <p>Aiza GmbH<br/>Bernstrasse 159<br/>3052 Zollikofen<br/>Schweiz</p>
+          </div>
+
+          <div class="contact-card">
+            <h3 data-i18n="contact.mail">E-Mail, Telefon & Links</h3>
             <p class="contact-links">
               <a href="mailto:angela.scherer@aiza.ch">angela.scherer@aiza.ch</a><br/>
               <a href="tel:+41791972153">+41 79 197 21 53</a>
             </p>
-          </div>
-
-          <div class="contact-card">
-            <h3 data-i18n="contact.companyLinks">Company Links</h3>
-            <div class="social-row">
-              <a class="social" href="https://www.linkedin.com/company/aiza-gmbh" target="_blank" rel="noopener">
-                <span class="social-dot" aria-hidden="true"></span>
-                LinkedIn
+            <div class="icon-row" aria-label="Company social links">
+              <a class="icon-link" href="https://www.linkedin.com/company/aiza-gmbh" target="_blank" rel="noopener" aria-label="LinkedIn (Aiza GmbH)">
+                <img src="images/icon_linkedin.png" alt="LinkedIn Icon" width="28" height="28" loading="lazy">
               </a>
-              <a class="social" href="https://www.xing.com/pages/aiza-gmbh" target="_blank" rel="noopener">
-                <span class="social-dot" aria-hidden="true"></span>
-                Xing
+              <a class="icon-link" href="https://www.xing.com/pages/aiza-gmbh" target="_blank" rel="noopener" aria-label="Xing (Aiza GmbH)">
+                <img src="images/icon_xing.png" alt="Xing Icon" width="28" height="28" loading="lazy">
               </a>
             </div>
-            <p class="small" data-i18n="contact.note">
-              Auf Wunsch: Referenzen/Projekte gerne im persönlichen Gespräch.
-            </p>
           </div>
 
           <div class="contact-card contact-card-accent">
             <h3 data-i18n="contact.quickStart">Quick Start</h3>
             <ol class="steps">
-              <li data-i18n="contact.step1">Kurzbeschrieb (Ziel, Kontext, Deadline)</li>
-              <li data-i18n="contact.step2">Technischer Check & Vorschlag (Scope/Optionen)</li>
+              <li data-i18n="contact.step1">Kurzbeschrieb mit Ziel, Kontext und Deadline</li>
+              <li data-i18n="contact.step2">Technischer Check und Vorschlag mit Scope und Optionen</li>
               <li data-i18n="contact.step3">Umsetzung mit klaren Deliverables</li>
             </ol>
-            <a class="btn primary wide" href="mailto:angela.scherer@aiza.ch?subject=Aiza%20Anfrage" data-i18n="contact.mailCta">E-Mail senden</a>
+            <a class="btn primary wide" href="mailto:angela.scherer@aiza.ch?subject=Aiza%20Anfrage" data-i18n="contact.mailCta">E Mail senden</a>
           </div>
         </div>
       </div>
@@ -386,7 +384,6 @@
         <div class="footer-left">
           <p>©<span id="year"></span> Aiza GmbH</p>
         </div>
-
         <div class="footer-right">
           <a href="#" class="footer-link" data-doc="imprint" data-i18n="footer.imprint">Impressum</a>
           <a href="#" class="footer-link" data-doc="privacy" data-i18n="footer.privacy">Datenschutzerklärung</a>
@@ -398,13 +395,11 @@
   <!-- LEGAL MODAL -->
   <div id="legal-modal" class="modal" hidden aria-hidden="true">
     <div class="modal-backdrop" data-close="true"></div>
-
     <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <div class="modal-header">
         <h2 id="modal-title" class="modal-title"></h2>
         <button type="button" class="modal-close" aria-label="Close" data-close="true">&times;</button>
       </div>
-
       <div id="modal-content" class="modal-content"></div>
     </div>
   </div>

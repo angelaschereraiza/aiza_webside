@@ -7,110 +7,96 @@ const I18N = {
     skip: 'Zum Inhalt springen',
     nav: { services: 'Services', stack: 'Technologien', about: 'Über uns', contact: 'Kontakt' },
     theme: { dark: 'Dark', light: 'Light' },
-
     hero: {
-      kicker: 'Aiza GmbH · Zollikofen (Bern)',
-      title: 'Consulting, Architektur & Software Development',
-      lead:
-        'Wir entwickeln massgeschneiderte Webapplikationen und Cloud-/Kubernetes-Lösungen für Unternehmen und Institutionen – modern, robust und wartbar.',
+      kicker: 'Aiza GmbH, Zollikofen bei Bern',
+      title: 'Consulting, Architektur und Software Development',
+      lead: 'Wir entwickeln massgeschneiderte Webapplikationen sowie Cloud und Kubernetes Lösungen für Unternehmen und Institutionen auf Basis von Open-Source-Software.',
       ctaPrimary: 'Kontakt aufnehmen',
       ctaSecondary: 'Services ansehen',
       cardTitle: 'Schwerpunkte',
-      b1: 'Architektur & Umsetzung von Web- und Cloud-Lösungen',
-      b2: 'Kubernetes Setup, Betrieb, Upgrades',
-      b3: 'Bugfixing & Stabilisierung bestehender Systeme',
-      b4: 'LLM Infrastruktur & Data Training (Use-Case-orientiert)',
-      note: 'Open-Source-first · Quality-focused · Pragmatic delivery'
+      b1: 'Architektur und Umsetzung von Web und Cloud Lösungen',
+      b2: 'Kubernetes Setup, Betrieb und Upgrades',
+      b3: 'Bugfixing und Stabilisierung bestehender Systeme',
+      b4: 'LLM Infrastruktur und Data Training, use case orientiert',
     },
-
     services: {
       title: 'Services',
-      subtitle: 'Klar definierte Leistungen – vom Konzept bis zum produktiven Betrieb.',
+      subtitle: 'Klar definierte Leistungen, vom Konzept bis zum produktiven Betrieb.',
       s1: {
-        title: 'Consulting, Architektur & Entwicklung',
-        text: 'Golang, C#, Python und JavaScript – pragmatisch, testbar, dokumentiert.',
-        b1: 'Systemdesign & API-Schnittstellen',
-        b2: 'Code Reviews & Quality Gates',
+        title: 'Consulting, Architektur und Entwicklung',
+        text: 'Golang, C#, Python, JavaScript und TypeScript. Pragmatic, testbar und dokumentiert.',
+        b1: 'Systemdesign und API Schnittstellen',
+        b2: 'Code Reviews und Quality Gates',
         b3: 'Modernisierung bestehender Anwendungen'
       },
       s2: {
-        title: 'Bug Fixing & Stabilisierung',
-        text: 'Gezielte Analyse, reproduzierbare Fixes und nachhaltige Verbesserungen.',
-        b1: 'Debugging & Root-Cause Analysis',
-        b2: 'Performance & Memory Profiling',
-        b3: 'Testabdeckung & Regression Prevention'
+        title: 'Bug Fixing und Stabilisierung',
+        text: 'Gezielte Analyse, reproduzierbare Fixes und Verbesserungen, die bleiben.',
+        b1: 'Debugging und Root Cause Analysis',
+        b2: 'Performance und Memory Profiling',
+        b3: 'Testabdeckung und Regression Prevention'
       },
       s3: {
-        title: 'Kubernetes Setup & Updates',
-        text: 'Von der ersten Cluster-Einführung bis zu sicheren Upgrades.',
-        b1: 'Cluster Setup (Cloud/On-Prem)',
-        b2: 'Upgrades, Hardening, Observability',
-        b3: 'CI/CD & GitOps Patterns'
+        title: 'Kubernetes Setup und Updates',
+        text: 'Von der ersten Cluster Einführung bis zu sicheren Upgrades.',
+        b1: 'Cluster Setup, Cloud oder On Prem',
+        b2: 'Upgrades, Hardening und Observability',
+        b3: 'CI CD und GitOps Patterns'
       },
       s4: {
-        title: 'LLM Infrastruktur & Data Training',
-        text: 'Aufbau von Infrastruktur und Datenpipelines für LLM-Use-Cases.',
-        b1: 'Deployment Patterns & Monitoring',
-        b2: 'Data Pipelines & Governance',
-        b3: 'Evaluierung & Qualitätssicherung'
+        title: 'LLM Infrastruktur und Data Training',
+        text: 'Aufbau von Infrastruktur und Datenpipelines für LLM Use Cases.',
+        b1: 'Deployment Patterns und Monitoring',
+        b2: 'Data Pipelines und Governance',
+        b3: 'Evaluierung und Qualitätssicherung'
       },
       s5: {
-        title: 'Workshops & Training',
-        text: 'Kubernetes Grundlagen sowie CRDs/Operatoren – hands-on mit Best Practices.',
-        b1: 'Kubernetes Basics & Operations',
-        b2: 'CRDs & Operator Development (Golang)',
-        b3: 'Real-world Übungen & Templates'
+        title: 'Workshops und Training',
+        text: 'Golang, Kubernetes Grundlagen sowie CRDs und Operatoren, hands on mit Best Practices.',
+        b1: 'Golang',
+        b2: 'Kubernetes Basics',
+        b3: 'CRDs und Operator Development in Golang'
       },
       s6: {
         title: 'Zusammenarbeit',
-        text: 'Kurzfristige Unterstützung oder langfristige Partnerschaft – transparent und zielorientiert.',
+        text: 'Kurzfristige Unterstützung oder langfristige Partnerschaft. Transparent und zielorientiert.',
         p1: 'Remote / On-Site (CH)',
         p2: 'Projekt / Consulting',
-        p3: 'Start small, scale fast'
       }
     },
-
     stack: {
       title: 'Technologien',
       subtitle: 'Ein stabiler Stack für moderne, sichere und wartbare Lösungen.',
       languages: 'Languages',
       frontend: 'Frontend',
-      cloud: 'Cloud & Platform',
+      cloud: 'Cloud und Platform',
       principles: 'Prinzipien',
-      p1: 'Security & Reliability by design',
-      p2: 'Observability & clean operations',
-      p3: 'Documentation & knowledge transfer'
+      p1: 'Security und Reliability by design',
+      p2: 'Observability und saubere Operations',
+      p3: 'Dokumentation und Wissenstransfer'
     },
-
     about: {
       title: 'Über uns',
-      text1:
-        'Aiza GmbH mit Sitz in Zollikofen bei Bern entwickelt massgeschneiderte, moderne Webapplikationen und Plattform-Lösungen auf Basis von Open Source.',
-      text2:
-        'Fokus: robuste Architektur, saubere Umsetzung und nachhaltiger Betrieb – damit Systeme langfristig stabil bleiben.',
+      text1: 'Aiza GmbH mit Sitz in Zollikofen bei Bern entwickelt massgeschneiderte, moderne Webapplikationen und Plattformlösungen. Wir bieten Beratung sowie Entwicklung, Implementierung und Schulung rund um Softwarelösungen. Dazu gehört auch der Aufbau und das Training unternehmensinterner AI Systeme auf Basis firmeneigener Daten. Unsere Arbeit basiert auf Open Source Technologien und richtet sich an Unternehmen und Institutionen.',
+      text2: 'Der Fokus liegt auf robuster Architektur, sauberer Umsetzung und einem nachhaltigen Betrieb, damit Systeme langfristig stabil, sicher und wartbar bleiben.',
       role: 'Founder & CEO',
       edu: 'Bachelor of Science in Informatik',
       certs: 'Zertifizierungen',
       links: 'Links'
     },
-
     contact: {
       title: 'Kontakt',
       subtitle: 'Haben wir Ihr Interesse geweckt? Schreiben Sie uns oder rufen Sie an.',
-      companyLinks: 'Unternehmens-Links',
-      note: 'Auf Wunsch: Referenzen/Projekte gerne im persönlichen Gespräch.',
+      address: 'Adresse',
+      mail: 'E-Mail, Telefon & Links',
+      note: 'Referenzen und Projekte gerne im persönlichen Gespräch.',
       quickStart: 'Quick Start',
-      step1: 'Kurzbeschrieb (Ziel, Kontext, Deadline)',
-      step2: 'Technischer Check & Vorschlag (Scope/Optionen)',
+      step1: 'Kurzbeschrieb mit Ziel, Kontext und Deadline',
+      step2: 'Technischer Check und Vorschlag mit Scope und Optionen',
       step3: 'Umsetzung mit klaren Deliverables',
-      mailCta: 'E-Mail senden'
+      mailCta: 'E Mail senden'
     },
-
-    footer: {
-      imprint: 'Impressum',
-      privacy: 'Datenschutzerklärung'
-    },
-
+    footer: { imprint: 'Impressum', privacy: 'Datenschutzerklärung' },
     legal: {
       imprintTitle: 'Impressum',
       privacyTitle: 'Datenschutzerklärung',
@@ -125,7 +111,7 @@ const I18N = {
 
         <h3>Kontakt</h3>
         <p>
-          E-Mail: <a href="mailto:angela.scherer@aiza.ch">angela.scherer@aiza.ch</a><br>
+          E Mail: <a href="mailto:angela.scherer@aiza.ch">angela.scherer@aiza.ch</a><br>
           Telefon: <a href="tel:+41791972153">+41 79 197 21 53</a>
         </p>
 
@@ -139,7 +125,7 @@ const I18N = {
         <p>
           Die Aiza GmbH übernimmt keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte.
           Haftungsansprüche gegen die Aiza GmbH wegen Schäden materieller oder immaterieller Art, welche aus dem Zugriff
-          oder der Nutzung bzw. Nichtnutzung der veröffentlichten Informationen entstanden sind, werden ausgeschlossen.
+          oder der Nutzung beziehungsweise Nichtnutzung der veröffentlichten Informationen entstanden sind, werden ausgeschlossen.
         </p>
 
         <h3>Externe Links</h3>
@@ -155,20 +141,20 @@ const I18N = {
           hat jede Person Anspruch auf Schutz ihrer Privatsphäre sowie auf Schutz vor Missbrauch ihrer persönlichen Daten.
         </p>
 
-        <h3>Server-Logfiles</h3>
+        <h3>Server Logfiles</h3>
         <p>
-          Beim Aufruf dieser Website können technisch bedingt Daten (z.B. IP-Adresse, Datum/Uhrzeit, aufgerufene Seite, User-Agent)
-          in Server-Logfiles verarbeitet werden. Diese Daten dienen ausschliesslich der Sicherstellung des Betriebs und der Sicherheit.
+          Beim Aufruf dieser Website können technisch bedingt Daten (zum Beispiel IP Adresse, Datum und Uhrzeit, aufgerufene Seite, User Agent)
+          in Server Logfiles verarbeitet werden. Diese Daten dienen ausschliesslich der Sicherstellung des Betriebs und der Sicherheit.
         </p>
 
         <h3>Kontaktaufnahme</h3>
         <p>
-          Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir die von Ihnen übermittelten Angaben zur Bearbeitung Ihrer Anfrage.
+          Wenn Sie uns per E Mail kontaktieren, verarbeiten wir die von Ihnen übermittelten Angaben zur Bearbeitung Ihrer Anfrage.
         </p>
 
-        <h3>Externe Links / Social Media</h3>
+        <h3>Externe Links und Social Media</h3>
         <p>
-          Diese Website enthält Links zu externen Anbietern (z.B. LinkedIn, Xing). Für die Datenbearbeitung nach dem Anklicken des Links
+          Diese Website enthält Links zu externen Anbietern (zum Beispiel LinkedIn, Xing). Für die Datenbearbeitung nach dem Anklicken des Links
           ist der jeweilige Anbieter verantwortlich.
         </p>
       `
@@ -179,110 +165,96 @@ const I18N = {
     skip: 'Skip to content',
     nav: { services: 'Services', stack: 'Technologies', about: 'About', contact: 'Contact' },
     theme: { dark: 'Dark', light: 'Light' },
-
     hero: {
-      kicker: 'Aiza GmbH · Zollikofen (Bern)',
-      title: 'Consulting, Architecture & Software Development',
-      lead:
-        'We build tailored web applications and cloud/Kubernetes solutions for companies and institutions — modern, robust, and maintainable.',
+      kicker: 'Aiza GmbH, Zollikofen near Bern',
+      title: 'Consulting, Architecture and Software Development',
+      lead: 'We build tailored web applications and cloud and Kubernetes solutions for companies and institutions based on open source software.',
       ctaPrimary: 'Get in touch',
       ctaSecondary: 'View services',
       cardTitle: 'Focus areas',
-      b1: 'Architecture & delivery of web and cloud solutions',
+      b1: 'Architecture and delivery of web and cloud solutions',
       b2: 'Kubernetes setup, operations and upgrades',
       b3: 'Bug fixing and stabilization of existing systems',
-      b4: 'LLM infrastructure setup & data training (use-case driven)',
-      note: 'Open-source first · Quality-focused · Pragmatic delivery'
+      b4: 'LLM infrastructure setup and data training, use case driven',
     },
-
     services: {
       title: 'Services',
-      subtitle: 'Clear offerings — from concept to production operations.',
+      subtitle: 'Clear services, from concept to operations.',
       s1: {
-        title: 'Consulting, Architecture & Development',
-        text: 'Golang, C#, Python and JavaScript — pragmatic, testable, documented.',
-        b1: 'System design & API interfaces',
-        b2: 'Code reviews & quality gates',
+        title: 'Consulting, Architecture and Development',
+        text: 'Golang, C#, Python, JavaScript und TypeScript. Pragmatic, testable, documented.',
+        b1: 'System design and API interfaces',
+        b2: 'Code reviews and quality gates',
         b3: 'Modernization of existing applications'
       },
       s2: {
-        title: 'Bug Fixing & Stabilization',
-        text: 'Targeted analysis, reproducible fixes, and sustainable improvements.',
-        b1: 'Debugging & root-cause analysis',
-        b2: 'Performance & memory profiling',
-        b3: 'Test coverage & regression prevention'
+        title: 'Bug Fixing and Stabilization',
+        text: 'Focused analysis, reproducible fixes, and improvements that last.',
+        b1: 'Debugging and root cause analysis',
+        b2: 'Performance and memory profiling',
+        b3: 'Test coverage and regression prevention'
       },
       s3: {
-        title: 'Kubernetes Setup & Updates',
+        title: 'Kubernetes Setup and Updates',
         text: 'From first cluster introduction to safe upgrades.',
-        b1: 'Cluster setup (cloud/on-prem)',
-        b2: 'Upgrades, hardening, observability',
-        b3: 'CI/CD & GitOps patterns'
+        b1: 'Cluster setup, cloud or on prem',
+        b2: 'Upgrades, hardening and observability',
+        b3: 'CI CD and GitOps patterns'
       },
       s4: {
-        title: 'LLM Infrastructure & Data Training',
+        title: 'LLM Infrastructure and Data Training',
         text: 'Infrastructure and data pipelines for LLM use cases.',
-        b1: 'Deployment patterns & monitoring',
-        b2: 'Data pipelines & governance',
-        b3: 'Evaluation & quality assurance'
+        b1: 'Deployment patterns and monitoring',
+        b2: 'Data pipelines and governance',
+        b3: 'Evaluation and quality assurance'
       },
       s5: {
-        title: 'Workshops & Training',
-        text: 'Kubernetes fundamentals and CRDs/operators — hands-on best practices.',
-        b1: 'Kubernetes basics & operations',
-        b2: 'CRDs & operator development (Golang)',
-        b3: 'Real-world exercises & templates'
+        title: 'Workshops and Training',
+        text: 'Kubernetes fundamentals and CRDs and operators, hands on with best practices.',
+        b1: 'Kubernetes basics and operations',
+        b2: 'CRDs and operator development, Golang',
+        b3: 'Real world exercises and templates'
       },
       s6: {
         title: 'Working together',
-        text: 'Short-term support or long-term partnership — transparent and outcome-driven.',
+        text: 'Short term support or long term partnership. Transparent and outcome driven.',
         p1: 'Remote / On-site (CH)',
         p2: 'Project / Consulting',
-        p3: 'Start small, scale fast'
       }
     },
-
     stack: {
       title: 'Technologies',
       subtitle: 'A stable stack for modern, secure, and maintainable solutions.',
       languages: 'Languages',
       frontend: 'Frontend',
-      cloud: 'Cloud & Platform',
+      cloud: 'Cloud and Platform',
       principles: 'Principles',
-      p1: 'Security & reliability by design',
-      p2: 'Observability & clean operations',
-      p3: 'Documentation & knowledge transfer'
+      p1: 'Security and reliability by design',
+      p2: 'Observability and clean operations',
+      p3: 'Documentation and knowledge transfer'
     },
-
     about: {
-      title: 'About Aiza',
-      text1:
-        'Aiza GmbH, based in Zollikofen near Bern, delivers tailored modern web applications and platform solutions built on open-source foundations.',
-      text2:
-        'Focus: robust architecture, clean implementation and sustainable operations — so systems remain stable long-term.',
+      title: 'About us',
+      text1: 'Aiza GmbH, based in Zollikofen near Bern, develops tailored modern web applications and platform solutions. We offer consulting as well as software development, implementation, and training. This also includes setting up and training internal AI systems using company specific data. Our work is based on open source technologies and serves companies and institutions.',
+      text2: 'The focus is on robust architecture, clean implementation, and sustainable operations to ensure systems remain stable, secure, and maintainable over time.',
       role: 'Founder & CEO',
       edu: 'Bachelor of Science in Computer Science',
       certs: 'Certifications',
       links: 'Links'
     },
-
     contact: {
       title: 'Contact',
       subtitle: 'Interested in working together? Send an email or give us a call.',
-      companyLinks: 'Company links',
-      note: 'References/projects available on request — happy to discuss.',
+      address: 'Address',
+      mail: 'Email, Telephone & Links',
+      note: 'References and projects are available on request.',
       quickStart: 'Quick start',
-      step1: 'Short brief (goal, context, deadline)',
-      step2: 'Technical check & proposal (scope/options)',
+      step1: 'Short brief with goal, context and deadline',
+      step2: 'Technical check and proposal with scope and options',
       step3: 'Delivery with clear deliverables',
       mailCta: 'Send email'
     },
-
-    footer: {
-      imprint: 'Imprint',
-      privacy: 'Privacy Policy'
-    },
-
+    footer: { imprint: 'Imprint', privacy: 'Privacy Policy' },
     legal: {
       imprintTitle: 'Imprint',
       privacyTitle: 'Privacy Policy',
@@ -315,20 +287,20 @@ const I18N = {
 
         <h3>External links</h3>
         <p>
-          Links to third-party websites are outside our responsibility. We assume no liability for their content and legality.
+          Links to third party websites are outside our responsibility. We assume no liability for their content and legality.
         </p>
       `,
       privacy_html: `
         <h3>General</h3>
         <p>
-          Based on Article 13 of the Swiss Federal Constitution and the Swiss data protection provisions (FADP/DSG),
+          Based on Article 13 of the Swiss Federal Constitution and the Swiss data protection provisions (FADP, DSG),
           every person has the right to privacy and protection against misuse of personal data.
         </p>
 
         <h3>Server logs</h3>
         <p>
-          For technical reasons, data (e.g., IP address, date/time, requested page, user-agent) may be processed in server logs
-          to ensure secure operation and system integrity.
+          For technical reasons, data (for example IP address, date and time, requested page, user agent)
+          may be processed in server logs to ensure secure operation and system integrity.
         </p>
 
         <h3>Contact</h3>
@@ -336,10 +308,10 @@ const I18N = {
           If you contact us by email, we process the data you provide solely to handle your inquiry.
         </p>
 
-        <h3>External links / Social media</h3>
+        <h3>External links and social media</h3>
         <p>
-          This website contains links to external providers (e.g., LinkedIn, Xing). After clicking a link, the respective provider
-          is responsible for data processing.
+          This website contains links to external providers (for example LinkedIn, Xing). After clicking a link,
+          the respective provider is responsible for data processing.
         </p>
       `
     }
@@ -351,7 +323,7 @@ let currentLang = 'en';
 function detectInitialLang() {
   const stored = localStorage.getItem('language');
   if (stored && SUPPORTED_LANGS.includes(stored)) return stored;
-  const browser = (navigator.language || 'en').slice(0,2);
+  const browser = (navigator.language || 'en').slice(0, 2);
   return SUPPORTED_LANGS.includes(browser) ? browser : 'en';
 }
 
@@ -366,11 +338,10 @@ function setTheme(theme) {
   localStorage.setItem('theme', theme);
 
   const isDark = theme === 'dark';
-  const iconEls = document.querySelectorAll('.mode-icon');
-  const textEls = document.querySelectorAll('.mode-text');
-
-  iconEls.forEach(el => el.textContent = isDark ? '☾' : '☀');
-  textEls.forEach(el => el.textContent = isDark ? I18N[currentLang].theme.dark : I18N[currentLang].theme.light);
+  document.querySelectorAll('.mode-icon').forEach(el => (el.textContent = isDark ? '☾' : '☀'));
+  document.querySelectorAll('.mode-text').forEach(el => {
+    el.textContent = isDark ? I18N[currentLang].theme.dark : I18N[currentLang].theme.light;
+  });
 
   const metaTheme = document.querySelector('meta[name="theme-color"]');
   if (metaTheme) metaTheme.setAttribute('content', isDark ? '#0b1020' : '#f7f8fc');
@@ -379,24 +350,20 @@ function setTheme(theme) {
 function setLanguage(lang) {
   if (!I18N[lang]) lang = 'en';
   currentLang = lang;
-
   localStorage.setItem('language', lang);
   document.documentElement.setAttribute('lang', lang);
 
-  // Update all elements with data-i18n="path.to.key"
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     const value = key.split('.').reduce((acc, part) => (acc ? acc[part] : undefined), I18N[lang]);
     if (typeof value === 'string') el.textContent = value;
   });
 
-  // Update pressed state for all language buttons (desktop + mobile)
   document.querySelectorAll('.seg-btn[data-lang]').forEach(btn => {
     const pressed = btn.dataset.lang === lang;
     btn.setAttribute('aria-pressed', String(pressed));
   });
 
-  // Ensure theme toggle text reflects current language
   const theme = document.documentElement.getAttribute('data-theme') || 'dark';
   setTheme(theme);
 }
@@ -408,17 +375,24 @@ function setupMobileMenu() {
 
   const open = () => {
     menu.hidden = false;
-    menu.setAttribute('aria-hidden', 'false');
+    menu.setAttribute('aria-hidden', 'true'); // start state for transition
     hamburger.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
-    menu.querySelector('a')?.focus();
+
+    requestAnimationFrame(() => {
+      menu.setAttribute('aria-hidden', 'false');
+      menu.querySelector('a')?.focus();
+    });
   };
 
   const close = () => {
     menu.setAttribute('aria-hidden', 'true');
     hamburger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
-    setTimeout(() => { menu.hidden = true; }, 120);
+
+    window.setTimeout(() => {
+      menu.hidden = true;
+    }, 380);
   };
 
   hamburger.addEventListener('click', () => {
@@ -426,17 +400,14 @@ function setupMobileMenu() {
     expanded ? close() : open();
   });
 
-  // Close after clicking a link
   menu.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', () => close());
   });
 
-  // Close on Escape (menu only)
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') close();
   });
 
-  // Close if user clicks outside mobile menu area (optional minimal)
   document.addEventListener('click', e => {
     const expanded = hamburger.getAttribute('aria-expanded') === 'true';
     if (!expanded) return;
@@ -454,7 +425,6 @@ function setupLegalModal() {
 
   const open = (docKey) => {
     const t = I18N[currentLang]?.legal || I18N.en.legal;
-
     if (docKey === 'imprint') {
       title.textContent = t.imprintTitle;
       content.innerHTML = t.imprint_html;
@@ -462,7 +432,6 @@ function setupLegalModal() {
       title.textContent = t.privacyTitle;
       content.innerHTML = t.privacy_html;
     }
-
     modal.hidden = false;
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -491,26 +460,20 @@ function setupLegalModal() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Year
   const y = document.getElementById('year');
   if (y) y.textContent = String(new Date().getFullYear());
 
-  // initial state
   currentLang = detectInitialLang();
   const theme = detectInitialTheme();
-
   setLanguage(currentLang);
   setTheme(theme);
 
-  // Language buttons (desktop + mobile)
   document.querySelectorAll('.seg-btn[data-lang]').forEach(btn => {
     btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
   });
 
-  // Theme toggles (desktop + mobile)
   const desktopToggle = document.getElementById('modeToggle');
   const toggles = [desktopToggle, ...document.querySelectorAll('[data-mode-toggle]')].filter(Boolean);
-
   toggles.forEach(t => {
     t.addEventListener('click', () => {
       const curr = document.documentElement.getAttribute('data-theme') || 'dark';
@@ -521,21 +484,19 @@ document.addEventListener('DOMContentLoaded', () => {
   setupMobileMenu();
   setupLegalModal();
 
-  // Smooth scroll with header offset (small polish)
+  // Smooth scroll with header offset
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       const href = link.getAttribute('href');
       if (!href || href === '#') return;
-
       const target = document.querySelector(href);
       if (!target) return;
 
       e.preventDefault();
-
       const header = document.querySelector('.site-header');
-      const offset = header ? header.offsetHeight + 16 : 90;
-
+      const offset = header ? Math.ceil(header.getBoundingClientRect().height) -8 : 50;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });

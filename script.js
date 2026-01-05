@@ -8,7 +8,6 @@ const I18N = {
     nav: { services: 'Services', stack: 'Technologien', about: 'Über uns', contact: 'Kontakt' },
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
-      kicker: 'Aiza GmbH, Zollikofen bei Bern',
       title: 'Consulting, Architektur und Software Development',
       lead: 'Wir entwickeln massgeschneiderte Webapplikationen sowie Cloud und Kubernetes Lösungen für Unternehmen und Institutionen auf Basis von Open-Source-Software.',
       ctaPrimary: 'Kontakt aufnehmen',
@@ -166,7 +165,6 @@ const I18N = {
     nav: { services: 'Services', stack: 'Technologies', about: 'About', contact: 'Contact' },
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
-      kicker: 'Aiza GmbH, Zollikofen near Bern',
       title: 'Consulting, Architecture and Software Development',
       lead: 'We build tailored web applications and cloud and Kubernetes solutions for companies and institutions based on open source software.',
       ctaPrimary: 'Get in touch',

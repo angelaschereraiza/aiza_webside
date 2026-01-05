@@ -71,10 +71,6 @@ img {
   display: block;
 }
 
-.profile-head img {
-  max-width: 4rem;
-}
-
 .container {
   max-width: var(--container);
   margin: 0 auto;
@@ -468,23 +464,6 @@ p {
   width: 100%;
 }
 
-.badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.625rem;
-  margin-top: 0.875rem;
-}
-
-.badge {
-  border: 0.0625rem solid var(--border);
-  background: rgba(255, 255, 255, 0.04);
-  padding: 0.5rem 0.625rem;
-  border-radius: 999rem;
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  color: var(--muted);
-}
-
 .hero-card {
   border-radius: var(--radius2);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
@@ -629,7 +608,6 @@ p {
 .profile-card {
   border: 0.0625rem;
   color: var(--muted);
-  text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
@@ -704,7 +682,7 @@ p {
 }
 
 .avatar {
-  width: 6rem;
+  width: 4rem;
   height: 6rem;
   border-radius: 1.125rem;
   object-fit: cover;

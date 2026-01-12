@@ -147,7 +147,7 @@ const I18N = {
 
         <h3>Externe Links und Social Media</h3>
         <p>
-          Diese Website enthält Links zu externen Anbietern (z.B. Instagram, Facebook). Für die Datenbearbeitung nach dem Anklicken des Links ist der jeweilige Anbieter verantwortlich.
+          Diese Website enthält Links zu externen Anbietern (z.B. Linkedin, Xing). Für die Datenbearbeitung nach dem Anklicken des Links ist der jeweilige Anbieter verantwortlich.
         </p>
       `
     }
@@ -295,7 +295,7 @@ const I18N = {
 
         <h3>External links and social media</h3>
         <p>
-          This website contains links to external providers (e.g. Instagram, Facebook). The respective provider is responsible for data processing after clicking the link.
+          This website contains links to external providers (e.g. Linkedin, Xing). The respective provider is responsible for data processing after clicking the link.
         </p>
       `
     }

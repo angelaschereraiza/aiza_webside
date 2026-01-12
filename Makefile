@@ -1,7 +1,7 @@
 .PHONY: deploy deploy_test serve
 
 deploy:
-	rsync -av --delete --exclude '.git' -e "ssh -p 17022" . aiza.ch:test/htdocs/
+	rsync -av --delete --exclude '.git' -e "ssh -p 17022" . aiza.ch:_/htdocs/
 
 deploy_test:
 	rsync -av --delete --exclude '.git' -e "ssh -p 17022" . aiza.ch:test/htdocs/

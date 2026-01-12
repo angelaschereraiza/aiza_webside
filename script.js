@@ -9,21 +9,21 @@ const I18N = {
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
       title: 'Consulting, Architektur und Software Development',
-      lead: 'Wir entwickeln massgeschneiderte Webapplikationen sowie Cloud und Kubernetes Lösungen für Unternehmen und Institutionen auf Basis von Open-Source-Software.',
+      lead: 'Wir entwickeln massgeschneiderte Webapplikationen sowie Cloud, Kubernetes und AI Lösungen für Unternehmen und Institutionen auf Basis von Open-Source-Software.',
       ctaPrimary: 'Kontakt aufnehmen',
       ctaSecondary: 'Services ansehen',
       cardTitle: 'Schwerpunkte',
       b1: 'Architektur und Umsetzung von Web und Cloud Lösungen',
-      b2: 'Kubernetes Setup, Betrieb und Upgrades',
-      b3: 'Bugfixing und Stabilisierung bestehender Systeme',
-      b4: 'LLM Infrastruktur und Data Training, use case orientiert',
+      b2: 'Bugfixing und Stabilisierung bestehender Systeme',
+      b3: 'Kubernetes: Setup, Betrieb, Upgrades sowie CRD-/Operator-Entwicklung und Bugfixing',
+      b4: 'AI Infrastruktur und Data Training, use case orientiert',
     },
     services: {
       title: 'Services',
       subtitle: 'Klar definierte Leistungen, vom Konzept bis zum produktiven Betrieb.',
       s1: {
         title: 'Consulting, Architektur und Entwicklung',
-        text: 'Golang, C#, Python, JavaScript und TypeScript. Pragmatic, testbar und dokumentiert.',
+        text: 'Golang, C#, Python, JavaScript und TypeScript mit Fokus auf Qualität, Testbarkeit und nachvollziehbare Dokumentation.',
         b1: 'Systemdesign und API Schnittstellen',
         b2: 'Code Reviews und Quality Gates',
         b3: 'Modernisierung bestehender Anwendungen'
@@ -36,25 +36,25 @@ const I18N = {
         b3: 'Testabdeckung und Regression Prevention'
       },
       s3: {
-        title: 'Kubernetes Setup und Updates',
-        text: 'Von der ersten Cluster Einführung bis zu sicheren Upgrades.',
+        title: 'Kubernetes Engineering & Operations',
+        text: 'Von Setup über Betrieb & Upgrades bis CRDs/Operatoren und Troubleshooting.',
         b1: 'Cluster Setup, Cloud oder On Prem',
         b2: 'Upgrades, Hardening und Observability',
-        b3: 'CI CD und GitOps Patterns'
+        b3: 'CI/CD und GitOps Patterns',
+        b4: 'CRDs & Operator-Entwicklung und Bugfixing'
       },
       s4: {
-        title: 'LLM Infrastruktur und Data Training',
-        text: 'Aufbau von Infrastruktur und Datenpipelines für LLM Use Cases.',
+        title: 'AI Infrastruktur und Data Training',
+        text: 'Aufbau von Infrastruktur und Datenpipelines für AI Use Cases.',
         b1: 'Deployment Patterns und Monitoring',
         b2: 'Data Pipelines und Governance',
         b3: 'Evaluierung und Qualitätssicherung'
       },
       s5: {
         title: 'Workshops und Training',
-        text: 'Golang, Kubernetes Grundlagen sowie CRDs und Operatoren, hands on mit Best Practices.',
+        text: 'Grundlagen sowie hands on mit Best Practices.',
         b1: 'Golang',
-        b2: 'Kubernetes Basics',
-        b3: 'CRDs und Operator Development in Golang'
+        b2: 'Kubernetes Operators, CRDs und Integrations',
       },
       s6: {
         title: 'Zusammenarbeit',
@@ -65,19 +65,16 @@ const I18N = {
     },
     stack: {
       title: 'Technologien',
-      subtitle: 'Ein stabiler Stack für moderne, sichere und wartbare Lösungen.',
+      subtitle: 'Ein stabiler Stack für moderne, sichere und wartbare Lösungen, verbunden mit der Bereitschaft, neue Technologien bei Bedarf zu erlernen und sinnvoll in Projekte zu integrieren.',
       languages: 'Languages',
       frontend: 'Frontend',
       cloud: 'Cloud und Platform',
-      principles: 'Prinzipien',
-      p1: 'Security und Reliability by design',
-      p2: 'Observability und saubere Operations',
-      p3: 'Dokumentation und Wissenstransfer'
+      databases: 'Datenbanken',
     },
     about: {
       title: 'Über uns',
-      text1: 'Aiza GmbH mit Sitz in Zollikofen bei Bern entwickelt massgeschneiderte, moderne Webapplikationen und Plattformlösungen. Wir bieten Beratung sowie Entwicklung, Implementierung und Schulung rund um Softwarelösungen. Dazu gehört auch der Aufbau und das Training unternehmensinterner AI Systeme auf Basis firmeneigener Daten. Unsere Arbeit basiert auf Open Source Technologien und richtet sich an Unternehmen und Institutionen.',
-      text2: 'Der Fokus liegt auf robuster Architektur, sauberer Umsetzung und einem nachhaltigen Betrieb, damit Systeme langfristig stabil, sicher und wartbar bleiben.',
+      text1: 'Die Aiza GmbH, gegründet 2023, mit Sitz in Zollikofen bei Bern, entwickelt massgeschneiderte Webapplikationen sowie Cloud und Kubernetes Plattformlösungen auf Basis von Open Source Technologien.',
+      text2: 'Wir unterstützen Unternehmen und Institutionen mit Consulting, Architektur, Entwicklung und Schulung. Dazu gehören der Aufbau, der Betrieb und die Weiterentwicklung von Kubernetes Umgebungen sowie der Aufbau und das Training unternehmensinterner AI Systeme auf Basis firmeneigener Daten.',
       role: 'Founder & CEO',
       edu: 'Bachelor of Science in Informatik',
       certs: 'Zertifizierungen',
@@ -114,10 +111,9 @@ const I18N = {
           Telefon: <a href="tel:+41791972153">+41 79 197 21 53</a>
         </p>
 
-        <h3>Handelsregister</h3>
+        <h3>Handelsregister des Kantons Bern</h3>
         <p>
-          Eingetragen im Handelsregister des Kantons Bern.<br>
-          UID: CHE-358.617.722
+          CHE-358.617.722
         </p>
 
         <h3>Haftungsausschluss</h3>
@@ -136,25 +132,22 @@ const I18N = {
       privacy_html: `
         <h3>Allgemeines</h3>
         <p>
-          Gestützt auf Art. 13 der Schweizer Bundesverfassung und die datenschutzrechtlichen Bestimmungen des Bundes (DSG)
-          hat jede Person Anspruch auf Schutz ihrer Privatsphäre sowie auf Schutz vor Missbrauch ihrer persönlichen Daten.
+          Gestützt auf Artikel 13 der schweizerischen Bundesverfassung und die datenschutzrechtlichen Bestimmungen des Bundes hat jede Person Anspruch auf Schutz ihrer Privatsphäre sowie auf Schutz vor Missbrauch ihrer persönlichen Daten. Die Aiza GmbH hält diese Bestimmungen ein. Personendaten werden vertraulich behandelt und nicht an Dritte verkauft.
         </p>
 
         <h3>Server Logfiles</h3>
         <p>
-          Beim Aufruf dieser Website können technisch bedingt Daten (zum Beispiel IP Adresse, Datum und Uhrzeit, aufgerufene Seite, User Agent)
-          in Server Logfiles verarbeitet werden. Diese Daten dienen ausschliesslich der Sicherstellung des Betriebs und der Sicherheit.
+          Beim Aufruf der Website können technisch bedingt Daten (z.B. IP-Adresse, Datum/Uhrzeit, aufgerufene Seite, User-Agent) in Server-Logfiles verarbeitet werden, um Betrieb und Sicherheit zu gewährleisten.
         </p>
 
         <h3>Kontaktaufnahme</h3>
         <p>
-          Wenn Sie uns per E Mail kontaktieren, verarbeiten wir die von Ihnen übermittelten Angaben zur Bearbeitung Ihrer Anfrage.
+          Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir die von Ihnen übermittelten Daten zur Bearbeitung Ihrer Anfrage.
         </p>
 
         <h3>Externe Links und Social Media</h3>
         <p>
-          Diese Website enthält Links zu externen Anbietern (zum Beispiel LinkedIn, Xing). Für die Datenbearbeitung nach dem Anklicken des Links
-          ist der jeweilige Anbieter verantwortlich.
+          Diese Website enthält Links zu externen Anbietern (z.B. Instagram, Facebook). Für die Datenbearbeitung nach dem Anklicken des Links ist der jeweilige Anbieter verantwortlich.
         </p>
       `
     }
@@ -166,21 +159,21 @@ const I18N = {
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
       title: 'Consulting, Architecture and Software Development',
-      lead: 'We build tailored web applications and cloud and Kubernetes solutions for companies and institutions based on open source software.',
+      lead: 'We build tailored web applications and cloud, Kubernetes and AI solutions for companies and institutions based on open source software.',
       ctaPrimary: 'Get in touch',
       ctaSecondary: 'View services',
       cardTitle: 'Focus areas',
       b1: 'Architecture and delivery of web and cloud solutions',
-      b2: 'Kubernetes setup, operations and upgrades',
-      b3: 'Bug fixing and stabilization of existing systems',
-      b4: 'LLM infrastructure setup and data training, use case driven',
+      b2: 'Bug fixing and stabilization of existing systems',
+      b3: 'Kubernetes: setup, operations, upgrades, as well as CRD and operator development and bug fixing',
+      b4: 'AI infrastructure setup and data training, use case driven',
     },
     services: {
       title: 'Services',
       subtitle: 'Clear services, from concept to operations.',
       s1: {
         title: 'Consulting, Architecture and Development',
-        text: 'Golang, C#, Python, JavaScript und TypeScript. Pragmatic, testable, documented.',
+        text: 'Golang, C#, Python, JavaScript and TypeScript with a focus on quality, testability and clear documentation.',
         b1: 'System design and API interfaces',
         b2: 'Code reviews and quality gates',
         b3: 'Modernization of existing applications'
@@ -193,25 +186,25 @@ const I18N = {
         b3: 'Test coverage and regression prevention'
       },
       s3: {
-        title: 'Kubernetes Setup and Updates',
-        text: 'From first cluster introduction to safe upgrades.',
+        title: 'Kubernetes Engineering & Operations',
+        text: 'From setup to operations & upgrades, including CRDs/operators and troubleshooting.',
         b1: 'Cluster setup, cloud or on prem',
         b2: 'Upgrades, hardening and observability',
-        b3: 'CI CD and GitOps patterns'
+        b3: 'CI/CD and GitOps patterns',
+        b4: 'CRDs & operator development and bug fixing'
       },
       s4: {
-        title: 'LLM Infrastructure and Data Training',
-        text: 'Infrastructure and data pipelines for LLM use cases.',
+        title: 'AI Infrastructure and Data Training',
+        text: 'Infrastructure and data pipelines for AI use cases.',
         b1: 'Deployment patterns and monitoring',
         b2: 'Data pipelines and governance',
         b3: 'Evaluation and quality assurance'
       },
       s5: {
         title: 'Workshops and Training',
-        text: 'Kubernetes fundamentals and CRDs and operators, hands on with best practices.',
-        b1: 'Kubernetes basics and operations',
-        b2: 'CRDs and operator development, Golang',
-        b3: 'Real world exercises and templates'
+        text: 'Fundamentals and hands-on training with best practices.',
+        b1: 'Golang',
+        b2: 'Kubernetes Operators, CRDs and Integrations',
       },
       s6: {
         title: 'Working together',
@@ -222,19 +215,16 @@ const I18N = {
     },
     stack: {
       title: 'Technologies',
-      subtitle: 'A stable stack for modern, secure, and maintainable solutions.',
+      subtitle: 'A stable stack for modern, secure, and maintainable solutions, combined with the willingness to learn new technologies when needed and integrate them meaningfully into projects.',
       languages: 'Languages',
       frontend: 'Frontend',
       cloud: 'Cloud and Platform',
-      principles: 'Principles',
-      p1: 'Security and reliability by design',
-      p2: 'Observability and clean operations',
-      p3: 'Documentation and knowledge transfer'
+      databases: 'Databases',
     },
     about: {
       title: 'About us',
-      text1: 'Aiza GmbH, based in Zollikofen near Bern, develops tailored modern web applications and platform solutions. We offer consulting as well as software development, implementation, and training. This also includes setting up and training internal AI systems using company specific data. Our work is based on open source technologies and serves companies and institutions.',
-      text2: 'The focus is on robust architecture, clean implementation, and sustainable operations to ensure systems remain stable, secure, and maintainable over time.',
+      text1: 'Aiza GmbH, founded in 2023 and based in Zollikofen near Bern, develops tailored web applications as well as cloud and Kubernetes platform solutions based on open source technologies.',
+      text2: 'We support companies and institutions with consulting, architecture, development and training. This includes the setup, operation and continuous improvement of Kubernetes environments as well as the design and training of internal AI and AI systems using company owned data.',
       role: 'Founder & CEO',
       edu: 'Bachelor of Science in Computer Science',
       certs: 'Certifications',
@@ -271,10 +261,9 @@ const I18N = {
           Phone: <a href="tel:+41791972153">+41 79 197 21 53</a>
         </p>
 
-        <h3>Commercial Register</h3>
+        <h3>Commercial Register of the Canton of Bern</h3>
         <p>
-          Registered in the Commercial Register of the Canton of Bern.<br>
-          UID: CHE-358.617.722
+          CHE-358.617.722
         </p>
 
         <h3>Disclaimer</h3>
@@ -291,25 +280,22 @@ const I18N = {
       privacy_html: `
         <h3>General</h3>
         <p>
-          Based on Article 13 of the Swiss Federal Constitution and the Swiss data protection provisions (FADP, DSG),
-          every person has the right to privacy and protection against misuse of personal data.
+          Based on Article 13 of the Swiss Federal Constitution and the data protection provisions of the Swiss Confederation, every person has the right to privacy and to protection against misuse of their personal data. Aiza GmbH complies with these provisions. Personal data is treated confidentially and is not sold to third parties.
         </p>
 
         <h3>Server logs</h3>
         <p>
-          For technical reasons, data (for example IP address, date and time, requested page, user agent)
-          may be processed in server logs to ensure secure operation and system integrity.
+          For technical reasons, data (e.g., IP address, date/time, requested page, user-agent) may be processed to ensure operation and security.
         </p>
 
         <h3>Contact</h3>
         <p>
-          If you contact us by email, we process the data you provide solely to handle your inquiry.
+          If you contact us by email, we process the data you provide to handle your request.
         </p>
 
         <h3>External links and social media</h3>
         <p>
-          This website contains links to external providers (for example LinkedIn, Xing). After clicking a link,
-          the respective provider is responsible for data processing.
+          This website contains links to external providers (e.g. Instagram, Facebook). The respective provider is responsible for data processing after clicking the link.
         </p>
       `
     }
@@ -421,7 +407,9 @@ function setupLegalModal() {
   const links = document.querySelectorAll('.footer-link[data-doc]');
   if (!modal || !title || !content || !links.length) return;
 
-  const open = (docKey) => {
+  let isOpen = false;
+
+  const renderDoc = (docKey) => {
     const t = I18N[currentLang]?.legal || I18N.en.legal;
     if (docKey === 'imprint') {
       title.textContent = t.imprintTitle;
@@ -430,21 +418,45 @@ function setupLegalModal() {
       title.textContent = t.privacyTitle;
       content.innerHTML = t.privacy_html;
     }
+  };
+
+  const open = (docKey, { pushHistory = true } = {}) => {
+    renderDoc(docKey);
+
     modal.hidden = false;
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    isOpen = true;
+
+    // Push history entry so browser "Back" closes the modal
+    if (pushHistory) {
+      history.pushState({ modal: 'legal', doc: docKey }, '', location.href);
+    }
+
+    modal.querySelector('.modal-close')?.focus();
   };
 
-  const close = () => {
+  const close = ({ fromPopState = false } = {}) => {
+    if (!isOpen) return;
+
     modal.hidden = true;
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    isOpen = false;
+
+    // If user clicked close (not back button), remove our history entry
+    if (!fromPopState) {
+      const st = history.state;
+      if (st && st.modal === 'legal') {
+        history.back();
+      }
+    }
   };
 
   links.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      open(link.dataset.doc);
+      open(link.dataset.doc, { pushHistory: true });
     });
   });
 
@@ -455,6 +467,19 @@ function setupLegalModal() {
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && !modal.hidden) close();
   });
+
+  // If the user hits browser back/forward:
+  window.addEventListener('popstate', () => {
+    // If modal is open, close it instead of navigating away
+    if (isOpen) {
+      close({ fromPopState: true });
+    }
+  });
+
+  const st = history.state;
+  if (st && st.modal === 'legal' && st.doc) {
+    open(st.doc, { pushHistory: false });
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -487,12 +512,20 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', e => {
       const href = link.getAttribute('href');
       if (!href || href === '#') return;
+
+      // Special case: go truly to the top
+      if (href === '#top') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+
       const target = document.querySelector(href);
       if (!target) return;
 
       e.preventDefault();
       const header = document.querySelector('.site-header');
-      const offset = header ? Math.ceil(header.getBoundingClientRect().height) -8 : 50;
+      const offset = header ? Math.ceil(header.getBoundingClientRect().height) - 8 : 50;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
 
       window.scrollTo({ top, behavior: 'smooth' });

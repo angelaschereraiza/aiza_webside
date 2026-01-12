@@ -65,9 +65,8 @@ const I18N = {
     },
     stack: {
       title: 'Technologien',
-      subtitle: 'Ein stabiler Stack für moderne, sichere und wartbare Lösungen, verbunden mit der Bereitschaft, neue Technologien bei Bedarf zu erlernen und sinnvoll in Projekte zu integrieren.',
-      languages: 'Languages',
-      frontend: 'Frontend',
+      subtitle: 'Ein stabiler Stack für moderne, sichere und wartbare Lösungen, verbunden mit der Bereitschaft, neue Technologien bei Bedarf zu erlernen.',
+      languages: 'Sprachen',
       cloud: 'Cloud und Platform',
       databases: 'Datenbanken',
     },
@@ -215,9 +214,8 @@ const I18N = {
     },
     stack: {
       title: 'Technologies',
-      subtitle: 'A stable stack for modern, secure, and maintainable solutions, combined with the willingness to learn new technologies when needed and integrate them meaningfully into projects.',
+      subtitle: 'A stable stack for modern, secure, and maintainable solutions, combined with the willingness to learn new technologies when needed.',
       languages: 'Languages',
-      frontend: 'Frontend',
       cloud: 'Cloud and Platform',
       databases: 'Databases',
     },

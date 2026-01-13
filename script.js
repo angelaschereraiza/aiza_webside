@@ -5,7 +5,7 @@ const SUPPORTED_LANGS = ['de', 'en'];
 const I18N = {
   de: {
     skip: 'Zum Inhalt springen',
-    nav: { services: 'Services', stack: 'Technologien', about: 'Über uns', contact: 'Kontakt' },
+    nav: { services: 'Services', stack: 'Technologien', about: 'Über uns', clients: 'Kunden', contact: 'Kontakt' },
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
       title: 'Consulting, Architektur und Software Development',
@@ -78,6 +78,10 @@ const I18N = {
       edu: 'Bachelor of Science in Informatik',
       certs: 'Zertifizierungen',
       links: 'Links'
+    },
+    clients: {
+      title: 'Kunden',
+      subtitle: 'Eine Auswahl von Organisationen, mit denen wir zusammengearbeitet haben. Referenzen und Details gerne auf Anfrage.',
     },
     contact: {
       title: 'Kontakt',
@@ -154,7 +158,7 @@ const I18N = {
 
   en: {
     skip: 'Skip to content',
-    nav: { services: 'Services', stack: 'Technologies', about: 'About', contact: 'Contact' },
+    nav: { services: 'Services', stack: 'Technologies', about: 'About', clients: 'Clients', contact: 'Contact' },
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
       title: 'Consulting, Architecture and Software Development',
@@ -227,6 +231,10 @@ const I18N = {
       edu: 'Bachelor of Science in Computer Science',
       certs: 'Certifications',
       links: 'Links'
+    },
+    clients: {
+      title: 'Clients',
+      subtitle: 'A selection of organizations we’ve worked with. References and details available on request.',
     },
     contact: {
       title: 'Contact',

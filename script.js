@@ -5,13 +5,13 @@ const SUPPORTED_LANGS = ['de', 'en'];
 const I18N = {
   de: {
     skip: 'Zum Inhalt springen',
-    nav: { services: 'Services', stack: 'Technologien', about: 'Über uns', clients: 'Kunden', contact: 'Kontakt' },
+    nav: { services: 'Services', stack: 'Technologien', about: 'Über uns', contact: 'Kontakt' },
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
       title: 'Consulting, Architektur und Software Development',
       lead: 'Wir entwickeln massgeschneiderte Webapplikationen sowie Cloud, Kubernetes und AI Lösungen für Unternehmen und Institutionen auf Basis von Open-Source-Software.',
       ctaPrimary: 'Kontakt aufnehmen',
-      ctaSecondary: 'Services ansehen',
+      ctaSecondary: 'Über uns',
       cardTitle: 'Schwerpunkte',
       b1: 'Architektur und Umsetzung von Web und Cloud Lösungen',
       b2: 'Bugfixing und Stabilisierung bestehender Systeme',
@@ -80,8 +80,7 @@ const I18N = {
       links: 'Links'
     },
     clients: {
-      title: 'Kunden',
-      subtitle: 'Eine Auswahl von Organisationen, mit denen wir zusammengearbeitet haben. Referenzen und Details gerne auf Anfrage.',
+      title: 'Eine Auswahl von Organisationen, mit denen wir zusammengearbeitet haben. Referenzen und Details gerne auf Anfrage.',
     },
     contact: {
       title: 'Kontakt',
@@ -131,40 +130,95 @@ const I18N = {
           Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs.
           Für Inhalte und Rechtmässigkeit solcher Webseiten wird jegliche Verantwortung abgelehnt.
         </p>
-      `,
+      `,     
+        
       privacy_html: `
         <h3>Allgemeines</h3>
         <p>
-          Gestützt auf Artikel 13 der schweizerischen Bundesverfassung und die datenschutzrechtlichen Bestimmungen des Bundes hat jede Person Anspruch auf Schutz ihrer Privatsphäre sowie auf Schutz vor Missbrauch ihrer persönlichen Daten. Die Aiza GmbH hält diese Bestimmungen ein. Personendaten werden vertraulich behandelt und nicht an Dritte verkauft.
+          Gestützt auf Artikel 13 der schweizerischen Bundesverfassung und die datenschutzrechtlichen Bestimmungen des Bundes hat jede 
+          Person Anspruch auf Schutz ihrer Privatsphäre sowie auf Schutz vor Missbrauch ihrer persönlichen Daten. Die Aiza GmbH hält diese 
+          Bestimmungen ein. Personendaten werden vertraulich behandelt und nicht an Dritte verkauft.
         </p>
 
-        <h3>Server Logfiles</h3>
+        <h3>Verantwortliche Stelle</h3>
         <p>
-          Beim Aufruf der Website können technisch bedingt Daten (z.B. IP-Adresse, Datum/Uhrzeit, aufgerufene Seite, User-Agent) in Server-Logfiles verarbeitet werden, um Betrieb und Sicherheit zu gewährleisten.
+          Verantwortlich für die Datenbearbeitung auf dieser Website ist:<br>
+          Aiza GmbH<br>
+          Bernstrasse 159<br>
+          3052 Zollikofen<br>
+          Schweiz<br><br>
+          E-Mail: <a href="mailto:angela.scherer@aiza.ch">angela.scherer@aiza.ch</a><br>
+          Telefon: <a href="tel:+41791972153">+41 79 197 21 53</a>
+        </p>
+
+        <h3>Server-Logfiles</h3>
+        <p>
+          Beim Besuch dieser Website werden aus technischen Gründen automatisch Daten in sogenannten Server-Logfiles verarbeitet.
+          Dazu gehören insbesondere IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite oder Datei,
+          Browser- und Betriebssysteminformationen (User-Agent) sowie gegebenenfalls Fehlermeldungen.
+          Diese Daten dienen ausschliesslich der Sicherstellung des technischen Betriebs, der Systemsicherheit
+          sowie der Fehleranalyse.
+        </p>
+
+        <h3>Hosting</h3>
+        <p>
+          Diese Website wird auf einer eigenen Infrastruktur in der Schweiz betrieben.
+          Die Verarbeitung der technischen Zugriffsdaten erfolgt ausschliesslich durch die Aiza GmbH.
+          Es findet keine Weitergabe der Daten an Hosting-Anbieter oder sonstige Dritte statt.
         </p>
 
         <h3>Kontaktaufnahme</h3>
         <p>
-          Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir die von Ihnen übermittelten Daten zur Bearbeitung Ihrer Anfrage.
+          Wenn Sie uns per E-Mail kontaktieren, werden die von Ihnen übermittelten Daten (z.B. Name, E-Mail-Adresse,
+          Inhalt der Anfrage) ausschliesslich zur Bearbeitung und Beantwortung Ihrer Anfrage verwendet.
         </p>
 
         <h3>Externe Links und Social Media</h3>
         <p>
-          Diese Website enthält Links zu externen Anbietern (z.B. Linkedin, Xing). Für die Datenbearbeitung nach dem Anklicken des Links ist der jeweilige Anbieter verantwortlich.
+          Diese Website enthält Links zu externen Webseiten und Social-Media-Plattformen (z.B. LinkedIn, Xing).
+          Beim Anklicken eines solchen Links verlassen Sie diese Website.
+          Für die Bearbeitung personenbezogener Daten auf den verlinkten Seiten ist der jeweilige Anbieter verantwortlich.
         </p>
-      `
+
+        <h3>Weitergabe von Daten</h3>
+        <p>
+          Es erfolgt keine Weitergabe, kein Verkauf und keine sonstige Übermittlung personenbezogener Daten an Dritte,
+          sofern keine gesetzliche Verpflichtung besteht.
+        </p>
+
+        <h3>Speicherdauer</h3>
+        <p>
+          Personenbezogene Daten werden nur so lange aufbewahrt, wie dies für die genannten Zwecke erforderlich ist
+          oder gesetzliche Aufbewahrungspflichten bestehen.
+          Server-Logfiles werden regelmässig gelöscht oder anonymisiert.
+        </p>
+
+        <h3>Ihre Rechte</h3>
+        <p>
+          Sie haben im Rahmen des anwendbaren Datenschutzrechts das Recht auf Auskunft darüber,
+          ob und welche personenbezogenen Daten wir über Sie bearbeiten.
+          Zudem können Sie die Berichtigung unrichtiger Daten sowie, soweit gesetzlich zulässig,
+          die Löschung oder Einschränkung der Bearbeitung verlangen.
+          Anfragen richten Sie bitte an die oben genannte Kontaktadresse.
+        </p>
+
+        <h3>Änderungen</h3>
+        <p>
+          Wir behalten uns vor, diese Datenschutzerklärung jederzeit anzupassen.
+          Es gilt die jeweils auf dieser Website veröffentlichte Version.
+        </p>
+      `      
     }
   },
-
   en: {
     skip: 'Skip to content',
-    nav: { services: 'Services', stack: 'Technologies', about: 'About', clients: 'Clients', contact: 'Contact' },
+    nav: { services: 'Services', stack: 'Technologies', about: 'About', contact: 'Contact' },
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
       title: 'Consulting, Architecture and Software Development',
       lead: 'We build tailored web applications and cloud, Kubernetes and AI solutions for companies and institutions based on open source software.',
       ctaPrimary: 'Get in touch',
-      ctaSecondary: 'View services',
+      ctaSecondary: 'About us',
       cardTitle: 'Focus areas',
       b1: 'Architecture and delivery of web and cloud solutions',
       b2: 'Bug fixing and stabilization of existing systems',
@@ -233,8 +287,7 @@ const I18N = {
       links: 'Links'
     },
     clients: {
-      title: 'Clients',
-      subtitle: 'A selection of organizations we’ve worked with. References and details available on request.',
+      title: 'A selection of organizations we’ve worked with. References and details available on request.',
     },
     contact: {
       title: 'Contact',
@@ -286,24 +339,77 @@ const I18N = {
       privacy_html: `
         <h3>General</h3>
         <p>
-          Based on Article 13 of the Swiss Federal Constitution and the data protection provisions of the Swiss Confederation, every person has the right to privacy and to protection against misuse of their personal data. Aiza GmbH complies with these provisions. Personal data is treated confidentially and is not sold to third parties.
+          Based on Article 13 of the Swiss Federal Constitution and the data protection provisions of the Swiss Confederation, every 
+          person has the right to privacy and to protection against misuse of their personal data. Aiza GmbH complies with these provisions. 
+          Personal data is treated confidentially and is not sold to third parties.
+        </p>
+
+        <h3>Responsible entity</h3>
+        <p>
+          The responsible entity for data processing on this website is:<br>
+          Aiza GmbH<br>
+          Bernstrasse 159<br>
+          3052 Zollikofen<br>
+          Switzerland<br><br>
+          Email: <a href="mailto:angela.scherer@aiza.ch">angela.scherer@aiza.ch</a><br>
+          Phone: <a href="tel:+41791972153">+41 79 197 21 53</a>
         </p>
 
         <h3>Server logs</h3>
         <p>
-          For technical reasons, data (e.g., IP address, date/time, requested page, user-agent) may be processed to ensure operation and security.
+          When visiting this website, technical data may be processed automatically in so-called server log files.
+          This may include IP address, date and time of access, requested page or file,
+          browser and operating system information (user-agent), and error messages.
+          This data is used exclusively to ensure technical operation, system security, and troubleshooting.
+        </p>
+
+        <h3>Hosting</h3>
+        <p>
+          This website is operated on our own infrastructure (NAS) located in Switzerland.
+          Technical access data is processed exclusively by Aiza GmbH.
+          No data is shared with hosting providers or other third parties.
         </p>
 
         <h3>Contact</h3>
         <p>
-          If you contact us by email, we process the data you provide to handle your request.
+          If you contact us by email, the data you provide (e.g. name, email address, content of your inquiry)
+          will be used exclusively to process and respond to your request.
         </p>
 
         <h3>External links and social media</h3>
         <p>
-          This website contains links to external providers (e.g. Linkedin, Xing). The respective provider is responsible for data processing after clicking the link.
+          This website contains links to external websites and social media platforms (e.g. LinkedIn, Xing).
+          When you click such a link, you leave this website.
+          From that point on, the respective provider is responsible for processing personal data.
         </p>
-      `
+
+        <h3>Data sharing</h3>
+        <p>
+          Personal data is not sold or shared with third parties unless required by law.
+        </p>
+
+        <h3>Retention</h3>
+        <p>
+          Personal data is processed only for as long as necessary for the stated purposes
+          or as required by applicable law.
+          Server log data is regularly deleted or anonymized.
+        </p>
+
+        <h3>Your rights</h3>
+        <p>
+          Under applicable data protection law, you have the right to request information about
+          whether and which personal data we process about you.
+          You may also request correction of inaccurate data and, where legally permitted,
+          deletion or restriction of processing.
+          Requests can be sent to the contact details above.
+        </p>
+
+        <h3>Changes</h3>
+        <p>
+          We may update this privacy policy at any time.
+          The version published on this website is the current one.
+        </p>
+      `,
     }
   }
 };

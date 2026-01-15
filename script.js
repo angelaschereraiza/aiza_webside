@@ -72,8 +72,8 @@ const I18N = {
     },
     about: {
       title: 'Über uns',
-      text1: 'Die Aiza GmbH, gegründet 2023, mit Sitz in Zollikofen bei Bern, entwickelt massgeschneiderte Webapplikationen sowie Cloud und Kubernetes Plattformlösungen auf Basis von Open Source Technologien.',
-      text2: 'Wir unterstützen Unternehmen und Institutionen mit Consulting, Architektur, Entwicklung und Schulung. Dazu gehören der Aufbau, der Betrieb und die Weiterentwicklung von Kubernetes Umgebungen sowie der Aufbau und das Training unternehmensinterner AI Systeme auf Basis firmeneigener Daten.',
+      text1: 'Die Aiza GmbH, gegründet 2023 und mit Sitz in Zollikofen bei Bern, entwickelt massgeschneiderte Webapplikationen sowie Cloud- und Kubernetes-Plattformlösungen auf Basis von Open-Source-Technologien.',
+      text2: 'Wir unterstützen Unternehmen und Institutionen mit Consulting, Architektur, Entwicklung und Schulung. Dazu gehören der Aufbau, der Betrieb und die Weiterentwicklung von Kubernetes-Umgebungen sowie der Aufbau und das Training unternehmensinterner AI-Systeme auf Basis firmeneigener Daten. Darüber hinaus wird die Aiza GmbH gezielt für Bugfixing, Fehleranalyse und die Stabilisierung bestehender Systeme eingesetzt, auch kurzfristig und ohne langfristige Vertragsbindung.',
       role: 'Founder & CEO',
       edu: 'Bachelor of Science in Informatik',
       certs: 'Zertifizierungen',
@@ -237,7 +237,7 @@ const I18N = {
       },
       s2: {
         title: 'Bug Fixing and Stabilization',
-        text: 'Focused analysis, reproducible fixes, and improvements that last.',
+        text: 'Focused analysis, reproducible fixes and improvements that last.',
         b1: 'Debugging and root cause analysis',
         b2: 'Performance and memory profiling',
         b3: 'Test coverage and regression prevention'
@@ -272,15 +272,15 @@ const I18N = {
     },
     stack: {
       title: 'Technologies',
-      subtitle: 'A stable stack for modern, secure, and maintainable solutions, combined with the willingness to learn new technologies when needed.',
+      subtitle: 'A stable stack for modern, secure and maintainable solutions, combined with the willingness to learn new technologies when needed.',
       languages: 'Languages',
       cloud: 'Cloud and Platform',
       databases: 'Databases',
     },
     about: {
       title: 'About us',
-      text1: 'Aiza GmbH, founded in 2023 and based in Zollikofen near Bern, develops tailored web applications as well as cloud and Kubernetes platform solutions based on open source technologies.',
-      text2: 'We support companies and institutions with consulting, architecture, development and training. This includes the setup, operation and continuous improvement of Kubernetes environments as well as the design and training of internal AI and AI systems using company owned data.',
+      text1: 'Aiza GmbH, founded in 2023 and based in Zollikofen near Bern, develops tailored web applications as well as cloud and Kubernetes platform solutions based on open-source technologies.',
+      text2: 'We support companies and institutions with consulting, architecture, development and training. This includes the setup, operation and continuous improvement of Kubernetes environments, as well as the design and training of internal AI systems using company-owned data. In addition, Aiza GmbH is frequently engaged for targeted bug fixing, root cause analysis and stabilization of existing systems, including short-term support without the need for long-term contractual commitments.',
       role: 'Founder & CEO',
       edu: 'Bachelor of Science in Computer Science',
       certs: 'Certifications',
@@ -359,8 +359,8 @@ const I18N = {
         <p>
           When visiting this website, technical data may be processed automatically in so-called server log files.
           This may include IP address, date and time of access, requested page or file,
-          browser and operating system information (user-agent), and error messages.
-          This data is used exclusively to ensure technical operation, system security, and troubleshooting.
+          browser and operating system information (user-agent) and error messages.
+          This data is used exclusively to ensure technical operation, system security and troubleshooting.
         </p>
 
         <h3>Hosting</h3>

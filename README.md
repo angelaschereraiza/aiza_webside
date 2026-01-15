@@ -1,6 +1,6 @@
 # Aiza GmbH Website
 
-Static single-page website for **Aiza GmbH** with **DE/EN i18n**, **light/dark theme**, a **mobile menu**, smooth scrolling, and a **legal modal** (*Imprint* / *Privacy Policy*). Deployment is done via `rsync` over SSH (see `Makefile`).
+Static single-page website for **Aiza GmbH** with **DE/EN i18n**, **light/dark theme**, a **mobile menu**, smooth scrolling and a **legal modal** (*Imprint* / *Privacy Policy*). Deployment is done via `rsync` over SSH (see `Makefile`).
 
 ## Features
 
@@ -35,7 +35,7 @@ From the project root:
 make serve
 ```
 
-This starts a static server and watches for changes in `*.html`, `*.css`, `*.js`, and `images/*`.
+This starts a static server and watches for changes in `*.html`, `*.css`, `*.js` and `images/*`.
 
 ## Deployment
 
@@ -118,7 +118,7 @@ Make sure paths are consistent (e.g., `/images/...` vs `images/...`) depending o
 - Keep contact details consistent:
   - in HTML and in the legal snippets
 - Adjust deployment targets:
-  - SSH host, port, and destination paths in `Makefile`
+  - SSH host, port and destination paths in `Makefile`
 
 ## License
 

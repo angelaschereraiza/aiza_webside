@@ -4,25 +4,50 @@ const SUPPORTED_LANGS = ['de', 'en'];
 
 const I18N = {
   de: {
-    skip: 'Zum Inhalt springen',
     nav: { services: 'Services', stack: 'Technologien', about: 'Über uns', contact: 'Kontakt' },
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
-      title: 'Consulting, Architektur und Software Development',
+      title: 'Consulting, Architektur und Softwareent\u00ADwicklung',
       lead: 'Wir entwickeln massgeschneiderte Webapplikationen sowie Cloud, Kubernetes und AI Lösungen für Unternehmen und Institutionen auf Basis von Open-Source-Software.',
       ctaPrimary: 'Kontakt aufnehmen',
-      ctaSecondary: 'Über uns',
+      ctaSecondary: 'Services ansehen',
       cardTitle: 'Schwerpunkte',
       b1: 'Architektur und Umsetzung von Web und Cloud Lösungen',
       b2: 'Bugfixing und Stabilisierung bestehender Systeme',
       b3: 'Kubernetes: Setup, Betrieb, Upgrades sowie CRD-/Operator-Entwicklung und Bugfixing',
       b4: 'AI Infrastruktur und Data Training, use case orientiert',
     },
+    process: {
+      title: 'Wie wir arbeiten',
+      subtitle: 'Ein pragmatischer, transparenter Ansatz mit klaren Ergebnissen.',
+      cta: 'Kontakt aufnehmen',
+      p1: {
+        title: '1. Ziel klären',
+        text: 'Wir klären Outcome, Rahmenbedingungen und Erfolgskriterien.',
+        b1: 'Kurzbeschrieb & Kontext',
+        b2: 'Risiken & Annahmen',
+        b3: 'Definition of Done'
+      },
+      p2: {
+        title: '2. Plan vorschlagen',
+        text: 'Sie erhalten einen konkreten Vorschlag mit Scope, Optionen und transparenter Aufwandsschätzung.',
+        b1: 'Architektur & Meilensteine',
+        b2: 'Trade-offs erklärt',
+        b3: 'Lieferplan'
+      },
+      p3: {
+        title: '3. Liefern & betreiben',
+        text: 'Wir liefern in kleinen Schritten und unterstützen bei Bedarf im Betrieb.',
+        b1: 'Tests & Code Reviews',
+        b2: 'Dokumentation',
+        b3: 'Übergabe / Betriebssupport'
+      }
+    },
     services: {
       title: 'Services',
       subtitle: 'Klar definierte Leistungen, vom Konzept bis zum produktiven Betrieb.',
       s1: {
-        title: 'Consulting, Architektur und Entwicklung',
+        title: 'Software Architektur & Engineering',
         text: 'Golang, C#, Python, JavaScript und TypeScript mit Fokus auf Qualität, Testbarkeit und nachvollziehbare Dokumentation.',
         b1: 'Systemdesign und API Schnittstellen',
         b2: 'Code Reviews und Quality Gates',
@@ -31,14 +56,14 @@ const I18N = {
       s2: {
         title: 'Bug Fixing und Stabilisierung',
         text: 'Gezielte Analyse, reproduzierbare Fixes und Verbesserungen, die bleiben.',
-        b1: 'Debugging und Root Cause Analysis',
+        b1: 'Debugging und Ursachenanalyse',
         b2: 'Performance und Memory Profiling',
         b3: 'Testabdeckung und Regression Prevention'
       },
       s3: {
         title: 'Kubernetes Engineering & Operations',
         text: 'Von Setup über Betrieb & Upgrades bis CRDs/Operatoren und Troubleshooting.',
-        b1: 'Cluster Setup, Cloud oder On Prem',
+        b1: 'Cluster Setup, Cloud oder On-Premises',
         b2: 'Upgrades, Hardening und Observability',
         b3: 'CI/CD und GitOps Patterns',
         b4: 'CRDs & Operator-Entwicklung und Bugfixing'
@@ -92,7 +117,7 @@ const I18N = {
       step1: 'Kurzbeschrieb mit Ziel, Kontext und Deadline',
       step2: 'Technischer Check und Vorschlag mit Scope und Optionen',
       step3: 'Umsetzung mit klaren Deliverables',
-      mailCta: 'E Mail senden'
+      mailCta: 'E-Mail senden'
     },
     footer: { imprint: 'Impressum', privacy: 'Datenschutzerklärung' },
     legal: {
@@ -109,7 +134,7 @@ const I18N = {
 
         <h3>Kontakt</h3>
         <p>
-          E Mail: <a href="mailto:angela.scherer@aiza.ch">angela.scherer@aiza.ch</a><br>
+          E-Mail: <a href="mailto:angela.scherer@aiza.ch">angela.scherer@aiza.ch</a><br>
           Telefon: <a href="tel:+41791972153">+41 79 197 21 53</a>
         </p>
 
@@ -142,11 +167,15 @@ const I18N = {
 
         <h3>Verantwortliche Stelle</h3>
         <p>
-          Verantwortlich für die Datenbearbeitung auf dieser Website ist:<br>
+          Verantwortlich für die Datenbearbeitung auf dieser Website ist:
+        </p>
+        <p>
           Aiza GmbH<br>
           Bernstrasse 159<br>
           3052 Zollikofen<br>
-          Schweiz<br><br>
+          Schweiz
+        </p>
+        <p>
           E-Mail: <a href="mailto:angela.scherer@aiza.ch">angela.scherer@aiza.ch</a><br>
           Telefon: <a href="tel:+41791972153">+41 79 197 21 53</a>
         </p>
@@ -211,25 +240,50 @@ const I18N = {
     }
   },
   en: {
-    skip: 'Skip to content',
     nav: { services: 'Services', stack: 'Technologies', about: 'About', contact: 'Contact' },
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
-      title: 'Consulting, Architecture and Software Development',
+      title: 'Consulting, Architecture and Software Develop\u00ADment',
       lead: 'We build tailored web applications and cloud, Kubernetes and AI solutions for companies and institutions based on open source software.',
       ctaPrimary: 'Get in touch',
-      ctaSecondary: 'About us',
+      ctaSecondary: 'View services',
       cardTitle: 'Focus areas',
       b1: 'Architecture and delivery of web and cloud solutions',
       b2: 'Bug fixing and stabilization of existing systems',
       b3: 'Kubernetes: setup, operations, upgrades, as well as CRD and operator development and bug fixing',
       b4: 'AI infrastructure setup and data training, use case driven',
     },
+    process: {
+      title: 'How we work',
+      subtitle: 'Pragmatic, transparent and with clear deliverables.',
+      cta: 'Get in touch',
+      p1: {
+        title: '1. Clarify the goal',
+        text: 'We align on outcome, constraints, and success criteria.',
+        b1: 'Short brief & context',
+        b2: 'Risks & assumptions',
+        b3: 'Definition of done'
+      },
+      p2: {
+        title: '2. Propose a plan',
+        text: 'You get a concrete proposal with scope, options and a transparent estimate.',
+        b1: 'Architecture & milestones',
+        b2: 'Trade-offs explained',
+        b3: 'Delivery plan'
+      },
+      p3: {
+        title: '3. Deliver & operate',
+        text: 'We deliver in small increments and support stable operations if needed.',
+        b1: 'Tests & code reviews',
+        b2: 'Documentation',
+        b3: 'Handover / operations support'
+      }
+    },
     services: {
       title: 'Services',
       subtitle: 'Clear services, from concept to operations.',
       s1: {
-        title: 'Consulting, Architecture and Development',
+        title: 'Software Architecture & Engineering',
         text: 'Golang, C#, Python, JavaScript and TypeScript with a focus on quality, testability and clear documentation.',
         b1: 'System design and API interfaces',
         b2: 'Code reviews and quality gates',
@@ -346,11 +400,15 @@ const I18N = {
 
         <h3>Responsible entity</h3>
         <p>
-          The responsible entity for data processing on this website is:<br>
+          The responsible entity for data processing on this website is:
+        </p>
+        <p>
           Aiza GmbH<br>
           Bernstrasse 159<br>
           3052 Zollikofen<br>
-          Switzerland<br><br>
+          Switzerland
+        </p>
+        <p>
           Email: <a href="mailto:angela.scherer@aiza.ch">angela.scherer@aiza.ch</a><br>
           Phone: <a href="tel:+41791972153">+41 79 197 21 53</a>
         </p>
@@ -471,24 +529,25 @@ function setupMobileMenu() {
 
   const open = () => {
     menu.hidden = false;
-    menu.setAttribute('aria-hidden', 'true'); // start state for transition
+    menu.setAttribute('aria-hidden', 'false');
     hamburger.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
 
     requestAnimationFrame(() => {
-      menu.setAttribute('aria-hidden', 'false');
+      menu.classList.add('is-open');
       menu.querySelector('a')?.focus();
     });
   };
 
   const close = () => {
-    menu.setAttribute('aria-hidden', 'true');
+    menu.classList.remove('is-open');
     hamburger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
 
     window.setTimeout(() => {
       menu.hidden = true;
-    }, 380);
+      menu.setAttribute('aria-hidden', 'true');
+    }, 350);
   };
 
   hamburger.addEventListener('click', () => {

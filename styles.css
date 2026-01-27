@@ -153,7 +153,7 @@ p, li, h1, h2, h3, h4 {
   hyphens: auto;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
-  overflow-wrap: break-word;
+  overflow-wrap: normal;
   word-break: normal;
 }
 
@@ -501,7 +501,7 @@ p, li, h1, h2, h3, h4 {
   background: linear-gradient(180deg, var(--btn-primary-from), var(--btn-primary-to));
   border-color: var(--accent-60);
   color: var(--light);
-  width: 10.3125rem;
+  width: 11rem;
 }
 
 .btn.primary:hover {
@@ -519,7 +519,7 @@ p, li, h1, h2, h3, h4 {
 .btn.ghost {
   background: var(--card);
   color: var(--text);
-  width: 10.3125rem;
+  width: 11rem;
 }
 
 .btn.ghost:hover {
@@ -1387,14 +1387,14 @@ p, li, h1, h2, h3, h4 {
   }
 
   .profile-head {
-    align-items: flex-start;
     gap: 0.75rem;
   }
 
   .avatar {
     width: 3.5rem;
-    height: 5.25rem;
+    height: 5.5rem;
     border-radius: 1rem;
+    margin-bottom: 0.15rem;
   }
 
   .profile-name {
@@ -1442,10 +1442,6 @@ p, li, h1, h2, h3, h4 {
   .btn.primary,
   .btn.ghost {
     width: 100%;
-  }
-
-  .avatar {
-    height: 5.3rem;
   }
 
   .clients-grid {

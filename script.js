@@ -1,6 +1,7 @@
 'use strict';
 
 const SUPPORTED_LANGS = ['de', 'en'];
+const HTML_LANG = { de: 'de-DE', en: 'en-US' };
 
 const I18N = {
   de: {
@@ -23,14 +24,14 @@ const I18N = {
       cta: 'Kontakt aufnehmen',
       p1: {
         title: '1. Ziel klären',
-        text: 'Wir klären Outcome, Rahmenbedingungen und Erfolgskriterien.',
+        text: 'Wir klären Outcome, Rahmenbedingungen und Erfolgs\u00ADkriterien.',
         b1: 'Kurzbeschrieb & Kontext',
         b2: 'Risiken & Annahmen',
         b3: 'Definition of Done'
       },
       p2: {
         title: '2. Plan vorschlagen',
-        text: 'Sie erhalten einen konkreten Vorschlag mit Scope, Optionen und transparenter Aufwandsschätzung.',
+        text: 'Sie erhalten einen konkreten Vorschlag mit Scope, Optionen und transparenter Aufwands\u00ADschätzung.',
         b1: 'Architektur & Meilensteine',
         b2: 'Trade-offs erklärt',
         b3: 'Lieferplan'
@@ -56,7 +57,7 @@ const I18N = {
       s2: {
         title: 'Bug Fixing und Stabilisierung',
         text: 'Gezielte Analyse, reproduzierbare Fixes und Verbesserungen, die bleiben.',
-        b1: 'Debugging und Ursachenanalyse',
+        b1: 'Debugging und Ursachen\u00ADanalyse',
         b2: 'Performance und Memory Profiling',
         b3: 'Testabdeckung und Regression Prevention'
       },
@@ -98,7 +99,7 @@ const I18N = {
     about: {
       title: 'Über uns',
       text1: 'Die Aiza GmbH, gegründet 2023 und mit Sitz in Zollikofen bei Bern, entwickelt massgeschneiderte Webapplikationen sowie Cloud- und Kubernetes-Plattformlösungen auf Basis von Open-Source-Technologien.',
-      text2: 'Wir unterstützen Unternehmen und Institutionen mit Consulting, Architektur, Entwicklung und Schulung. Dazu gehören der Aufbau, der Betrieb und die Weiterentwicklung von Kubernetes-Umgebungen sowie der Aufbau und das Training unternehmensinterner AI-Systeme auf Basis firmeneigener Daten. Darüber hinaus wird die Aiza GmbH gezielt für Bugfixing, Fehleranalyse und die Stabilisierung bestehender Systeme eingesetzt, auch kurzfristig und ohne langfristige Vertragsbindung.',
+      text2: 'Wir unterstützen Unternehmen und Institutionen mit Consulting, Architektur, Entwicklung und Schulung. Dazu gehören der Aufbau, der Betrieb und die Weiterentwicklung von Kubernetes-Umgebungen sowie der Aufbau und das Training unternehmensinterner AI-Systeme auf Basis firmeneigener Daten. Darüber hinaus wird die Aiza GmbH gezielt für Bugfixing, Fehleranalyse und die Stabilisierung bestehender Systeme eingesetzt, auch kurzfristig und ohne langfristige Vertrags\u00ADbindung.',
       role: 'Founder & CEO',
       edu: 'Bachelor of Science in Informatik',
       certs: 'Zertifizierungen',
@@ -505,7 +506,10 @@ function setLanguage(lang) {
   if (!I18N[lang]) lang = 'en';
   currentLang = lang;
   localStorage.setItem('language', lang);
-  document.documentElement.setAttribute('lang', lang);
+  const locale = HTML_LANG[lang] || lang;
+
+  document.documentElement.setAttribute('lang', locale);
+  document.body?.setAttribute('lang', locale);
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');

@@ -9,9 +9,7 @@ const I18N = {
       title: 'Aiza GmbH | Consulting, Architektur & Softwareentwicklung (Zollikofen/Bern)',
       description: 'Aiza GmbH in Zollikofen (bei Bern): Consulting, Software-Architektur & Entwicklung von Webapplikationen sowie Cloud-, Kubernetes- und AI-Lösungen auf Open-Source-Basis.'
     },
-    a11y: {
-      skip: 'Zum Hauptinhalt springen'
-    },
+    skip: 'Zum Hauptinhalt springen',
     nav: { services: 'Services', stack: 'Technologien', about: 'Über uns', contact: 'Kontakt' },
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
@@ -251,9 +249,7 @@ const I18N = {
       title: 'Aiza GmbH | Consulting, Architecture & Software Development (Zollikofen/Bern)',
       description: 'Aiza GmbH in Zollikofen (near Bern): consulting, software architecture and development of web applications as well as cloud, Kubernetes and AI solutions based on open source.'
     },
-    a11y: {
-      skip: 'Skip to main content'
-    },
+    skip: 'Skip to main content',
     nav: { services: 'Services', stack: 'Technologies', about: 'About', contact: 'Contact' },
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
@@ -703,7 +699,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupMobileMenu();
   setupLegalModal();
 
-  // Smooth scroll with header offset
+  // Smooth scroll with header offset + focus management (fix skip link enter)
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       const href = link.getAttribute('href');
@@ -720,11 +716,30 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!target) return;
 
       e.preventDefault();
+
       const header = document.querySelector('.site-header');
       const offset = header ? Math.ceil(header.getBoundingClientRect().height) - 8 : 50;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
 
+      // If target is not focusable, temporarily make it focusable
+      const hadTabindex = target.hasAttribute('tabindex');
+      if (!hadTabindex) target.setAttribute('tabindex', '-1');
+
       window.scrollTo({ top, behavior: 'smooth' });
+
+      // After scroll: move keyboard focus (Enter/Space works reliably for skip link)
+      window.setTimeout(() => {
+        try {
+          target.focus({ preventScroll: true });
+        } catch {
+          target.focus();
+        }
+
+        if (!hadTabindex && target.id !== 'main') {
+          // Remove only if we added it dynamically and it's not the main landmark
+          target.removeAttribute('tabindex');
+        }
+      }, 250);
     });
   });
 });

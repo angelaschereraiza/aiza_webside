@@ -9,6 +9,9 @@ const I18N = {
       title: 'Aiza GmbH | Consulting, Architektur & Softwareentwicklung (Zollikofen/Bern)',
       description: 'Aiza GmbH in Zollikofen (bei Bern): Consulting, Software-Architektur & Entwicklung von Webapplikationen sowie Cloud-, Kubernetes- und AI-Lösungen auf Open-Source-Basis.'
     },
+    a11y: {
+      skip: 'Zum Hauptinhalt springen'
+    },
     nav: { services: 'Services', stack: 'Technologien', about: 'Über uns', contact: 'Kontakt' },
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
@@ -247,6 +250,9 @@ const I18N = {
     meta: {
       title: 'Aiza GmbH | Consulting, Architecture & Software Development (Zollikofen/Bern)',
       description: 'Aiza GmbH in Zollikofen (near Bern): consulting, software architecture and development of web applications as well as cloud, Kubernetes and AI solutions based on open source.'
+    },
+    a11y: {
+      skip: 'Skip to main content'
     },
     nav: { services: 'Services', stack: 'Technologies', about: 'About', contact: 'Contact' },
     theme: { dark: 'Dark', light: 'Light' },

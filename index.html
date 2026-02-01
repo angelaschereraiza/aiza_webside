@@ -1,71 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CH">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aiza GmbH | Consulting, Architecture & Software Development</title>
+
+  <title>Aiza GmbH | Consulting, Architecture & Software Development (Zollikofen/Bern)</title>
 
   <link rel="icon" href="/images/favicon.ico" sizes="any" />
-
-  <link rel="alternate" hreflang="de-CH" href="https://aiza.ch/" />
-  <link rel="alternate" hreflang="en"    href="https://aiza.ch/" />
-  <link rel="alternate" hreflang="x-default" href="https://aiza.ch/" />
   <link rel="canonical" href="https://aiza.ch/" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
   <!-- SEO -->
-  <meta name="robots" content="index,follow" />
-  <meta name="description" content="Aiza GmbH (Zollikofen near Bern): Consulting, architecture & development of web applications and cloud and Kubernetes solutions based on open source. Golang, C#, Python, JavaScript, TypeScript." />
-  <meta name="keywords" content="Aiza GmbH, software development Bern, Zollikofen, consulting, Golang, C#, Python, JavaScript, TypeScript, Kubernetes, AI infrastructure, architecture" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="description"
+        content="Aiza GmbH in Zollikofen (bei Bern): Consulting, Software-Architektur & Entwicklung von Webapplikationen sowie Cloud-, Kubernetes- und AI-Lösungen auf Open-Source-Basis." />
   <meta name="theme-color" content="#0b1020" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Aiza GmbH" />
   <meta property="og:title" content="Aiza GmbH | Consulting, Architecture & Software Development" />
-  <meta property="og:description" content="Consulting, architecture and development. Golang, C#, Python, JavaScript, TypeScript. Kubernetes and AI infrastructure." />
+  <meta property="og:description" content="Consulting, architecture and development. Kubernetes, cloud and AI infrastructure." />
   <meta property="og:url" content="https://aiza.ch/" />
-  <meta property="og:image" content="https://aiza.ch/images/social.jpg" />
+  <meta property="og:image" content="https://aiza.ch/images/aiza_logo.png" />
+  <meta property="og:locale" content="en_CH" />
 
-  <!-- Structured Data -->
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aiza GmbH | Consulting, Architecture & Software Development" />
+  <meta name="twitter:description" content="Consulting, architecture and development. Kubernetes, cloud and AI infrastructure." />
+  <meta name="twitter:image" content="https://aiza.ch/images/aiza_logo.png" />
+
+  <!-- Structured Data: Local SEO -->
   <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Organization",
-      "name":"Aiza GmbH",
-      "url":"https://aiza.ch/",
-      "logo":"https://aiza.ch/images/aiza_logo.png",
-      "email":"mailto:angela.scherer@aiza.ch",
-      "telephone":"+41 79 197 21 53",
-      "address":{
-        "@type":"PostalAddress",
-        "streetAddress":"Bernstrasse 159",
-        "postalCode":"3052",
-        "addressLocality":"Zollikofen",
-        "addressCountry":"CH"
-      },
-      "founder":{
-        "@type":"Person",
-        "name":"Angela Scherer"
-      },
-      "sameAs":[
-        "https://linkedin.com/company/aiza-gmbh",
-        "https://xing.com/pages/aiza-gmbh"
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Aiza GmbH",
+    "url": "https://aiza.ch/",
+    "logo": "https://aiza.ch/images/aiza_logo.png",
+    "image": "https://aiza.ch/images/aiza_logo.png",
+    "description": "Consulting, software architecture and development of web applications, cloud, Kubernetes and AI infrastructure based on open source.",
+    "email": "mailto:angela.scherer@aiza.ch",
+    "telephone": "+41 79 197 21 53",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bernstrasse 159",
+      "postalCode": "3052",
+      "addressLocality": "Zollikofen",
+      "addressRegion": "BE",
+      "addressCountry": "CH"
+    },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Switzerland" },
+      { "@type": "City", "name": "Bern" },
+      { "@type": "City", "name": "Zollikofen" }
+    ],
+    "foundingDate": "2023",
+    "founder": {
+      "@type": "Person",
+      "name": "Angela Scherer",
+      "jobTitle": "Founder & CEO",
+      "sameAs": [
+        "https://linkedin.com/in/angela-scherer-2a2979136"
       ]
-    }
+    },
+    "sameAs": [
+      "https://linkedin.com/company/aiza-gmbh",
+      "https://xing.com/pages/aiza-gmbh"
+    ],
+    "knowsAbout": [
+      "Software Architecture",
+      "Web Application Development",
+      "Kubernetes",
+      "Cloud Engineering",
+      "CI/CD",
+      "AI Infrastructure",
+      "Golang",
+      "C#",
+      "Python",
+      "TypeScript"
+    ]
+  }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Aiza GmbH Home">
         <span class="brand-badge" aria-hidden="true">
-          <img src="/images/aiza_logo.png" alt="Aiza GmbH Logo" class="brand-logo" data-light="/images/aiza_logo.png" data-dark="/images/aiza_logo_border.png"/>
+          <img src="/images/aiza_logo.png" alt="Aiza GmbH Logo" class="brand-logo" width="192" height="48" decoding="async" data-light="/images/aiza_logo.png" data-dark="/images/aiza_logo_border.png"/>
         </span>
       </a>
 
@@ -160,9 +195,7 @@
         <div class="grid cards">
           <article class="card">
             <h3 data-i18n="process.p1.title">1. Clarify the goal</h3>
-            <p data-i18n="process.p1.text">
-              We align on outcome, constraints, and success criteria.
-            </p>
+            <p data-i18n="process.p1.text">We align on outcome, constraints, and success criteria.</p>
             <ul class="mini">
               <li data-i18n="process.p1.b1">Short brief & context</li>
               <li data-i18n="process.p1.b2">Risks & assumptions</li>
@@ -172,9 +205,7 @@
 
           <article class="card">
             <h3 data-i18n="process.p2.title">2. Propose a plan</h3>
-            <p data-i18n="process.p2.text">
-              You get a concrete proposal with scope, options and a transparent estimate.
-            </p>
+            <p data-i18n="process.p2.text">You get a concrete proposal with scope, options and a transparent estimate.</p>
             <ul class="mini">
               <li data-i18n="process.p2.b1">Architecture & milestones</li>
               <li data-i18n="process.p2.b2">Trade-offs explained</li>
@@ -184,9 +215,7 @@
 
           <article class="card">
             <h3 data-i18n="process.p3.title">3. Deliver & operate</h3>
-            <p data-i18n="process.p3.text">
-              We deliver in small increments and support stable operations if needed.
-            </p>
+            <p data-i18n="process.p3.text">We deliver in small increments and support stable operations if needed.</p>
             <ul class="mini">
               <li data-i18n="process.p3.b1">Tests & code reviews</li>
               <li data-i18n="process.p3.b2">Documentation</li>
@@ -208,7 +237,7 @@
         <div class="grid cards">
           <article class="card">
             <h3 data-i18n="services.s1.title">Software Architecture & Engineering</h3>
-            <p data-i18n="services.s1.text"> Golang, C#, Python, JavaScript and TypeScript with a focus on quality, testability and clear documentation.</p>
+            <p data-i18n="services.s1.text">Golang, C#, Python, JavaScript and TypeScript with a focus on quality, testability and clear documentation.</p>
             <ul class="mini">
               <li data-i18n="services.s1.b1">System design and API interfaces</li>
               <li data-i18n="services.s1.b2">Code reviews and quality gates</li>
@@ -337,6 +366,7 @@
       <div class="section-head">
         <h2 data-i18n="about.title">About us</h2>
       </div>
+
       <div class="container about-grid">
         <div class="about-card">
           <p data-i18n="about.text1">
@@ -349,7 +379,7 @@
 
         <div class="profile-card">
           <div class="profile-head">
-            <img src="/images/me.png" alt="Portrait of Angela Scherer" class="avatar" />
+            <img src="/images/me.png" alt="Portrait of Angela Scherer" class="avatar" width="256" height="384" loading="lazy" decoding="async"/>
             <div>
               <h3 class="profile-name">Angela Scherer</h3>
               <p class="profile-role" data-i18n="about.role">Founder & CEO</p>
@@ -367,68 +397,70 @@
               <li>Business English Cambridge Preliminary</li>
             </ul>
           </div>
+
           <div class="icon-row" aria-label="Social links">
             <a class="icon-link" href="https://linkedin.com/in/angela-scherer-2a2979136" target="_blank" rel="noopener" aria-label="LinkedIn (Angela Scherer)">
-              <img src="/images/icon_linkedin.png" alt="LinkedIn Icon" width="28" height="28" loading="lazy">
+              <img src="/images/icon_linkedin.png" alt="LinkedIn Icon" width="28" height="28" loading="lazy" decoding="async" />
               <span class="tooltip" role="tooltip">Linkedin Angela Scherer</span>
             </a>
             <a class="icon-link" href="https://xing.com/profile/Angela_Scherer3/cv" target="_blank" rel="noopener" aria-label="Xing (Angela Scherer)">
-              <img src="/images/icon_xing.png" alt="Xing Icon" width="28" height="28" loading="lazy">
+              <img src="/images/icon_xing.png" alt="Xing Icon" width="28" height="28" loading="lazy" decoding="async" />
               <span class="tooltip" role="tooltip">Xing Angela Scherer</span>
             </a>
           </div>
         </div>
       </div>
+
       <div class="container">
         <div class="clients-head">
           <p data-i18n="clients.title">Selected organizations we’ve worked with. References and details available on request.</p>
         </div>
 
         <div class="clients-grid" aria-label="Client logos">
+          
           <figure class="client-card">
             <a href="https://letsboot.ch" target="_blank" rel="noopener" class="client-link" aria-label="Letsboot.ch">
-              <img class="letsboot-img" src="/images/letsboot_logo.svg" alt="Letsboot.ch" loading="lazy" decoding="async" />
+              <img class="letsboot-img" src="/images/letsboot_logo.svg" alt="Letsboot.ch" loading="lazy" decoding="async" width="320" height="120" />
               <span class="client-tooltip" role="tooltip">Letsboot.ch</span>
             </a>
           </figure>
 
           <figure class="client-card">
             <a href="https://afca.ch" target="_blank" rel="noopener" class="client-link" aria-label="afca. ag">
-              <img src="/images/afca_logo.svg" alt="afca. ag" loading="lazy" decoding="async" />
+              <img src="/images/afca_logo.svg" alt="afca. ag" loading="lazy" decoding="async" width="320" height="120" />
               <span class="client-tooltip" role="tooltip">afca. ag</span>
             </a>
           </figure>
 
           <figure class="client-card">
             <a href="https://officeworld.ch" target="_blank" rel="noopener" class="client-link" aria-label="Office World | OWIBA AG">
-              <img src="/images/officeworld_logo.svg" alt="Office World | OWIBA AG" loading="lazy" decoding="async" />
+              <img src="/images/officeworld_logo.svg" alt="Office World | OWIBA AG" loading="lazy" decoding="async" width="320" height="120" />
               <span class="client-tooltip" role="tooltip">Office World | OWIBA AG</span>
             </a>
           </figure>
 
           <figure class="client-card">
             <a href="https://onedoc.ch/en/medical-practice/bern/esh1/kasparpraxis-praxis-dr-med-daniel-weil" target="_blank" rel="noopener" class="client-link" aria-label="Kaspar Praxis">
-              <img src="/images/kaspar_praxis_logo.png" alt="Kaspar Praxis" loading="lazy" decoding="async" />
+              <img src="/images/kaspar_praxis_logo.png" alt="Kaspar Praxis" loading="lazy" decoding="async" width="320" height="120" />
               <span class="client-tooltip" role="tooltip">Kaspar Praxis</span>
             </a>
           </figure>
-          
+
           <figure class="client-card">
-              <a href="https://rocket-bar.ch" target="_blank" rel="noopener" class="client-link" aria-label="Rocket Bar GmbH">
-                <span class="logo-oval">
-                  <img src="/images/rocket_bar_logo.webp" alt="Rocket Bar GmbH" loading="lazy" decoding="async" />
-                  <span class="client-tooltip" role="tooltip">Rocket Bar GmbH</span>
-                </span>
-              </a>
+            <a href="https://rocket-bar.ch" target="_blank" rel="noopener" class="client-link" aria-label="Rocket Bar GmbH">
+              <span class="logo-oval">
+                <img src="/images/rocket_bar_logo.webp" alt="Rocket Bar GmbH" loading="lazy" decoding="async" width="320" height="120" />
+                <span class="client-tooltip" role="tooltip">Rocket Bar GmbH</span>
+              </span>
+            </a>
           </figure>
 
           <figure class="client-card">
             <div class="client-link" aria-label="Alex Osterwalder Treuhand">
-              <img class="osterwalder-img" src="/images/osterwalder_logo.png" alt="Osterwalder Treuhand" loading="lazy" decoding="async" />
+              <img class="osterwalder-img" src="/images/osterwalder_logo.png" alt="Osterwalder Treuhand" loading="lazy" decoding="async" width="320" height="120" />
               <span class="client-tooltip" role="tooltip">Alex Osterwalder Treuhand</span>
             </div>
           </figure>
-
         </div>
       </div>
     </section>
@@ -455,11 +487,11 @@
             </p>
             <div class="icon-row" aria-label="Company social links">
               <a class="icon-link" href="https://linkedin.com/company/aiza-gmbh" target="_blank" rel="noopener" aria-label="LinkedIn (Aiza GmbH)">
-                <img src="/images/icon_linkedin.png" alt="LinkedIn Icon" width="28" height="28" loading="lazy">
+                <img src="/images/icon_linkedin.png" alt="LinkedIn Icon" width="28" height="28" loading="lazy" decoding="async" />
                 <span class="tooltip" role="tooltip">Linkedin Aiza GmbH</span>
               </a>
               <a class="icon-link" href="https://xing.com/pages/aiza-gmbh" target="_blank" rel="noopener" aria-label="Xing (Aiza GmbH)">
-                <img src="/images/icon_xing.png" alt="Xing Icon" width="28" height="28" loading="lazy">
+                <img src="/images/icon_xing.png" alt="Xing Icon" width="28" height="28" loading="lazy" decoding="async" />
                 <span class="tooltip" role="tooltip">Xing Aiza GmbH</span>
               </a>
             </div>

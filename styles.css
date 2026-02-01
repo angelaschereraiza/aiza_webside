@@ -98,6 +98,28 @@
 }
 
 /* ===========================
+   Skip Link (A11y)
+=========================== */
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 1rem;
+  z-index: 3000;
+  background: var(--card);
+  color: var(--text);
+  border: 0.0625rem solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.skip-link:focus {
+  left: 1rem;
+}
+
+/* ===========================
    Base
 =========================== */
 

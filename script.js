@@ -5,6 +5,10 @@ const HTML_LANG = { de: 'de-DE', en: 'en-US' };
 
 const I18N = {
   de: {
+    meta: {
+      title: 'Aiza GmbH | Consulting, Architektur & Softwareentwicklung (Zollikofen/Bern)',
+      description: 'Aiza GmbH in Zollikofen (bei Bern): Consulting, Software-Architektur & Entwicklung von Webapplikationen sowie Cloud-, Kubernetes- und AI-Lösungen auf Open-Source-Basis.'
+    },
     nav: { services: 'Services', stack: 'Technologien', about: 'Über uns', contact: 'Kontakt' },
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
@@ -156,8 +160,7 @@ const I18N = {
           Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs.
           Für Inhalte und Rechtmässigkeit solcher Webseiten wird jegliche Verantwortung abgelehnt.
         </p>
-      `,     
-        
+      `,
       privacy_html: `
         <h3>Allgemeines</h3>
         <p>
@@ -237,10 +240,14 @@ const I18N = {
           Wir behalten uns vor, diese Datenschutzerklärung jederzeit anzupassen.
           Es gilt die jeweils auf dieser Website veröffentlichte Version.
         </p>
-      `      
+      `
     }
   },
   en: {
+    meta: {
+      title: 'Aiza GmbH | Consulting, Architecture & Software Development (Zollikofen/Bern)',
+      description: 'Aiza GmbH in Zollikofen (near Bern): consulting, software architecture and development of web applications as well as cloud, Kubernetes and AI solutions based on open source.'
+    },
     nav: { services: 'Services', stack: 'Technologies', about: 'About', contact: 'Contact' },
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
@@ -468,7 +475,7 @@ const I18N = {
           We may update this privacy policy at any time.
           The version published on this website is the current one.
         </p>
-      `,
+      `
     }
   }
 };
@@ -522,6 +529,13 @@ function setLanguage(lang) {
     btn.setAttribute('aria-pressed', String(pressed));
   });
 
+  // SEO: update <title> and meta description per language
+  const meta = I18N[lang]?.meta;
+  if (meta?.title) document.title = meta.title;
+
+  const desc = document.querySelector('meta[name="description"]');
+  if (desc && meta?.description) desc.setAttribute('content', meta.description);
+
   const theme = document.documentElement.getAttribute('data-theme') || 'dark';
   setTheme(theme);
 }
@@ -551,6 +565,7 @@ function setupMobileMenu() {
     window.setTimeout(() => {
       menu.hidden = true;
       menu.setAttribute('aria-hidden', 'true');
+      hamburger.focus();
     }, 350);
   };
 

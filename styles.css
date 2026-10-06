@@ -1539,6 +1539,19 @@ p, li, h1, h2, h3, h4 {
   .contact-card p {
     margin-bottom: 0.75rem;
   }
+
+  .modal {
+    align-items: flex-start;
+    overflow-y: auto;
+    height: 100dvh;
+    padding: 1rem;
+  }
+
+  .modal-dialog {
+    margin: auto;
+    max-height: calc(100dvh - 2rem);
+    overflow-y: auto;
+  }
 }
 
 @media (max-width: 30rem) {

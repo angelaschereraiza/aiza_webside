@@ -52,6 +52,7 @@ const I18N = {
     services: {
       title: 'Services',
       subtitle: 'Klar definierte Leistungen, vom Konzept bis zum produktiven Betrieb.',
+      details: 'Mehr erfahren',
       s1: {
         title: 'Software Architektur & Engineering',
         text: 'Golang, C#, Python, JavaScript und TypeScript mit Fokus auf Qualität, Testbarkeit und nachvollziehbare Dokumentation.',
@@ -292,6 +293,7 @@ const I18N = {
     services: {
       title: 'Services',
       subtitle: 'Clear services, from concept to operations.',
+      details: 'Learn more',
       s1: {
         title: 'Software Architecture & Engineering',
         text: 'Golang, C#, Python, JavaScript and TypeScript with a focus on quality, testability and clear documentation.',
@@ -526,6 +528,11 @@ function setLanguage(lang) {
     if (typeof value === 'string') el.textContent = value;
   });
 
+  document.querySelectorAll('[data-service]').forEach(button => {
+    const service = I18N[lang].services[button.dataset.service];
+    if (service) button.setAttribute('aria-label', `${I18N[lang].services.details}: ${service.title}`);
+  });
+
   document.querySelectorAll('.seg-btn[data-lang]').forEach(btn => {
     const pressed = btn.dataset.lang === lang;
     btn.setAttribute('aria-pressed', String(pressed));
@@ -597,9 +604,12 @@ function setupLegalModal() {
   const title = document.getElementById('modal-title');
   const content = document.getElementById('modal-content');
   const links = document.querySelectorAll('.footer-link[data-doc]');
-  if (!modal || !title || !content || !links.length) return;
+  const serviceButtons = document.querySelectorAll('[data-service]');
+  const serviceCards = document.querySelectorAll('#services .service-card');
+  if (!modal || !title || !content || (!links.length && !serviceButtons.length && !serviceCards.length)) return;
 
   let isOpen = false;
+  let activeTrigger = null;
 
   const renderDoc = (docKey) => {
     const t = I18N[currentLang]?.legal || I18N.en.legal;
@@ -609,20 +619,61 @@ function setupLegalModal() {
     } else if (docKey === 'privacy') {
       title.textContent = t.privacyTitle;
       content.innerHTML = t.privacy_html;
+    } else {
+      return false;
     }
+    return true;
   };
 
-  const open = (docKey, { pushHistory = true } = {}) => {
-    renderDoc(docKey);
+  const renderService = serviceKey => {
+    const service = I18N[currentLang]?.services?.[serviceKey];
+    if (!service) return false;
+
+    title.textContent = service.title;
+    const list = document.createElement('ul');
+    list.className = 'service-detail-list';
+    const trainingLinks = {
+      b1: 'https://letsboot.ch/kurs/golang',
+      b2: 'https://letsboot.ch/kurs/kubernetes-operators'
+    };
+
+    Object.entries(service)
+      .filter(([key]) => /^(b|p)\d+$/.test(key))
+      .forEach(([key, value]) => {
+        const item = document.createElement('li');
+        if (serviceKey === 's5' && trainingLinks[key]) {
+          const link = document.createElement('a');
+          link.href = trainingLinks[key];
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.textContent = value;
+          item.append(link);
+        } else {
+          item.textContent = value;
+        }
+        list.append(item);
+      });
+
+    content.replaceChildren(list);
+    return true;
+  };
+
+  const open = (docKey, { pushHistory = true, type = 'legal', trigger = null } = {}) => {
+    const rendered = type === 'service' ? renderService(docKey) : renderDoc(docKey);
+    if (!rendered) return;
 
     modal.hidden = false;
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
     isOpen = true;
+    activeTrigger = trigger;
 
     // Push history entry so browser "Back" closes the modal
     if (pushHistory) {
-      history.pushState({ modal: 'legal', doc: docKey }, '', location.href);
+      const state = type === 'service'
+        ? { modal: 'service', service: docKey }
+        : { modal: 'legal', doc: docKey };
+      history.pushState(state, '', location.href);
     }
 
     modal.querySelector('.modal-close')?.focus();
@@ -635,11 +686,13 @@ function setupLegalModal() {
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
     isOpen = false;
+    if (activeTrigger?.isConnected) activeTrigger.focus();
+    activeTrigger = null;
 
     // If user clicked close (not back button), remove our history entry
     if (!fromPopState) {
       const st = history.state;
-      if (st && st.modal === 'legal') {
+      if (st && (st.modal === 'legal' || st.modal === 'service')) {
         history.back();
       }
     }
@@ -648,7 +701,29 @@ function setupLegalModal() {
   links.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      open(link.dataset.doc, { pushHistory: true });
+      open(link.dataset.doc, { pushHistory: true, trigger: link });
+    });
+  });
+
+  serviceCards.forEach(card => {
+    const serviceKey = card.dataset.serviceKey || card.querySelector('[data-service]')?.dataset.service;
+    if (!serviceKey) return;
+
+    card.addEventListener('click', e => {
+      if (e.target.closest('button, a, input, select, textarea')) return;
+      open(serviceKey, { type: 'service', trigger: card });
+    });
+
+    card.addEventListener('keydown', e => {
+      if (e.target !== card || (e.key !== 'Enter' && e.key !== ' ')) return;
+      e.preventDefault();
+      open(serviceKey, { type: 'service', trigger: card });
+    });
+  });
+
+  serviceButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      open(button.dataset.service, { type: 'service', trigger: button });
     });
   });
 
@@ -657,7 +732,23 @@ function setupLegalModal() {
   });
 
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && !modal.hidden) close();
+    if (modal.hidden) return;
+    if (e.key === 'Escape') {
+      close();
+      return;
+    }
+    if (e.key !== 'Tab') return;
+
+    const focusable = [...modal.querySelectorAll('.modal-dialog a[href], .modal-dialog button:not([disabled]), .modal-dialog [tabindex]:not([tabindex="-1"])')];
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last?.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first?.focus();
+    }
   });
 
   // If the user hits browser back/forward:
@@ -671,6 +762,8 @@ function setupLegalModal() {
   const st = history.state;
   if (st && st.modal === 'legal' && st.doc) {
     open(st.doc, { pushHistory: false });
+  } else if (st && st.modal === 'service' && st.service) {
+    open(st.service, { pushHistory: false, type: 'service' });
   }
 }
 

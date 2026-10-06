@@ -99,7 +99,7 @@
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Aiza GmbH Home">
         <span class="brand-badge" aria-hidden="true">
-          <img src="/images/aiza_logo.png" alt="Aiza GmbH Logo" class="brand-logo" width="192" height="48" decoding="async" data-light="/images/aiza_logo.png" data-dark="/images/aiza_logo_border.png"/>
+          <img src="/images/aiza_logo.png" alt="Aiza GmbH Logo" class="brand-logo" width="192" height="48" decoding="async" />
         </span>
       </a>
 
@@ -234,66 +234,37 @@
         </div>
 
         <div class="grid cards">
-          <article class="card">
+          <article class="card service-card" tabindex="0" aria-haspopup="dialog">
             <h3 data-i18n="services.s1.title">Software Architecture & Engineering</h3>
             <p data-i18n="services.s1.text">Golang, C#, Python, JavaScript and TypeScript with a focus on quality, testability and clear documentation.</p>
-            <ul class="mini">
-              <li data-i18n="services.s1.b1">System design and API interfaces</li>
-              <li data-i18n="services.s1.b2">Code reviews and quality gates</li>
-              <li data-i18n="services.s1.b3">Modernization of existing applications</li>
-            </ul>
+            <button class="service-details" type="button" data-service="s1" data-i18n="services.details" aria-haspopup="dialog">Details</button>
           </article>
 
-          <article class="card">
+          <article class="card service-card" tabindex="0" aria-haspopup="dialog">
             <h3 data-i18n="services.s2.title">Bug Fixing and Stabilization</h3>
             <p data-i18n="services.s2.text">Focused analysis, reproducible fixes and improvements that last.</p>
-            <ul class="mini">
-              <li data-i18n="services.s2.b1">Debugging and root cause analysis</li>
-              <li data-i18n="services.s2.b2">Performance and memory profiling</li>
-              <li data-i18n="services.s2.b3">Test coverage and regression prevention</li>
-            </ul>
+            <button class="service-details" type="button" data-service="s2" data-i18n="services.details" aria-haspopup="dialog">Details</button>
           </article>
 
-          <article class="card">
+          <article class="card service-card" tabindex="0" aria-haspopup="dialog">
             <h3 data-i18n="services.s3.title">Kubernetes Engineering & Operations</h3>
             <p data-i18n="services.s3.text">From setup to operations & upgrades, including CRDs/operators and troubleshooting.</p>
-            <ul class="mini">
-              <li data-i18n="services.s3.b1">Cluster setup, cloud or on prem</li>
-              <li data-i18n="services.s3.b2">Upgrades, hardening and observability</li>
-              <li data-i18n="services.s3.b3">CI/CD and GitOps patterns</li>
-              <li data-i18n="services.s3.b4">CRDs & operator development and bug fixing</li>
-            </ul>
+            <button class="service-details" type="button" data-service="s3" data-i18n="services.details" aria-haspopup="dialog">Details</button>
           </article>
 
-          <article class="card">
+          <article class="card service-card" tabindex="0" aria-haspopup="dialog">
             <h3 data-i18n="services.s4.title">AI Infrastructure and Data Training</h3>
             <p data-i18n="services.s4.text">Infrastructure and data pipelines for AI use cases.</p>
-            <ul class="mini">
-              <li data-i18n="services.s4.b1">Deployment patterns and monitoring</li>
-              <li data-i18n="services.s4.b2">Data pipelines and governance</li>
-              <li data-i18n="services.s4.b3">Evaluation and quality assurance</li>
-            </ul>
+            <button class="service-details" type="button" data-service="s4" data-i18n="services.details" aria-haspopup="dialog">Details</button>
           </article>
 
-          <article class="card">
+          <article class="card service-card" tabindex="0" aria-haspopup="dialog">
             <h3 data-i18n="services.s5.title">Workshops and Training</h3>
             <p data-i18n="services.s5.text">Fundamentals and hands-on training with best practices.</p>
-
-            <ul class="mini mini-links">
-              <li>
-                <a href="https://letsboot.ch/kurs/golang" target="_blank" rel="noopener">
-                  <span data-i18n="services.s5.b1">Golang</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://letsboot.ch/kurs/kubernetes-operators" target="_blank" rel="noopener">
-                  <span data-i18n="services.s5.b2">Kubernetes Operators, CRDs and Integrations</span>
-                </a>
-              </li>
-            </ul>
+            <button class="service-details" type="button" data-service="s5" data-i18n="services.details" aria-haspopup="dialog">Details</button>
           </article>
 
-          <article class="card card-accent">
+          <article class="card service-card card-accent" data-service-key="s6" tabindex="0" aria-haspopup="dialog">
             <h3 data-i18n="services.s6.title">Working together</h3>
             <p data-i18n="services.s6.text">Short term support or long term partnership. Transparent and outcome driven.</p>
             <div class="pill-row">
@@ -427,28 +398,30 @@
 
           <figure class="client-card">
             <a href="https://afca.ch" target="_blank" rel="noopener" class="client-link" aria-label="afca. ag">
-              <img src="/images/afca_logo.svg" alt="afca. ag" loading="lazy" decoding="async" width="320" height="120" />
+              <img class="afca-img" src="/images/afca_logo.svg" alt="afca. ag" loading="lazy" decoding="async" width="320" height="120" />
               <span class="client-tooltip" role="tooltip">afca. ag</span>
             </a>
           </figure>
 
           <figure class="client-card">
             <a href="https://officeworld.ch" target="_blank" rel="noopener" class="client-link" aria-label="Office World | OWIBA AG">
-              <img src="/images/officeworld_logo.svg" alt="Office World | OWIBA AG" loading="lazy" decoding="async" width="320" height="120" />
+              <img class="oficeworld-img" src="/images/officeworld_logo.svg" alt="Office World | OWIBA AG" loading="lazy" decoding="async" width="320" height="120" />
               <span class="client-tooltip" role="tooltip">Office World | OWIBA AG</span>
             </a>
           </figure>
 
           <figure class="client-card">
-            <a href="https://onedoc.ch/en/medical-practice/bern/esh1/kasparpraxis-praxis-dr-med-daniel-weil" target="_blank" rel="noopener" class="client-link" aria-label="Kaspar Praxis">
-              <img src="/images/kaspar_praxis_logo.png" alt="Kaspar Praxis" loading="lazy" decoding="async" width="320" height="120" />
-              <span class="client-tooltip" role="tooltip">Kaspar Praxis</span>
+            <a href="https://onedoc.ch/en/medical-practice/bern/esh1/kasparpraxis-praxis-dr-med-daniel-weil" target="_blank" rel="noopener" class="client-link" aria-label="Kaspar Praxis" >
+              <span class="logo-oval-kaspar">
+                <img class="kaspar-img" src="/images/kaspar_praxis_logo.png" alt="Kaspar Praxis" loading="lazy" decoding="async" width="320" height="120" />
+                <span class="client-tooltip" role="tooltip">Kaspar Praxis</span>
+              </span>
             </a>
           </figure>
 
           <figure class="client-card">
             <a href="https://rocket-bar.ch" target="_blank" rel="noopener" class="client-link" aria-label="Rocket Bar GmbH">
-              <span class="logo-oval">
+              <span class="logo-oval-rocket">
                 <img src="/images/rocket_bar_logo.webp" alt="Rocket Bar GmbH" loading="lazy" decoding="async" width="320" height="120" />
                 <span class="client-tooltip" role="tooltip">Rocket Bar GmbH</span>
               </span>
@@ -461,6 +434,21 @@
               <span class="client-tooltip" role="tooltip">Alex Osterwalder Treuhand</span>
             </div>
           </figure>
+
+          <figure class="client-card">
+            <a href="https://www.inventx.ch/en" target="_blank" rel="noopener" class="client-link" aria-label="Inventx AG">
+              <img class="inventx-img" src="/images/inventx_logo.svg" alt="Inventx AG" loading="lazy" decoding="async" width="320" height="120" />
+              <span class="client-tooltip" role="tooltip">Inventx AG</span>
+            </a>
+          </figure>
+
+          <figure class="client-card">
+            <a href="https://assajconsulting.ch/" target="_blank" rel="noopener" class="client-link" aria-label="ASSAJ Consulting GmbH">
+              <img class="assaj-img" src="/images/assaj_logo.png" alt="ASSAJ Consulting GmbH" loading="lazy" decoding="async" width="320" height="120" />
+              <span class="client-tooltip" role="tooltip">ASSAJ Consulting GmbH</span>
+            </a>
+          </figure>
+
         </div>
       </div>
     </section>

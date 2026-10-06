@@ -61,10 +61,6 @@
   --ui-hover-border: rgba(39, 111, 255, 0.35);
   --ui-hover-shadow: rgba(39, 111, 255, 0.10);
 
-  --client-card-border-dark: rgba(11, 16, 32, 0.28);
-  --client-card-shadow-dark: rgba(0, 0, 0, 0.55);
-  --client-card-inset-dark: rgba(255, 255, 255, 0.55);
-
   --client-grad-1: #f0f2f8;
   --client-grad-2: #d9deec;
   --client-grad-3: #b8bfd9;
@@ -252,6 +248,30 @@ p, li, h1, h2, h3, h4 {
 
 [data-theme="dark"] .brand-logo {
   content: url("images/aiza_logo_border.png");
+}
+
+.afca-img {
+  content: url("/images/afca_logo.svg");
+}
+
+[data-theme="dark"] .afca-img {
+  content: url("/images/afca_logo_dark.svg");
+}
+
+.letsboot-img {
+  content: url("/images/letsboot_logo.svg");
+}
+
+[data-theme="dark"] .letsboot-img {
+  content: url("/images/letsboot_logo_dark.svg");
+}
+
+.inventx-img {
+  content: url("/images/inventx_logo.webp");
+}
+
+[data-theme="dark"] .inventx-img {
+  content: url("/images/inventx_logo_dark.svg");
 }
 
 .nav-desktop {
@@ -633,6 +653,25 @@ p, li, h1, h2, h3, h4 {
   box-shadow: var(--shadow);
 }
 
+.service-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.service-card:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.service-card:hover,
+.service-card:focus-within {
+  transform: translateY(-0.125rem) scale(1.02);
+  border-color: var(--ui-hover-border);
+  box-shadow: 0 0.75rem 2.25rem var(--ui-hover-shadow);
+}
+
 .card h3 {
   margin: 0 0 0.625rem;
   font-size: 1rem;
@@ -642,6 +681,17 @@ p, li, h1, h2, h3, h4 {
   margin: 0 0 0.625rem;
   color: var(--muted);
   line-height: 1.6;
+}
+
+.service-details {
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  padding: 0.25rem 0;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: auto;
+  align-self: flex-end;
 }
 
 .mini {
@@ -662,7 +712,10 @@ p, li, h1, h2, h3, h4 {
 .mini-links a:hover,
 .footer-link:hover,
 .contact-links a:hover,
-.modal-content a:hover {
+.modal-content a:hover,
+.service-details:hover,
+.service-card:hover .service-details,
+.service-card:focus-within .service-details {
   color: var(--accent2);
 }
 
@@ -675,7 +728,6 @@ p, li, h1, h2, h3, h4 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.625rem;
-  margin-top: 0.625rem;
   justify-content: center;
 }
 
@@ -897,7 +949,7 @@ p, li, h1, h2, h3, h4 {
 .clients-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-content: center;
   justify-items: center;
   margin-top: 1.25rem;
@@ -906,7 +958,7 @@ p, li, h1, h2, h3, h4 {
 .client-card {
   margin: 0;
   border: 1px solid var(--border);
-  background: var(--light);
+  background: var(--card);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
   padding: 0.75rem;
@@ -918,20 +970,6 @@ p, li, h1, h2, h3, h4 {
   transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
 
-[data-theme="dark"] .client-card {
-  background: radial-gradient(
-    ellipse at center,
-    var(--light) 0%,
-    var(--light) 60%,
-    var(--client-grad-1) 70%,
-    var(--client-grad-2) 76%,
-    var(--client-grad-3) 88%,
-    var(--client-grad-4) 100%
-  );
-  border: 1px solid var(--client-card-border-dark);
-  box-shadow: 0 1rem 3rem var(--client-card-shadow-dark), inset 0 0 0 1px var(--client-card-inset-dark);
-}
-
 .client-card img {
   max-height: 5rem;
   width: auto;
@@ -940,25 +978,46 @@ p, li, h1, h2, h3, h4 {
   transition: filter 0.18s ease, opacity 0.18s ease, transform 0.18s ease;
 }
 
-.letsboot-img {
-  padding: 0.7rem;
+.inventx-img {
+  padding: 1rem;
 }
 
-.osterwalder-img {
+.letsboot-img {
+  padding: 0.8rem;
+}
+
+.osterwalder-img,
+.oficeworld-img{
   padding: 0.5rem;
 }
 
-.logo-oval {
+.assaj-img {
+  padding: 0.3rem;
+}
+
+.logo-oval-rocket,
+.logo-oval-kaspar {
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--dark);
-  border-radius: 9999px;
+  border-radius: 50px;
   padding: 0.85rem 1.6rem;
 }
 
-.logo-oval img {
+.logo-oval-kaspar {
+  background: var(--light);
+  padding: 0.5rem 1.5rem;
+}
+
+.logo-oval-rocket img{
   max-height: 3.301rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-oval-kaspar img {
+  max-height: 4rem;
   width: auto;
   object-fit: contain;
 }
@@ -1185,6 +1244,17 @@ p, li, h1, h2, h3, h4 {
   font-size: 0.875rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.service-detail-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.service-detail-list li {
+  padding-left: 0.15rem;
 }
 
 .modal-content a {

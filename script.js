@@ -7,21 +7,21 @@ const I18N = {
   de: {
     meta: {
       title: 'Aiza GmbH | Consulting, Architektur & Softwareentwicklung (Zollikofen/Bern)',
-      description: 'Aiza GmbH in Zollikofen (bei Bern): Consulting, Software-Architektur & Entwicklung von Webapplikationen sowie Cloud-, Kubernetes- und AI-Lösungen auf Open-Source-Basis.'
+      description: 'Aiza GmbH in Zollikofen (bei Bern): Consulting, Software-Architektur & Entwicklung von Webapplikationen sowie Cloud-, Kubernetes- und KI-Lösungen auf Open-Source-Basis.'
     },
     skip: 'Zum Hauptinhalt springen',
     nav: { services: 'Services', stack: 'Technologien', about: 'Über uns', contact: 'Kontakt' },
     theme: { dark: 'Dark', light: 'Light' },
     hero: {
       title: 'Consulting, Architektur und Softwareent\u00ADwicklung',
-      lead: 'Wir entwickeln massgeschneiderte Webapplikationen sowie Cloud, Kubernetes und AI Lösungen für Unternehmen und Institutionen auf Basis von Open-Source-Software.',
+      lead: 'Wir entwickeln massgeschneiderte Webapplikationen sowie Cloud-, Kubernetes- und KI-Lösungen für Unternehmen und Institutionen auf Basis von Open-Source-Software.',
       ctaPrimary: 'Kontakt aufnehmen',
       ctaSecondary: 'Services ansehen',
       cardTitle: 'Schwerpunkte',
-      b1: 'Architektur und Umsetzung von Web und Cloud Lösungen',
+      b1: 'Architektur und Umsetzung von Web- und Cloud-Lösungen',
       b2: 'Bugfixing und Stabilisierung bestehender Systeme',
       b3: 'Kubernetes: Setup, Betrieb, Upgrades sowie CRD-/Operator-Entwicklung und Bugfixing',
-      b4: 'AI Infrastruktur und Data Training, use case orientiert',
+      b4: 'KI-Infrastruktur und Modelltraining für konkrete Anwendungsfälle',
     },
     process: {
       title: 'Wie wir arbeiten',
@@ -36,7 +36,7 @@ const I18N = {
       },
       p2: {
         title: '2. Plan vorschlagen',
-        text: 'Sie erhalten einen konkreten Vorschlag mit Scope, Optionen und transparenter Aufwands\u00ADschätzung.',
+        text: 'Sie erhalten einen klaren Scope mit transparenter Aufwands\u00ADschätzung.',
         b1: 'Architektur & Meilensteine',
         b2: 'Trade-offs erklärt',
         b3: 'Lieferplan'
@@ -49,48 +49,83 @@ const I18N = {
         b3: 'Übergabe / Betriebssupport'
       }
     },
-    services: {
+      services: {
       title: 'Services',
-      subtitle: 'Klar definierte Leistungen, vom Konzept bis zum produktiven Betrieb.',
+      subtitle: 'Technische Expertise für moderne, zuverlässige und langfristig wartbare Softwarelösungen.',
       details: 'Mehr erfahren',
       s1: {
-        title: 'Software Architektur & Engineering',
-        text: 'Golang, C#, Python, JavaScript und TypeScript mit Fokus auf Qualität, Testbarkeit und nachvollziehbare Dokumentation.',
-        b1: 'Systemdesign und API Schnittstellen',
-        b2: 'Code Reviews und Quality Gates',
-        b3: 'Modernisierung bestehender Anwendungen'
+        title: 'Architektur & Softwareentwicklung',
+        text: 'Individuelle Software und Weblösungen von der Konzeption bis zur Umsetzung.',
+        description: 'Von der technischen Konzeption und Softwarearchitektur bis zur produktiven Umsetzung entwickeln wir massgeschneiderte Business-Applikationen, Weblösungen und Backend-Systeme. Dabei übernehmen wir sowohl Frontend- als auch Backend-Entwicklung und realisieren bei Bedarf komplette Webseiten inklusive Design, Responsive Design, technischer SEO und Hosting.',
+        b1: 'Softwarearchitektur und technische Konzeption',
+        b2: 'Frontend- und Backend-Entwicklung',
+        b3: 'Business-Applikationen und individuelle Weblösungen',
+        b4: 'Webdesign und Responsive Design',
+        b5: 'APIs, Schnittstellen und Systemintegrationen',
+        b6: 'Technische SEO und Performance-Optimierung',
+        b7: 'Hosting und Deployment',
+        b8: 'Backend-Entwicklung mit Go, C#, .NET und Python',
+        b9: 'Frontend: TypeScript, Vue.js, Angular, Svelte und Razor Pages',
+        b10: 'Auf Wunsch arbeiten wir uns gerne in neue Technologien ein'
       },
       s2: {
-        title: 'Bug Fixing und Stabilisierung',
-        text: 'Gezielte Analyse, reproduzierbare Fixes und Verbesserungen, die bleiben.',
-        b1: 'Debugging und Ursachen\u00ADanalyse',
-        b2: 'Performance und Memory Profiling',
-        b3: 'Testabdeckung und Regression Prevention'
+        title: 'Cloud Native, DevOps & Kubernetes',
+        text: 'Sichere Cloud-Native-Infrastrukturen für zuverlässige Deployments und stabilen Betrieb.',
+        description: 'Wir konzipieren, implementieren und optimieren Cloud-Native- und Kubernetes-Umgebungen für einen sicheren, automatisierten und zuverlässigen Betrieb. Von Kubernetes und Containerisierung über CI/CD und GitOps bis zu Security Hardening und Observability unterstützen wir sowohl beim Aufbau neuer Plattformen als auch bei der Weiterentwicklung bestehender Infrastrukturen.',
+        b1: 'Kubernetes-Setup, Betrieb und Upgrades',
+        b2: 'Kubernetes Security Hardening',
+        b3: 'Entwicklung von Kubernetes Operators und CRDs',
+        b4: 'CI/CD und Deployment-Automatisierung',
+        b5: 'Containerisierung mit Docker und Podman',
+        b6: 'Cloud- und Linux-Infrastruktur',
+        b7: 'Cloud- und Datenlösungen mit Azure, Azure DevOps und Azure Data Factory',
+        b8: 'GitOps mit Argo CD und Infrastructure as Code mit Terraform',
+        b9: 'Monitoring und Observability'
       },
       s3: {
-        title: 'Kubernetes Engineering & Operations',
-        text: 'Von Setup über Betrieb & Upgrades bis CRDs/Operatoren und Troubleshooting.',
-        b1: 'Cluster Setup, Cloud oder On-Premises',
-        b2: 'Upgrades, Hardening und Observability',
-        b3: 'CI/CD und GitOps Patterns',
-        b4: 'CRDs & Operator-Entwicklung und Bugfixing'
+        title: 'KI-Infrastruktur & Data Engineering',
+        text: 'Technische Infrastruktur und Datenlösungen für den sicheren und produktiven Einsatz von KI.',
+        description: 'Wir schaffen die technische Grundlage für den produktiven Einsatz von KI in Unternehmen. Dazu gehören der Aufbau geeigneter Infrastrukturen, die Aufbereitung und Verarbeitung unternehmenseigener Daten sowie die Integration von KI-Modellen und Services in bestehende Anwendungen und Prozesse. Der Fokus liegt auf konkreten Anwendungsfällen und technisch nachhaltigen Lösungen.',
+        b1: 'KI-Infrastruktur und Deployment',
+        b2: 'Datenpipelines und Datenaufbereitung',
+        b3: 'Integration von KI-Services und Modellen',
+        b4: 'Anbindung bestehender Anwendungen und Systeme',
+        b5: 'Monitoring und Qualitätssicherung',
+        b6: 'Unternehmensinterne KI-Lösungen auf Basis eigener Daten'
       },
       s4: {
-        title: 'AI Infrastruktur und Data Training',
-        text: 'Aufbau von Infrastruktur und Datenpipelines für AI Use Cases.',
-        b1: 'Deployment Patterns und Monitoring',
-        b2: 'Data Pipelines und Governance',
-        b3: 'Evaluierung und Qualitätssicherung'
+        title: 'Troubleshooting & Modernisierung',
+        text: 'Technische Probleme lösen, Systeme stabilisieren und Lösungen modernisieren.',
+        description: 'Wenn Anwendungen instabil, langsam oder technisch festgefahren sind, analysieren wir systematisch die Ursachen und beheben Probleme nachhaltig statt mit kurzfristigen Workarounds. Wir unterstützen bei akuten Produktionsproblemen ebenso wie bei der schrittweisen Modernisierung bestehender Anwendungen und Infrastrukturen.',
+        b1: 'Root Cause Analysis und Debugging',
+        b2: 'Performance- und Fehleranalyse',
+        b3: 'Stabilisierung produktiver Systeme',
+        b4: 'Analyse komplexer Produktionsprobleme',
+        b5: 'Modernisierung von Legacy-Anwendungen',
+        b6: 'Gezieltes Bugfixing in bestehenden Projekten',
+        b7: 'Code Reviews und technische Qualitätsanalyse'
       },
       s5: {
-        title: 'Workshops und Training',
-        text: 'Grundlagen sowie hands on mit Best Practices.',
-        b1: 'Golang',
-        b2: 'Kubernetes Operators, CRDs und Integrations',
+        title: 'Workshops & technische Trainings',
+        text: 'Praxisnahe Trainings und Workshops, auf Wunsch individuell auf Ihr Team zugeschnitten.',
+        description: 'Praxisorientierte technische Trainings für Teams aus Entwicklung, Engineering und IT-Betrieb. Die Trainings verbinden fundierte technische Grundlagen mit praktischen Übungen und realistischen Anwendungsfällen. Inhalte und Schwerpunkte können individuell auf den Wissensstand, die bestehende Infrastruktur und die Anforderungen des Teams abgestimmt werden.',
+        b1: 'Programmieren mit Golang',
+        b2: 'Programmieren mit C#/.NET',
+        b3: 'Kubernetes Grundlagen und Administration',
+        b4: 'Kubernetes Security und Security Hardening',
+        b5: 'Kubernetes Operators und CRDs',
+        b6: 'GitOps mit Argo CD',
+        b7: 'Infrastructure as Code mit Terraform',
+        b8: 'Containerisierung mit Docker und Podman',
+        b9: 'Podman Quadlet',
+        b10: 'Weitere Kurse können auf Wunsch angefragt werden',
+        collaboration: 'Ausgewählte Trainings bieten wir auch in Zusammenarbeit mit Letsboot an:',
+        letsbootGo: 'Programmieren mit Golang',
+        letsbootKubernetes: 'Kubernetes Operators, CRDs und Integrationen'
       },
       s6: {
         title: 'Zusammenarbeit',
-        text: 'Kurzfristige Unterstützung oder langfristige Partnerschaft. Transparent und zielorientiert.',
+        text: 'Flexible Unterstützung für einzelne Projekte, technische Herausforderungen oder eine langfristige Zusammenarbeit.',
         p1: 'Remote / On-Site (CH)',
         p2: 'Projekt / Consulting',
       }
@@ -105,7 +140,7 @@ const I18N = {
     about: {
       title: 'Über uns',
       text1: 'Die Aiza GmbH, gegründet 2023 und mit Sitz in Zollikofen bei Bern, entwickelt massgeschneiderte Webapplikationen sowie Cloud- und Kubernetes-Plattformlösungen auf Basis von Open-Source-Technologien.',
-      text2: 'Wir unterstützen Unternehmen und Institutionen mit Consulting, Architektur, Entwicklung und Schulung. Dazu gehören der Aufbau, der Betrieb und die Weiterentwicklung von Kubernetes-Umgebungen sowie der Aufbau und das Training unternehmensinterner AI-Systeme auf Basis firmeneigener Daten. Darüber hinaus wird die Aiza GmbH gezielt für Bugfixing, Fehleranalyse und die Stabilisierung bestehender Systeme eingesetzt, auch kurzfristig und ohne langfristige Vertrags\u00ADbindung.',
+      text2: 'Wir unterstützen Unternehmen und Institutionen mit Consulting, Architektur, Entwicklung und Schulung. Dazu gehören der Aufbau, der Betrieb und die Weiterentwicklung von Kubernetes-Umgebungen sowie der Aufbau und das Training unternehmensinterner KI-Systeme auf Basis firmeneigener Daten. Darüber hinaus wird die Aiza GmbH gezielt für Bugfixing, Fehleranalyse und die Stabilisierung bestehender Systeme eingesetzt, auch kurzfristig und ohne langfristige Vertrags\u00ADbindung.',
       role: 'Founder & CEO',
       edu: 'Bachelor of Science in Informatik',
       certs: 'Zertifizierungen',
@@ -121,9 +156,7 @@ const I18N = {
       mail: 'E-Mail, Telefon & Links',
       note: 'Referenzen und Projekte gerne im persönlichen Gespräch.',
       quickStart: 'Quick Start',
-      step1: 'Kurzbeschrieb mit Ziel, Kontext und Deadline',
-      step2: 'Technischer Check und Vorschlag mit Scope und Optionen',
-      step3: 'Umsetzung mit klaren Deliverables',
+      text: 'Kurzbeschrieb mit Ziel, Kontext und Deadline',
       mailCta: 'E-Mail senden'
     },
     footer: { imprint: 'Impressum', privacy: 'Datenschutzerklärung' },
@@ -262,7 +295,7 @@ const I18N = {
       b1: 'Architecture and delivery of web and cloud solutions',
       b2: 'Bug fixing and stabilization of existing systems',
       b3: 'Kubernetes: setup, operations, upgrades, as well as CRD and operator development and bug fixing',
-      b4: 'AI infrastructure setup and data training, use case driven',
+      b4: 'AI infrastructure and model training for specific use cases',
     },
     process: {
       title: 'How we work',
@@ -277,7 +310,7 @@ const I18N = {
       },
       p2: {
         title: '2. Propose a plan',
-        text: 'You get a concrete proposal with scope, options and a transparent estimate.',
+        text: 'You get a concrete proposal with scope and a transparent estimate.',
         b1: 'Architecture & milestones',
         b2: 'Trade-offs explained',
         b3: 'Delivery plan'
@@ -290,48 +323,83 @@ const I18N = {
         b3: 'Handover / operations support'
       }
     },
-    services: {
+  services: {
       title: 'Services',
-      subtitle: 'Clear services, from concept to operations.',
+      subtitle: 'Technical expertise for modern, reliable and maintainable software solutions.',
       details: 'Learn more',
       s1: {
-        title: 'Software Architecture & Engineering',
-        text: 'Golang, C#, Python, JavaScript and TypeScript with a focus on quality, testability and clear documentation.',
-        b1: 'System design and API interfaces',
-        b2: 'Code reviews and quality gates',
-        b3: 'Modernization of existing applications'
+        title: 'Architecture & Software Development',
+        text: 'Tailored software and web solutions from concept to delivery.',
+        description: 'From technical design and software architecture to production-ready implementation, we develop tailored business applications, web solutions and backend systems. We cover both frontend and backend development and, where required, deliver complete websites including design, responsive implementation, technical SEO and hosting.',
+        b1: 'Software architecture and technical design',
+        b2: 'Frontend and backend development',
+        b3: 'Business applications and tailored web solutions',
+        b4: 'Web design and responsive design',
+        b5: 'APIs, interfaces and system integrations',
+        b6: 'Technical SEO and performance optimization',
+        b7: 'Hosting and deployment',
+        b8: 'Backend development with Go, C#, .NET and Python',
+        b9: 'Frontend: TypeScript, Vue.js, Angular, Svelte and Razor Pages',
+        b10: 'We are happy to learn new technologies on request'
       },
       s2: {
-        title: 'Bug Fixing and Stabilization',
-        text: 'Focused analysis, reproducible fixes and improvements that last.',
-        b1: 'Debugging and root cause analysis',
-        b2: 'Performance and memory profiling',
-        b3: 'Test coverage and regression prevention'
+        title: 'Cloud Native, DevOps & Kubernetes',
+        text: 'Secure cloud-native infrastructure for reliable deployments and stable operations.',
+        description: 'We design, implement and optimize cloud-native and Kubernetes environments for secure, automated and reliable operations. From Kubernetes and containerization to CI/CD, GitOps, security hardening and observability, we support both the implementation of new platforms and the continuous improvement of existing infrastructure.',
+        b1: 'Kubernetes setup, operations and upgrades',
+        b2: 'Kubernetes security hardening',
+        b3: 'Kubernetes operator and CRD development',
+        b4: 'CI/CD and deployment automation',
+        b5: 'Containerization with Docker and Podman',
+        b6: 'Cloud and Linux infrastructure',
+        b7: 'Cloud and data solutions with Azure, Azure DevOps and Azure Data Factory',
+        b8: 'GitOps with Argo CD and Infrastructure as Code with Terraform',
+        b9: 'Monitoring and observability'
       },
       s3: {
-        title: 'Kubernetes Engineering & Operations',
-        text: 'From setup to operations & upgrades, including CRDs/operators and troubleshooting.',
-        b1: 'Cluster setup, cloud or on prem',
-        b2: 'Upgrades, hardening and observability',
-        b3: 'CI/CD and GitOps patterns',
-        b4: 'CRDs & operator development and bug fixing'
+        title: 'AI Infrastructure & Data Engineering',
+        text: 'Technical infrastructure and data solutions for secure and productive AI adoption.',
+        description: 'We build the technical foundation for the productive use of AI within organizations. This includes suitable infrastructure, preparation and processing of company-owned data, and the integration of AI models and services into existing applications and processes. Our focus is on concrete use cases and technically sustainable solutions.',
+        b1: 'AI infrastructure and deployment',
+        b2: 'Data pipelines and data preparation',
+        b3: 'Integration of AI services and models',
+        b4: 'Integration with existing applications and systems',
+        b5: 'Monitoring and quality assurance',
+        b6: 'Internal AI solutions based on company-owned data'
       },
       s4: {
-        title: 'AI Infrastructure and Data Training',
-        text: 'Infrastructure and data pipelines for AI use cases.',
-        b1: 'Deployment patterns and monitoring',
-        b2: 'Data pipelines and governance',
-        b3: 'Evaluation and quality assurance'
+        title: 'Troubleshooting & Modernization',
+        text: 'Resolve technical issues, stabilize systems and modernize solutions.',
+        description: 'When applications become unstable, slow or technically constrained, we systematically identify the root cause and implement sustainable solutions instead of short-term workarounds. We support both urgent production issues and the gradual modernization of existing applications and infrastructure.',
+        b1: 'Root cause analysis and debugging',
+        b2: 'Performance and error analysis',
+        b3: 'Stabilization of production systems',
+        b4: 'Analysis of complex production issues',
+        b5: 'Modernization of legacy applications',
+        b6: 'Targeted bug fixing in existing projects',
+        b7: 'Code reviews and technical quality assessments'
       },
       s5: {
-        title: 'Workshops and Training',
-        text: 'Fundamentals and hands-on training with best practices.',
-        b1: 'Golang',
-        b2: 'Kubernetes Operators, CRDs and Integrations',
+        title: 'Workshops & Technical Training',
+        text: 'Practical training and workshops, with content tailored to your team on request.',
+        description: 'Hands-on technical training for software development, engineering, and IT operations teams. The training combines solid technical foundations with practical exercises and real-world use cases. Content and focus areas can be tailored to the team\'s existing knowledge, infrastructure and specific requirements.',
+        b1: 'Programming in Go',
+        b2: 'Programming with C#/.NET',
+        b3: 'Kubernetes fundamentals and administration',
+        b4: 'Kubernetes security and security hardening',
+        b5: 'Kubernetes operators and CRDs',
+        b6: 'GitOps with Argo CD',
+        b7: 'Infrastructure as Code with Terraform',
+        b8: 'Containerization with Docker and Podman',
+        b9: 'Podman Quadlet',
+        b10: 'Other courses are available on request',
+        collaboration: 'Selected training courses are also available in collaboration with Letsboot:',
+        letsbootGo: 'Programming in Go',
+        letsbootKubernetes: 'Kubernetes Operators, CRDs and Integrations'
       },
       s6: {
         title: 'Working together',
-        text: 'Short term support or long term partnership. Transparent and outcome driven.',
+        text: 'Flexible support for individual projects, technical challenges or long-term collaboration.',
         p1: 'Remote / On-site (CH)',
         p2: 'Project / Consulting',
       }
@@ -340,7 +408,7 @@ const I18N = {
       title: 'Technologies',
       subtitle: 'A stable stack for modern, secure and maintainable solutions, combined with the willingness to learn new technologies when needed.',
       languages: 'Languages',
-      cloud: 'Cloud and Platform',
+      cloud: 'Cloud & Platforms',
       databases: 'Databases',
     },
     about: {
@@ -362,9 +430,7 @@ const I18N = {
       mail: 'Email, Telephone & Links',
       note: 'References and projects are available on request.',
       quickStart: 'Quick start',
-      step1: 'Short brief with goal, context and deadline',
-      step2: 'Technical check and proposal with scope and options',
-      step3: 'Delivery with clear deliverables',
+      text: 'Short brief with goal, context and deadline',
       mailCta: 'Send email'
     },
     footer: { imprint: 'Imprint', privacy: 'Privacy Policy' },
@@ -630,31 +696,56 @@ function setupLegalModal() {
     if (!service) return false;
 
     title.textContent = service.title;
+
+    const fragment = document.createDocumentFragment();
+
+    const descriptionText = service.description || service.text;
+    if (descriptionText) {
+      const description = document.createElement('p');
+      description.className = 'service-detail-description';
+      description.textContent = descriptionText;
+      fragment.append(description);
+    }
+
     const list = document.createElement('ul');
     list.className = 'service-detail-list';
-    const trainingLinks = {
-      b1: 'https://letsboot.ch/kurs/golang',
-      b2: 'https://letsboot.ch/kurs/kubernetes-operators'
-    };
 
     Object.entries(service)
       .filter(([key]) => /^(b|p)\d+$/.test(key))
       .forEach(([key, value]) => {
         const item = document.createElement('li');
-        if (serviceKey === 's5' && trainingLinks[key]) {
-          const link = document.createElement('a');
-          link.href = trainingLinks[key];
-          link.target = '_blank';
-          link.rel = 'noopener';
-          link.textContent = value;
-          item.append(link);
-        } else {
-          item.textContent = value;
-        }
+        item.textContent = value;
         list.append(item);
       });
 
-    content.replaceChildren(list);
+    fragment.append(list);
+
+    if (serviceKey === 's5') {
+      const collaboration = document.createElement('p');
+      collaboration.className = 'service-detail-collaboration';
+      collaboration.textContent = service.collaboration;
+      fragment.append(collaboration);
+
+      const courses = document.createElement('ul');
+      courses.className = 'service-detail-list service-detail-courses';
+      [
+        { label: service.letsbootGo, href: 'https://letsboot.ch/kurs/golang' },
+        { label: service.letsbootKubernetes, href: 'https://letsboot.ch/kurs/kubernetes-operators' }
+      ].forEach(course => {
+        const item = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = course.href;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.textContent = course.label;
+        item.append(link);
+        courses.append(item);
+      });
+      fragment.append(courses);
+    }
+
+    content.replaceChildren(fragment);
+
     return true;
   };
 

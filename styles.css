@@ -373,8 +373,8 @@ p, li, h1, h2, h3, h4 {
   display: none;
   position: relative;
   z-index: 110;
-  width: var(--hamburger-size);
-  height: var(--hamburger-size);
+  width: 3rem;
+  height: 3rem;
   padding: 0.5rem;
   background: transparent;
   border: none;
@@ -383,53 +383,54 @@ p, li, h1, h2, h3, h4 {
 
 .hamburger-box {
   position: relative;
-  display: inline-block;
-  width: var(--hamburger-width);
-  height: var(--hamburger-height);
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-  position: absolute;
-  left: 0;
   display: block;
-  width: 100%;
-  height: var(--hamburger-line);
-  background: var(--text);
-  border-radius: var(--hamburger-line);
-  transform: translateZ(0);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  width: 1.875rem;
+  height: 1.25rem;
+  margin: auto;
 }
 
 .hamburger-inner {
+  position: absolute;
   top: 50%;
-  transform: translateY(-50%) translateZ(0);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--text);
+  border-radius: 99rem;
+  transform: translateY(-50%);
+  box-shadow:
+    0 -8px 0 var(--text),
+    0 8px 0 var(--text);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hamburger-inner::before {
-  content: "";
-  top: calc(-1 * var(--hamburger-gap));
-}
-
+.hamburger-inner::before,
 .hamburger-inner::after {
   content: "";
-  top: var(--hamburger-gap);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--text);
+  border-radius: 99rem;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .hamburger[aria-expanded="true"] .hamburger-inner {
-  transform: translateY(-50%) rotate(45deg) translateZ(0);
+  background: transparent;
+  box-shadow: none;
 }
 
 .hamburger[aria-expanded="true"] .hamburger-inner::before {
-  opacity: 0;
-  transform: rotate(-90deg) translateX(calc(-1 * var(--hamburger-gap)));
+  opacity: 1;
+  transform: rotate(45deg);
 }
 
 .hamburger[aria-expanded="true"] .hamburger-inner::after {
-  transform: rotate(-90deg) translateX(var(--hamburger-gap));
+  opacity: 1;
+  transform: rotate(-45deg);
 }
 
 /* ===========================
@@ -665,8 +666,7 @@ p, li, h1, h2, h3, h4 {
   outline-offset: 3px;
 }
 
-.service-card:hover,
-.service-card:focus-within {
+.service-card:hover {
   transform: translateY(-0.125rem) scale(1.02);
   border-color: var(--ui-hover-border);
   box-shadow: 0 0.75rem 2.25rem var(--ui-hover-shadow);
@@ -714,8 +714,7 @@ p, li, h1, h2, h3, h4 {
 .contact-links a:hover,
 .modal-content a:hover,
 .service-details:hover,
-.service-card:hover .service-details,
-.service-card:focus-within .service-details {
+.service-card:hover .service-details {
   color: var(--accent2);
 }
 
@@ -733,7 +732,6 @@ p, li, h1, h2, h3, h4 {
 
 .pill {
   font-size: 0.75rem;
-  font-weight: 700;
   color: var(--text);
   background: var(--accent-18);
   border: 0.0625rem solid var(--accent-25);
@@ -779,7 +777,7 @@ p, li, h1, h2, h3, h4 {
 
 .chip {
   border: 0.0625rem solid var(--border);
-  background: var(--surface-04);
+  background: var(--accent-18);
   padding: 0.5rem 0.625rem;
   border-radius: 999rem;
   font-family: var(--mono);
@@ -979,7 +977,7 @@ p, li, h1, h2, h3, h4 {
 }
 
 .inventx-img {
-  padding: 1rem;
+  padding: 1.2rem;
 }
 
 .letsboot-img {
@@ -987,12 +985,9 @@ p, li, h1, h2, h3, h4 {
 }
 
 .osterwalder-img,
-.oficeworld-img{
-  padding: 0.5rem;
-}
-
+.oficeworld-img,
 .assaj-img {
-  padding: 0.3rem;
+  padding: 0.5rem;
 }
 
 .logo-oval-rocket,
@@ -1104,6 +1099,7 @@ p, li, h1, h2, h3, h4 {
   flex-direction: column;
   box-shadow: var(--shadow);
   background: var(--card);
+  justify-content: flex-start;
 }
 
 .contact-card h3 {
@@ -1132,12 +1128,8 @@ p, li, h1, h2, h3, h4 {
   background: linear-gradient(180deg, var(--accent-12), var(--surface-02));
 }
 
-.steps {
-  margin: 0.3rem 0 0.875rem;
-  padding-left: 1.125rem;
-  color: var(--muted);
-  display: grid;
-  gap: 0.5rem;
+.contact-card-accent .btn {
+  margin-top: auto;
 }
 
 .small {
@@ -1255,6 +1247,17 @@ p, li, h1, h2, h3, h4 {
 
 .service-detail-list li {
   padding-left: 0.15rem;
+}
+
+.service-detail-collaboration {
+  margin: 2rem 0 1rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.service-detail-courses {
+  list-style: disc;
+  padding-left: 1.25rem;
 }
 
 .modal-content a {
@@ -1531,6 +1534,10 @@ p, li, h1, h2, h3, h4 {
     padding: 0.95rem;
     min-height: 5.75rem;
     border-radius: 0.95rem;
+  }
+
+  .contact-card p {
+    margin-bottom: 0.75rem;
   }
 }
 
